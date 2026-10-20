@@ -11,3 +11,5 @@ models/*.part
 build/
 dist/
 experiments/artifacts/
+!docs/experiments/data/
+!docs/experiments/data/**
