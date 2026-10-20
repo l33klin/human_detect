@@ -10,3 +10,4 @@ models/*.tflite
 models/*.part
 build/
 dist/
+experiments/artifacts/
