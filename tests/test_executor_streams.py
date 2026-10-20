@@ -34,8 +34,10 @@ def test_bounded_admission_and_cancelled_queued_work():
         executor.close()
 
 
-def test_spawned_video_capture_json_results_and_cleanup(settings, monkeypatch):
+@pytest.mark.parametrize("temporal", [False, True])
+def test_spawned_video_capture_json_results_and_cleanup(settings, monkeypatch, temporal):
     monkeypatch.setattr("human_detect.streams.capture_frames", synthetic_capture)
+    settings.temporal_enabled = temporal
     settings.max_streams = 1
     executor = InferenceExecutor(2)
     store = IdentityStore(settings.database, "test-model-v1", 3)
@@ -54,6 +56,7 @@ def test_spawned_video_capture_json_results_and_cleanup(settings, monkeypatch):
         assert snapshot["processed"] >= 2
         assert snapshot["latest"]["width"] == 240
         assert snapshot["latest"]["persons"][0]["faces"]
+        assert ("temporal" in snapshot["latest"]) is temporal
         assert "secret" not in str(snapshot)
         process = stream.process
         assert manager.delete(stream.id)
