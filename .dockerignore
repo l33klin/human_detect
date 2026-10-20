@@ -1,0 +1,11 @@
+.venv
+.git
+data
+.env
+__pycache__
+**/__pycache__
+.pytest_cache
+.ruff_cache
+*.egg-info
+models/*.tflite
+tests

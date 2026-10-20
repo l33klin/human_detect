@@ -1,0 +1,32 @@
+services:
+  human-detect:
+    build: .
+    init: true
+    restart: unless-stopped
+    ports:
+      - "${HD_BIND_ADDRESS:-127.0.0.1}:8000:8000"
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      HD_DEVICE: pci:0
+      HD_MODELS_DIR: /app/models
+      HD_DATABASE: /app/data/identities.sqlite3
+    devices:
+      - /dev/apex_0:/dev/apex_0
+      # For USB/V4L2 cameras, add /dev/video0:/dev/video0 here.
+    group_add:
+      # Set to: stat -c '%g' /dev/apex_0 (and video group GID for USB cameras).
+      - "${HD_APEX_GID:?Set HD_APEX_GID to the numeric group ID of /dev/apex_0}"
+    volumes:
+      - identities:/app/data
+    tmpfs:
+      - /tmp:size=128m
+    read_only: true
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  identities:
