@@ -1,5 +1,7 @@
 # Human Detect
 
+本分支为跟踪与身份特征降频实验，默认关闭优化。见 [实验说明](docs/experiments/temporal.md)、[对照协议](docs/experiments/protocol.md)和[实测结果](docs/experiments/results.md)。
+
 在 Ubuntu Server 上使用 **Coral M.2 / PCIe Edge TPU**，提供人体检测、人脸检测和已录入人员的身份匹配。支持 RTSP、HTTP(S) 视频流、USB/V4L2 摄像头和静态图片，输出 JSON。
 
 视频处理链路：

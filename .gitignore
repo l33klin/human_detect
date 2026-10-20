@@ -10,3 +10,5 @@ models/*.tflite
 models/*.part
 build/
 dist/
+!docs/experiments/data/
+!docs/experiments/data/**
