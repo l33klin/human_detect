@@ -70,6 +70,10 @@ class Meter:
         meter = self
 
         class Measured:
+            def close(self):
+                model.interpreter = None
+                model.delegate = None
+
             def __getattr__(self, name):
                 function = getattr(model, name)
                 if name not in {"detect", "embed"}:
@@ -235,6 +239,10 @@ def main():
     finally:
         for store in resources:
             store.close()
+        for _, mode, pipeline, _ in variants:
+            if mode == "baseline":
+                for role in ("person", "face", "embedding"):
+                    getattr(pipeline.models, role).close()
 
 
 if __name__ == "__main__":

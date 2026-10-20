@@ -92,6 +92,11 @@ def main():
             )
             + "\n"
         )
+        for models in variants.values():
+            for role in ("person", "face", "embedding"):
+                model = getattr(models, role)
+                model.interpreter = None
+                model.delegate = None
 
 
 if __name__ == "__main__":
