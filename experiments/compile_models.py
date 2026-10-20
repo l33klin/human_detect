@@ -18,6 +18,10 @@ SOURCES = {
     "person": "ssdlite_mobiledet_coco_qat_postprocess.tflite",
     "face": "ssd_mobilenet_v2_face_quant_postprocess.tflite",
 }
+SOURCE_SHA256 = {
+    "person": "32c486140391eb4dc43fca7113ad392be632dc5366687f2731f73d740678693f",
+    "face": "4c33a81508aed53a2b55b91693957d777f051e24cd62f69270f512957d422aa2",
+}
 
 
 def checksum(path):
@@ -52,6 +56,8 @@ def main():
         if not path.exists():
             with urllib.request.urlopen(BASE + name, timeout=60) as response:
                 path.write_bytes(response.read())
+        if checksum(path) != SOURCE_SHA256[role]:
+            raise RuntimeError(f"source model checksum mismatch: {role}")
         source_report[role] = dict(file=name, url=BASE + name, sha256=checksum(path))
     original = json.loads((args.original_models / "manifest.json").read_text())
     embedding = args.original_models / original["embedding"]["file"]
