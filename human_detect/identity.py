@@ -22,6 +22,7 @@ class IdentityStore:
     def __init__(self, path: Path, fingerprint: str, dimension: int):
         path.parent.mkdir(parents=True, exist_ok=True)
         self.lock = threading.RLock()
+        self.revision = 0
         self.connection = sqlite3.connect(str(path), check_same_thread=False)
         self.connection.execute("PRAGMA journal_mode=WAL")
         self.connection.executescript("""
@@ -57,6 +58,7 @@ class IdentityStore:
                 "INSERT INTO samples(person_id, embedding) VALUES (?, ?)",
                 (person_id, json.dumps(vector.tolist())),
             )
+            self.revision += 1
         return next(row for row in self.list_people() if row["person_id"] == person_id)
 
     def list_people(self):
@@ -70,9 +72,12 @@ class IdentityStore:
     def delete(self, person_id):
         with self.lock, self.connection:
             self.connection.execute("DELETE FROM samples WHERE person_id=?", (person_id,))
-            return (
+            deleted = (
                 self.connection.execute("DELETE FROM people WHERE id=?", (person_id,)).rowcount > 0
             )
+            if deleted:
+                self.revision += 1
+            return deleted
 
     def match(self, vector, threshold, margin):
         vector = normalize(vector)

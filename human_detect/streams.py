@@ -74,6 +74,12 @@ class Stream:
         self.fps, self.settings = fps, settings
         self.context, self.source = context, source
         self.pipeline, self.executor = pipeline, executor
+        if settings.temporal_enabled:
+            from human_detect.temporal import TemporalSession
+
+            self.video_pipeline = TemporalSession(pipeline)
+        else:
+            self.video_pipeline = pipeline
         self.lock = threading.RLock()
         self.condition = threading.Condition(self.lock)
         self.stop = threading.Event()
@@ -123,7 +129,7 @@ class Stream:
             future = None
             try:
                 future = self.executor.submit(
-                    self.pipeline.analyze, rgb, datetime.fromtimestamp(captured, timezone.utc)
+                    self.video_pipeline.analyze, rgb, datetime.fromtimestamp(captured, timezone.utc)
                 )
                 result = future.result(timeout=self.settings.inference_timeout_seconds)
                 with self.condition:

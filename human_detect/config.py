@@ -24,3 +24,7 @@ class Settings(BaseSettings):
     max_image_pixels: int = Field(20_000_000, ge=1024)
     inference_queue_size: int = Field(4, ge=1, le=100)
     inference_timeout_seconds: float = Field(15, gt=0)
+    temporal_enabled: bool = False
+    temporal_detect_every: int = Field(5, ge=1, le=30)
+    temporal_detection_seconds: float = Field(0.5, gt=0, le=2)
+    temporal_identity_seconds: float = Field(1, gt=0, le=5)
