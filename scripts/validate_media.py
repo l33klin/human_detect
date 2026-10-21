@@ -171,10 +171,29 @@ def run(args):
             media_public_host="127.0.0.1",
             media_webrtc_url="http://127.0.0.1:18889",
             media_font=args.font,
+            media_inference_fps=args.inference_fps,
+            person_threshold=args.person_threshold,
+            empty_scene_enabled=not args.disable_empty_scene,
         )
         app = create_app(cfg)
         with TestClient(app) as client:
             assert client.get("/health/ready").status_code == 200
+            report["models"] = client.get("/health/ready").json()["models"]
+            report["target_detection_hz"] = args.inference_fps
+            report["person_threshold"] = args.person_threshold
+            report["empty_scene_enabled"] = cfg.empty_scene_enabled
+            detector = client.app.state.pipeline.models.person
+            original_detect = detector.detect
+            detection_stats = dict(calls=0, milliseconds=0.0)
+
+            def counted_detect(*values, **options):
+                tick = time.monotonic()
+                result = original_detect(*values, **options)
+                detection_stats["calls"] += 1
+                detection_stats["milliseconds"] += (time.monotonic() - tick) * 1000
+                return result
+
+            detector.detect = counted_detect
             enrolled = client.post(
                 "/v1/identities/reference/samples?name=参考人物", content=args.sample.read_bytes()
             )
@@ -196,6 +215,7 @@ def run(args):
             time.sleep(5)
             first = [client.get(f"/v1/streams/{key}").json() for key in ids]
             started = time.monotonic()
+            detection_start = dict(detection_stats)
             observations = []
             while time.monotonic() - started < args.seconds:
                 for key in ids:
@@ -217,6 +237,14 @@ def run(args):
                 time.sleep(0.2)
             last = [client.get(f"/v1/streams/{key}").json() for key in ids]
             elapsed = time.monotonic() - started
+            count = detection_stats["calls"] - detection_start["calls"]
+            report["full_detection_calls"] = count
+            report["full_detection_hz"] = count / elapsed
+            report["mean_person_detection_ms"] = (
+                (detection_stats["milliseconds"] - detection_start["milliseconds"]) / count
+                if count
+                else None
+            )
             report["measurement_seconds"] = elapsed
             report["processed_fps"] = [
                 (b["processed"] - a["processed"]) / elapsed for a, b in zip(first, last)
@@ -425,6 +453,9 @@ if __name__ == "__main__":
     parser.add_argument("--work", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--seconds", type=int, default=30)
+    parser.add_argument("--inference-fps", type=float, default=3)
+    parser.add_argument("--person-threshold", type=float, default=0.5)
+    parser.add_argument("--disable-empty-scene", action="store_true")
     parser.add_argument("--streams", type=int, choices=[1, 2], default=1)
     parser.add_argument("--clip", type=Path)
     parser.add_argument("--preview", type=Path)

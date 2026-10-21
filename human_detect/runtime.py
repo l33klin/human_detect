@@ -47,9 +47,10 @@ def audit_model(path):
 
 
 class TpuModel:
-    def __init__(self, path, device, kind):
+    def __init__(self, path, device, kind, output_format="ssd"):
         self.audit = audit_model(path)
         self.kind = kind
+        self.output_format = output_format
         try:
             from tflite_runtime.interpreter import Interpreter, load_delegate
 
@@ -75,8 +76,14 @@ class TpuModel:
                 if len(self.outputs) != 1:
                     raise ValueError("expected a single embedding output")
                 self.dimension = int(np.prod(self.outputs[0]["shape"]))
-            elif len(self.outputs) != 4:
-                raise ValueError("detectors require four SSD postprocess outputs")
+            elif output_format == "yolov9_dfl17" and kind == "person":
+                from human_detect.yolo import YoloDflDecoder
+
+                self.yolo = YoloDflDecoder(
+                    self.width, self.height, [detail["shape"].tolist() for detail in self.outputs]
+                )
+            elif output_format != "ssd" or len(self.outputs) != 4:
+                raise ValueError("unsupported detector output contract")
         except Exception as exc:
             raise EngineUnavailable(f"failed to initialize {kind} on {device}: {exc}") from exc
 
@@ -97,6 +104,9 @@ class TpuModel:
 
     def detect(self, rgb, threshold, class_id=None):
         values = self.run(rgb)
+        if getattr(self, "output_format", "ssd") == "yolov9_dfl17":
+            height, width = rgb.shape[:2]
+            return self.yolo.decode(values, width, height, threshold, class_id)
         # SSD MobileNet/MobileDet output contracts used by the pinned manifest.
         if values[3].size == 1:
             boxes, classes, scores, count = values
@@ -146,7 +156,8 @@ class ModelBundle:
                 checksum = hashlib.sha256(path.read_bytes()).hexdigest()
                 if checksum != item["sha256"]:
                     raise EngineUnavailable(f"checksum mismatch for {path.name}")
-                models[role] = TpuModel(path, settings.device, role)
+                options = {"output_format": item["format"]} if "format" in item else {}
+                models[role] = TpuModel(path, settings.device, role, **options)
         except Exception:
             for model in models.values():
                 model.close()

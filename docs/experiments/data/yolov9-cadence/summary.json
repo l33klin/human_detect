@@ -1,0 +1,335 @@
+{
+  "date": "2026-10-21",
+  "machine": "pn41 / Intel N6005 / PCIe Coral / VAAPI",
+  "source_filename": "videoplayback (1).mp4",
+  "source_sha256": "be41233b75eebf9a7432ecd75e772ddf0ef2c1fae596720a44ff850172ce185a",
+  "source": {
+    "width": 1280,
+    "height": 720,
+    "fps": 25,
+    "frames": 376,
+    "duration_seconds": 15.04,
+    "audio": false
+  },
+  "regions": {
+    "right_person": [
+      1010,
+      245,
+      1195,
+      595
+    ],
+    "table": [
+      580,
+      420,
+      825,
+      705
+    ]
+  },
+  "region_hit_min_iou": 0.3,
+  "interpretation": "Fixed-region output coverage, not whole-scene precision/recall or identity accuracy",
+  "cases": [
+    {
+      "case": "mobile-3",
+      "model": "MobileDet",
+      "person_threshold": 0.5,
+      "target_detection_hz": 3.0,
+      "empty_scene_enabled": true,
+      "scheduled_frame_interval": 9,
+      "region_hit_frames": {
+        "right_person": 376,
+        "table": 205
+      },
+      "export_full_detections": 45,
+      "export_modes": {
+        "detected": 45,
+        "tracked": 331
+      },
+      "export_person_counts": {
+        "2": 81,
+        "3": 87,
+        "5": 37,
+        "4": 63,
+        "6": 9,
+        "1": 99
+      },
+      "export_face_counts": {
+        "0": 376
+      },
+      "live_measurement_seconds": 35.16085150465369,
+      "live_output_fps": 24.743428067572587,
+      "live_full_detection_hz": 3.1569201327592613,
+      "live_mean_person_detection_ms": 23.346025731649483,
+      "live_dropped_frames": 0,
+      "exported_video": "mobile-3.mp4",
+      "export_json_sha256": "14494f35cb2b4990da297cdf68cec90f003cfc58198d4b0d92fee9d04d8b2ad6"
+    },
+    {
+      "case": "mobile-5",
+      "model": "MobileDet",
+      "person_threshold": 0.5,
+      "target_detection_hz": 5.0,
+      "empty_scene_enabled": true,
+      "scheduled_frame_interval": 5,
+      "region_hit_frames": {
+        "right_person": 376,
+        "table": 199
+      },
+      "export_full_detections": 82,
+      "export_modes": {
+        "detected": 82,
+        "tracked": 294
+      },
+      "export_person_counts": {
+        "2": 91,
+        "3": 59,
+        "4": 76,
+        "5": 40,
+        "1": 105,
+        "6": 5
+      },
+      "export_face_counts": {
+        "0": 376
+      },
+      "live_measurement_seconds": 35.10397461988032,
+      "live_output_fps": 24.584110755118314,
+      "live_full_detection_hz": 5.412492518508087,
+      "live_mean_person_detection_ms": 22.100461372419407,
+      "live_dropped_frames": 0,
+      "exported_video": "mobile-5.mp4",
+      "export_json_sha256": "bd2b14053fdfdc20b604b7c5550c070a718254d4fd0527939b0969100ef1c23d"
+    },
+    {
+      "case": "mobile-8",
+      "model": "MobileDet",
+      "person_threshold": 0.5,
+      "target_detection_hz": 8.0,
+      "empty_scene_enabled": true,
+      "scheduled_frame_interval": 4,
+      "region_hit_frames": {
+        "right_person": 376,
+        "table": 198
+      },
+      "export_full_detections": 101,
+      "export_modes": {
+        "detected": 101,
+        "tracked": 275
+      },
+      "export_person_counts": {
+        "2": 89,
+        "3": 49,
+        "4": 77,
+        "5": 45,
+        "6": 16,
+        "1": 100
+      },
+      "export_face_counts": {
+        "0": 376
+      },
+      "live_measurement_seconds": 35.07546488754451,
+      "live_output_fps": 24.376013339843578,
+      "live_full_detection_hz": 6.614310052448783,
+      "live_mean_person_detection_ms": 21.588337254421464,
+      "live_dropped_frames": 9,
+      "exported_video": "mobile-8.mp4",
+      "export_json_sha256": "cb800afd8886db5b4e4a5d7839fd316029fa6313dd6fea9469b13a3e5f9aeac7"
+    },
+    {
+      "case": "yolo-3",
+      "model": "YOLOv9-s ReLU6",
+      "person_threshold": 0.5,
+      "target_detection_hz": 3.0,
+      "empty_scene_enabled": true,
+      "scheduled_frame_interval": 9,
+      "region_hit_frames": {
+        "right_person": 227,
+        "table": 0
+      },
+      "export_full_detections": 54,
+      "export_modes": {
+        "detected": 54,
+        "tracked": 216,
+        "idle": 106
+      },
+      "export_person_counts": {
+        "1": 222,
+        "0": 132,
+        "2": 22
+      },
+      "export_face_counts": {
+        "0": 376
+      },
+      "live_measurement_seconds": 35.16872716881335,
+      "live_output_fps": 25.050664920885918,
+      "live_full_detection_hz": 3.355253644341133,
+      "live_mean_person_detection_ms": 21.531012288089524,
+      "live_dropped_frames": 0,
+      "exported_video": "yolo-3.mp4",
+      "export_json_sha256": "65e0a984ad62cfdc505e7d3b5954d2199ec04376a196acf232de231513d62d1d"
+    },
+    {
+      "case": "yolo-5",
+      "model": "YOLOv9-s ReLU6",
+      "person_threshold": 0.5,
+      "target_detection_hz": 5.0,
+      "empty_scene_enabled": true,
+      "scheduled_frame_interval": 5,
+      "region_hit_frames": {
+        "right_person": 238,
+        "table": 0
+      },
+      "export_full_detections": 78,
+      "export_modes": {
+        "detected": 78,
+        "tracked": 194,
+        "idle": 104
+      },
+      "export_person_counts": {
+        "1": 228,
+        "0": 133,
+        "2": 15
+      },
+      "export_face_counts": {
+        "0": 376
+      },
+      "live_measurement_seconds": 35.15909341722727,
+      "live_output_fps": 25.000644628945615,
+      "live_full_detection_hz": 5.233354507083041,
+      "live_mean_person_detection_ms": 22.65465849727068,
+      "live_dropped_frames": 0,
+      "exported_video": "yolo-5.mp4",
+      "export_json_sha256": "edcdc901314b8c441a3464bea3ba2356ac43a40bbacc09c5f9adc76d97563e84"
+    },
+    {
+      "case": "yolo-8",
+      "model": "YOLOv9-s ReLU6",
+      "person_threshold": 0.5,
+      "target_detection_hz": 8.0,
+      "empty_scene_enabled": true,
+      "scheduled_frame_interval": 4,
+      "region_hit_frames": {
+        "right_person": 237,
+        "table": 0
+      },
+      "export_full_detections": 87,
+      "export_modes": {
+        "detected": 87,
+        "tracked": 180,
+        "idle": 109
+      },
+      "export_person_counts": {
+        "1": 216,
+        "2": 25,
+        "0": 135
+      },
+      "export_face_counts": {
+        "0": 376
+      },
+      "live_measurement_seconds": 35.17649553529918,
+      "live_output_fps": 25.045132739727507,
+      "live_full_detection_hz": 5.770898917326543,
+      "live_mean_person_detection_ms": 23.976715098093884,
+      "live_dropped_frames": 0,
+      "exported_video": "yolo-8.mp4",
+      "export_json_sha256": "35b36c5e98b9b0dbf45a08f3af5e5027ff03ad676b94b2e3f32db7f8ef93192a"
+    },
+    {
+      "case": "yolo-5-t04",
+      "model": "YOLOv9-s ReLU6",
+      "person_threshold": 0.4,
+      "target_detection_hz": 5.0,
+      "empty_scene_enabled": true,
+      "scheduled_frame_interval": 5,
+      "region_hit_frames": {
+        "right_person": 313,
+        "table": 0
+      },
+      "export_full_detections": 76,
+      "export_modes": {
+        "detected": 76,
+        "tracked": 249,
+        "idle": 51
+      },
+      "export_person_counts": {
+        "1": 270,
+        "2": 43,
+        "0": 63
+      },
+      "export_face_counts": {
+        "0": 376
+      },
+      "live_measurement_seconds": 35.051779268309474,
+      "live_output_fps": 24.963069443698476,
+      "live_full_detection_hz": 5.078201555403805,
+      "live_mean_person_detection_ms": 26.503631614902048,
+      "live_dropped_frames": 0,
+      "exported_video": "yolo-5-t04.mp4",
+      "export_json_sha256": "64d5c8a56efbb0c2fdbfcfb6d1ee993606a246d6ad5f5eeb14982f791038a636"
+    },
+    {
+      "case": "yolo-5-t04-noidle",
+      "model": "YOLOv9-s ReLU6",
+      "person_threshold": 0.4,
+      "target_detection_hz": 5.0,
+      "empty_scene_enabled": false,
+      "scheduled_frame_interval": 5,
+      "region_hit_frames": {
+        "right_person": 335,
+        "table": 0
+      },
+      "export_full_detections": 106,
+      "export_modes": {
+        "detected": 106,
+        "tracked": 270
+      },
+      "export_person_counts": {
+        "1": 297,
+        "2": 43,
+        "0": 36
+      },
+      "export_face_counts": {
+        "0": 376
+      },
+      "live_measurement_seconds": 35.09278039261699,
+      "live_output_fps": 24.99089528353553,
+      "live_full_detection_hz": 6.6395423045197015,
+      "live_mean_person_detection_ms": 23.297376331149763,
+      "live_dropped_frames": 0,
+      "exported_video": "yolo-5-t04-noidle.mp4",
+      "export_json_sha256": "a6fba7a2497b5783f820e6b14451350ec49767844b56e1ca3985ab2b5cf52fde"
+    },
+    {
+      "case": "yolo-5-t03",
+      "model": "YOLOv9-s ReLU6",
+      "person_threshold": 0.3,
+      "target_detection_hz": 5.0,
+      "empty_scene_enabled": true,
+      "scheduled_frame_interval": 5,
+      "region_hit_frames": {
+        "right_person": 365,
+        "table": 0
+      },
+      "export_full_detections": 77,
+      "export_modes": {
+        "detected": 77,
+        "tracked": 290,
+        "idle": 9
+      },
+      "export_person_counts": {
+        "1": 300,
+        "2": 60,
+        "0": 11,
+        "3": 5
+      },
+      "export_face_counts": {
+        "0": 376
+      },
+      "live_measurement_seconds": 35.08016903139651,
+      "live_output_fps": 24.91436113713637,
+      "live_full_detection_hz": 5.159610258377212,
+      "live_mean_person_detection_ms": 28.579317712487438,
+      "live_dropped_frames": 0,
+      "exported_video": "yolo-5-t03.mp4",
+      "export_json_sha256": "725c4605403db239140f9ce7798598977c55a1e819a489eae499b114f7bd77da"
+    }
+  ]
+}

@@ -53,7 +53,7 @@ def media_decoder_command(source, cfg):
     ]
 
 
-def encoder_command(url, rate, cfg):
+def encoder_command(url, rate, cfg, output_format="rtsp"):
     command = [
         "ffmpeg",
         "-nostdin",
@@ -120,7 +120,7 @@ def encoder_command(url, rate, cfg):
             "-bufsize",
             str(cfg.media_bitrate // 2),
         ]
-    return command + [
+    command += [
         "-bf",
         "0",
         "-g",
@@ -137,12 +137,12 @@ def encoder_command(url, rate, cfg):
         "lowdelay",
         "-flush_packets",
         "1",
-        "-f",
-        "rtsp",
-        "-rtsp_transport",
-        "tcp",
-        url,
     ]
+    if output_format == "rtsp":
+        return command + ["-f", "rtsp", "-rtsp_transport", "tcp", url]
+    if output_format == "mp4":
+        return command + ["-movflags", "+faststart", "-f", "mp4", url]
+    raise ValueError("unsupported media output format")
 
 
 def stop_process(process):
@@ -160,7 +160,7 @@ def stop_process(process):
 
 
 class MediaConnection:
-    def __init__(self, source, url, cfg):
+    def __init__(self, source, url, cfg, output_format="rtsp"):
         self.decoder = self.encoder = self.input = self.output = None
         self.writer = None
         self.writer_stop = threading.Event()
@@ -185,7 +185,7 @@ class MediaConnection:
             if not 0 < self.rate <= 120:
                 raise ValueError("invalid_source_rate")
             self.encoder = subprocess.Popen(
-                encoder_command(url, self.rate, cfg),
+                encoder_command(url, self.rate, cfg, output_format),
                 stdin=subprocess.PIPE,
                 stdout=subprocess.DEVNULL,
                 stderr=subprocess.DEVNULL,

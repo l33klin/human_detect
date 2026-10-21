@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Fetch pinned model artifacts; no runtime downloads or unverified overwrites."""
 
+import argparse
 import hashlib
 import json
 import os
@@ -11,7 +12,9 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def main():
-    directory = ROOT / "models"
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--models", type=Path, default=ROOT / "models")
+    directory = parser.parse_args().models
     directory.mkdir(exist_ok=True)
     manifest = json.loads((directory / "manifest.json").read_text())
     for item in manifest.values():
