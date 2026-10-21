@@ -1,0 +1,26 @@
+{
+  "captured_at_utc": "2026-10-21T02:20:45.840043+00:00",
+  "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+  "python": "3.9.25",
+  "versions": {
+    "numpy": "1.26.4",
+    "opencv-python-headless": "4.11.0.86",
+    "tflite": "2.10.0",
+    "tflite-runtime": "2.5.0.post1",
+    "fastapi": "0.128.8",
+    "pydantic": "2.13.5",
+    "pytest": "8.4.2",
+    "Pillow": "11.3.0",
+    "pydantic-settings": "2.11.0",
+    "uvicorn": "0.39.0"
+  },
+  "cpu_count": 4,
+  "cpu_model": "Intel(R) Pentium(R) Silver N6005 @ 2.00GHz",
+  "device": "pci:0",
+  "device_node": "/dev/apex_0",
+  "compiler_archive_sha256": "f9a97adbf2ff621d24a91721191264f2abc3c1db31e63d9a266d988f907269ce",
+  "compiler_version": "16.0.384591198",
+  "libedgetpu": "16.0",
+  "memory": "MemTotal:        7730032 kB\nMemFree:          255380 kB\nMemAvailable:     953184 kB\nBuffers:           62860 kB\nCached:          1096144 kB\nSwapCached:       242016 kB\nActive:          2361736 kB\nInactive:        2414144 kB\nActive(anon):    1895400 kB\nInactive(anon):  2040472 kB\nActive(file):     466336 kB\nInactive(file):   373672 kB\nUnevictable:       27900 kB\nMlocked:           27812 kB\nSwapTotal:       2097148 kB\nSwapFree:              4 kB\nDirty:              3860 kB\nWriteback:             0 kB\nAnonPages:       3411148 kB\nMapped:          2537488 kB\nShmem:            309924 kB\nKReclaimable:     165240 kB\nSlab:             324624 kB\nSReclaimable:     165240 kB\nSUnreclaim:       159384 kB\nKernelStack:       20908 kB\nPageTables:        52916 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5962164 kB\nCommitted_AS:   16873368 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       56560 kB\nVmallocChunk:          0 kB\nPercpu:             5472 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:     2541036 kB\nDirectMap2M:     5646336 kB\n",
+  "loadavg": "1.88 1.10 0.81 2/1303 3518508\n"
+}

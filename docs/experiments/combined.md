@@ -47,6 +47,9 @@ PYTHONPATH=. python -m experiments.benchmark \
   --variant joint=experiments/artifacts/co-person-first --temporal \
   --frames 20 --repeats 3 --input-fps 5 --sizes 512x600,1920x1080 \
   --scenarios static,translation,two_people --output combined-5fps.json
+
+PYTHONPATH=. python -m experiments.combined_summary \
+  combined-25fps.json combined-5fps.json --output-dir combined-results
 ```
 
 在服务中同时开启两个方案：

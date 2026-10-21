@@ -1,0 +1,19 @@
+{
+  "person": {
+    "file": "ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+    "sha256": "fec7b3f9b37347ff77c5e66922c3080741ae01a2fd126e6b5f8cd4cb31e6fca6",
+    "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+    "generated": true
+  },
+  "face": {
+    "file": "ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite",
+    "sha256": "1db4d0b7088a989e4369222cba75bdd899ee9ea4154cd8b4bcfd758003c168ee",
+    "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssd_mobilenet_v2_face_quant_postprocess.tflite",
+    "generated": true
+  },
+  "embedding": {
+    "file": "mobilefacenet_edgetpu.tflite",
+    "url": "https://raw.githubusercontent.com/NikolasChorianopoulos/face-recognition-on-the-google-coral-dev-board/03bd43ff94e9c83b604eb802bb191beb7f1fb185/models/mobilefacenet_edgetpu.tflite",
+    "sha256": "01f6f5814e122261632c3156ef6ac3c5eea051bae707352cc64b96894a278cac"
+  }
+}
