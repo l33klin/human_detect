@@ -1,0 +1,424 @@
+{
+  "phase": "decode",
+  "revision": "e45854c",
+  "revisions": [
+    "e45854c",
+    "250493d",
+    "5829591"
+  ],
+  "groups": [
+    {
+      "scene": "testsrc",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 2345.8239833513894,
+      "mean_cpu_ms": 2703.338817333343,
+      "mean_first_frame_ms": 198.3155726144711,
+      "total_decoded_frames": 450,
+      "decoded_fps": 63.943416498667005,
+      "cpu_ms_per_decoded_frame": 18.022258782222288
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "opencv",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 943.9814823369185,
+      "mean_cpu_ms": 1980.5864196666685,
+      "mean_first_frame_ms": 47.31002263724804,
+      "total_decoded_frames": 450,
+      "decoded_fps": 158.90142212181993,
+      "cpu_ms_per_decoded_frame": 13.203909464444457
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 4432.6540393133955,
+      "mean_cpu_ms": 4601.751244333331,
+      "mean_first_frame_ms": 151.62032594283423,
+      "total_decoded_frames": 450,
+      "decoded_fps": 33.83977153859599,
+      "cpu_ms_per_decoded_frame": 30.678341628888877
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg",
+      "policy": "none",
+      "scale": [
+        1280,
+        720
+      ],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 2670.0885059932866,
+      "mean_cpu_ms": 2831.005662666667,
+      "mean_first_frame_ms": 107.39325359463692,
+      "total_decoded_frames": 450,
+      "decoded_fps": 56.17791307790347,
+      "cpu_ms_per_decoded_frame": 18.873371084444447
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        3840,
+        2160
+      ],
+      "backend": "vaapi",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 17117.33517299096,
+      "mean_cpu_ms": 17917.042989666657,
+      "mean_first_frame_ms": 288.9625219007333,
+      "total_decoded_frames": 450,
+      "decoded_fps": 8.763046261820092,
+      "cpu_ms_per_decoded_frame": 119.44695326444437
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        3840,
+        2160
+      ],
+      "backend": "opencv",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 3754.4015229990086,
+      "mean_cpu_ms": 8048.196307333333,
+      "mean_first_frame_ms": 124.12294000387192,
+      "total_decoded_frames": 450,
+      "decoded_fps": 39.953105463312376,
+      "cpu_ms_per_decoded_frame": 53.65464204888888
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        3840,
+        2160
+      ],
+      "backend": "ffmpeg",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 8572.769244511923,
+      "mean_cpu_ms": 10228.382332999992,
+      "mean_first_frame_ms": 265.364080046614,
+      "total_decoded_frames": 450,
+      "decoded_fps": 17.497263220519592,
+      "cpu_ms_per_decoded_frame": 68.18921555333328
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        3840,
+        2160
+      ],
+      "backend": "ffmpeg",
+      "policy": "none",
+      "scale": [
+        1280,
+        720
+      ],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 6203.8183609644575,
+      "mean_cpu_ms": 6365.216440666672,
+      "mean_first_frame_ms": 208.81843256453672,
+      "total_decoded_frames": 450,
+      "decoded_fps": 24.178657606068388,
+      "cpu_ms_per_decoded_frame": 42.43477627111115
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 2348.93166522185,
+      "mean_cpu_ms": 2518.4131153333337,
+      "mean_first_frame_ms": 143.24717285732427,
+      "total_decoded_frames": 450,
+      "decoded_fps": 63.85881812608325,
+      "cpu_ms_per_decoded_frame": 16.78942076888889
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        3840,
+        2160
+      ],
+      "backend": "vaapi-i420",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 8667.41308135291,
+      "mean_cpu_ms": 9506.802605333334,
+      "mean_first_frame_ms": 243.82365308701992,
+      "total_decoded_frames": 450,
+      "decoded_fps": 17.306201815015637,
+      "cpu_ms_per_decoded_frame": 63.37868403555555
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg-sampled",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 1169.396959245205,
+      "mean_cpu_ms": 1250.383444,
+      "mean_first_frame_ms": 124.72648608187835,
+      "total_decoded_frames": 450,
+      "decoded_fps": 128.27124169778799,
+      "cpu_ms_per_decoded_frame": 8.335889626666669
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420-sampled",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 742.2502487897873,
+      "mean_cpu_ms": 631.3969926666667,
+      "mean_first_frame_ms": 106.22389366229375,
+      "total_decoded_frames": 450,
+      "decoded_fps": 202.08817746382664,
+      "cpu_ms_per_decoded_frame": 4.209313284444445
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        3840,
+        2160
+      ],
+      "backend": "vaapi-i420-sampled",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 2619.244083762169,
+      "mean_cpu_ms": 2163.8937996666673,
+      "mean_first_frame_ms": 238.2537250717481,
+      "total_decoded_frames": 450,
+      "decoded_fps": 57.26843135006589,
+      "cpu_ms_per_decoded_frame": 14.42595866444445
+    },
+    {
+      "scene": "testsrc",
+      "size": [
+        3840,
+        2160
+      ],
+      "backend": "ffmpeg-sampled",
+      "policy": "none",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 0,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_elapsed_ms": 4429.656097044547,
+      "mean_cpu_ms": 4755.044588333333,
+      "mean_first_frame_ms": 320.1710854967435,
+      "total_decoded_frames": 450,
+      "decoded_fps": 33.86267392181518,
+      "cpu_ms_per_decoded_frame": 31.70029725555555
+    }
+  ],
+  "errors": [
+    {
+      "backend": "vaapi",
+      "policy": "none",
+      "scale": [
+        1280,
+        720
+      ],
+      "error": "decoder stopped after 0 of 150 frames",
+      "scene": "testsrc",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "encoded_sha256": "735015fdded1a81edc3110f4a1fb4f8f630b94a351a7198c0278dfb8600a4080"
+    },
+    {
+      "backend": "vaapi",
+      "policy": "none",
+      "scale": [
+        1280,
+        720
+      ],
+      "error": "decoder stopped after 0 of 150 frames",
+      "scene": "testsrc",
+      "size": [
+        3840,
+        2160
+      ],
+      "repeat": 0,
+      "encoded_sha256": "7635902770a9e91c071ef99624d4f7adba365724ae9304daffda2f762c87fd38"
+    },
+    {
+      "backend": "vaapi",
+      "policy": "none",
+      "scale": [
+        1280,
+        720
+      ],
+      "error": "decoder stopped after 0 of 150 frames",
+      "scene": "testsrc",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "encoded_sha256": "735015fdded1a81edc3110f4a1fb4f8f630b94a351a7198c0278dfb8600a4080"
+    },
+    {
+      "backend": "vaapi",
+      "policy": "none",
+      "scale": [
+        1280,
+        720
+      ],
+      "error": "decoder stopped after 0 of 150 frames",
+      "scene": "testsrc",
+      "size": [
+        3840,
+        2160
+      ],
+      "repeat": 1,
+      "encoded_sha256": "7635902770a9e91c071ef99624d4f7adba365724ae9304daffda2f762c87fd38"
+    },
+    {
+      "backend": "vaapi",
+      "policy": "none",
+      "scale": [
+        1280,
+        720
+      ],
+      "error": "decoder stopped after 0 of 150 frames",
+      "scene": "testsrc",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "encoded_sha256": "735015fdded1a81edc3110f4a1fb4f8f630b94a351a7198c0278dfb8600a4080"
+    },
+    {
+      "backend": "vaapi",
+      "policy": "none",
+      "scale": [
+        1280,
+        720
+      ],
+      "error": "decoder stopped after 0 of 150 frames",
+      "scene": "testsrc",
+      "size": [
+        3840,
+        2160
+      ],
+      "repeat": 2,
+      "encoded_sha256": "7635902770a9e91c071ef99624d4f7adba365724ae9304daffda2f762c87fd38"
+    }
+  ],
+  "comparisons": []
+}

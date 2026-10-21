@@ -49,7 +49,7 @@ HD_CAPTURE_BACKEND=opencv human-detect serve
 
 核显后端需要系统 FFmpeg、iHD 驱动和 `/dev/dri/renderD128` 访问权限。pn41 测试用临时 `setpriv` 进程赋予 render 主组，保留 apex 等附属组；不永久修改组成员，不以 root 部署服务。使用 `HD_CAPTURE_BACKEND=ffmpeg` 可运行同一管道的 CPU 解码控制组。显式 vaapi 路径失败时重连并返回状态，不切换软件解码；TPU 故障仍按原策略报错。
 
-上例保留 OpenCV 解码。核显实验显式设置 `HD_CAPTURE_BACKEND=vaapi` 或 `vaapi-i420`；本机实测不建议将它们设为默认。OpenCV 路径不需要 FFmpeg 可执行文件或 render 权限。
+上例保留 OpenCV 解码。外部采集路径均在 RGB 转换前按目标 fps 筛帧：CPU 解码设置 `HD_CAPTURE_BACKEND=ffmpeg`，核显解码优先测试 `vaapi-i420`；最初的 `vaapi` 直接色彩转换路径较慢，留作对照。前置筛帧后的核显主要节省 CPU，见最终补测结果。OpenCV 路径不需要 FFmpeg 可执行文件或 render 权限。
 
 PPM 帧头携带实际尺寸，先校验像素上限再分配 RGB 内存。采集进程使用独立进程组，超时、删除流和关闭服务时同时回收 FFmpeg 子进程。静态图片 API 不使用运动复用。
 

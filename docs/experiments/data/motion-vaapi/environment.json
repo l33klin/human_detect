@@ -1,0 +1,50 @@
+{
+  "captured_at_utc": "2026-10-21T03:31:22.176030+00:00",
+  "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+  "python": "3.9.25",
+  "uid": 1000,
+  "gid": 109,
+  "groups": [
+    4,
+    24,
+    27,
+    30,
+    33,
+    46,
+    116,
+    118,
+    1000,
+    1004
+  ],
+  "cpu_model": "Intel(R) Pentium(R) Silver N6005 @ 2.00GHz",
+  "versions": {
+    "numpy": "1.26.4",
+    "opencv-python-headless": "4.11.0.86",
+    "tflite": "2.10.0",
+    "tflite-runtime": "2.5.0.post1",
+    "fastapi": "0.128.8",
+    "pydantic": "2.13.5",
+    "Pillow": "11.3.0",
+    "pytest": "8.4.2"
+  },
+  "ffmpeg": {
+    "exit_code": 0,
+    "stdout": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers\nbuilt with gcc 11 (Ubuntu 11.2.0-19ubuntu1)\nconfiguration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared\nlibavutil      56. 70.100 / 56. 70.100\nlibavcodec     58.134.100 / 58.134.100\nlibavformat    58. 76.100 / 58. 76.100\nlibavdevice    58. 13.100 / 58. 13.100\nlibavfilter     7.110.100 /  7.110.100\nlibswscale      5.  9.100 /  5.  9.100\nlibswresample   3.  9.100 /  3.  9.100\nlibpostproc    55.  9.100 / 55.  9.100\n",
+    "stderr": ""
+  },
+  "driver": {
+    "exit_code": 0,
+    "stdout": "intel-media-va-driver:amd64\t22.3.1+dfsg1-1ubuntu2\nlibedgetpu1-std:amd64\t16.0\nlibva2:amd64\t2.14.0-1\n",
+    "stderr": ""
+  },
+  "render_device": "/dev/dri/renderD128",
+  "render_device_gid": 109,
+  "opencl": {
+    "available": false,
+    "enabled": false,
+    "device": ""
+  },
+  "memory": "MemTotal:        7730032 kB\nMemFree:          423984 kB\nMemAvailable:    1008856 kB\nBuffers:           37180 kB\nCached:           945228 kB\nSwapCached:       146468 kB\nActive:          2942476 kB\nInactive:        1684096 kB\nActive(anon):    2394044 kB\nInactive(anon):  1495888 kB\nActive(file):     548432 kB\nInactive(file):   188208 kB\nUnevictable:       27900 kB\nMlocked:           27812 kB\nSwapTotal:       2097148 kB\nSwapFree:         107828 kB\nDirty:              4216 kB\nWriteback:             4 kB\nAnonPages:       3534716 kB\nMapped:          2544552 kB\nShmem:            236700 kB\nKReclaimable:     146112 kB\nSlab:             306592 kB\nSReclaimable:     146112 kB\nSUnreclaim:       160480 kB\nKernelStack:       20900 kB\nPageTables:        54304 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     5962164 kB\nCommitted_AS:   16715020 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       56224 kB\nVmallocChunk:          0 kB\nPercpu:             5472 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:     2565612 kB\nDirectMap2M:     5621760 kB\n",
+  "loadavg": "2.05 1.87 1.78 3/1303 3566088\n",
+  "note": "Temporary render primary group via setpriv; existing packages only; no persistent permission changes."
+}
