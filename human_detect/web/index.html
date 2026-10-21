@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light" />
+    <title>Human Detect · 实时识别</title>
+    <link rel="stylesheet" href="/ui/style.css" />
+    <script type="module" src="/ui/app.js"></script>
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">Human Detect<span>本地视频识别</span></a>
+      <nav aria-label="主导航">
+        <button class="tab active" data-view="streams" aria-pressed="true">
+          实时画面
+        </button>
+        <button class="tab" data-view="identities" aria-pressed="false">
+          身份管理
+        </button>
+      </nav>
+      <button id="access-button" class="subtle">连接设置</button>
+    </header>
+    <main>
+      <div id="notice" role="alert" hidden></div>
+      <section id="streams-view" aria-labelledby="streams-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">实时监看</p>
+            <h1 id="streams-title">视频流</h1>
+            <p class="description">查看带有目标框和身份信息的实时画面。</p>
+          </div>
+          <button id="add-stream" class="primary">添加视频流</button>
+        </div>
+        <div id="stream-grid" class="stream-grid" aria-live="polite"></div>
+        <div id="streams-empty" class="empty" hidden>
+          <h2>连接第一路摄像头</h2>
+          <p>添加 RTSP 地址，即可在这里观看识别画面，并获得新的 RTSP 地址。</p>
+          <button id="empty-add" class="primary">添加视频流</button>
+        </div>
+      </section>
+      <section id="identities-view" aria-labelledby="identities-title" hidden>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">人脸特征库</p>
+            <h1 id="identities-title">身份管理</h1>
+            <p class="description">
+              添加人脸样本，让画面中的身份显示为对应姓名。
+            </p>
+          </div>
+          <button id="add-identity" class="primary">录入身份</button>
+        </div>
+        <p class="privacy">
+          样本图片只用于本次提取，服务仅保存人脸特征向量。再次使用相同 ID
+          可追加样本。
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>姓名</th>
+                <th>身份 ID</th>
+                <th>样本数量</th>
+                <th><span class="sr-only">操作</span></th>
+              </tr>
+            </thead>
+            <tbody id="identity-list"></tbody>
+          </table>
+        </div>
+        <div id="identities-empty" class="empty" hidden>
+          <h2>还没有录入身份</h2>
+          <p>使用清晰、仅包含一张人脸的照片。未匹配的人脸会标记为“未知”。</p>
+        </div>
+      </section>
+    </main>
+    <dialog id="stream-dialog">
+      <form id="stream-form">
+        <div class="dialog-head">
+          <h2>添加视频流</h2>
+          <button type="button" class="subtle close-dialog" aria-label="关闭">
+            关闭
+          </button>
+        </div>
+        <label
+          >名称<input
+            name="name"
+            maxlength="100"
+            placeholder="例如：门口摄像头"
+            autocomplete="off"
+        /></label>
+        <label
+          >RTSP 地址<input
+            name="source"
+            type="url"
+            required
+            placeholder="rtsp://192.168.1.100:554/live"
+            autocomplete="off"
+            spellcheck="false"
+        /></label>
+        <p class="hint">
+          连接配置会保存，服务重启后自动恢复。视频和截图不会保存。
+        </p>
+        <p class="form-error" role="alert"></p>
+        <button class="primary submit" type="submit">连接并开始识别</button>
+      </form>
+    </dialog>
+    <dialog id="identity-dialog">
+      <form id="identity-form">
+        <div class="dialog-head">
+          <h2>录入身份样本</h2>
+          <button type="button" class="subtle close-dialog" aria-label="关闭">
+            关闭
+          </button>
+        </div>
+        <label
+          >身份 ID<input
+            name="person_id"
+            required
+            pattern="[A-Za-z0-9_-]{1,64}"
+            maxlength="64"
+            placeholder="例如：zhang_san"
+            autocomplete="off"
+        /></label>
+        <label
+          >姓名<input
+            name="name"
+            required
+            maxlength="100"
+            placeholder="例如：张三"
+            autocomplete="off"
+        /></label>
+        <label
+          >人脸样本<input
+            name="sample"
+            type="file"
+            accept="image/jpeg,image/png,image/webp"
+            required
+        /></label>
+        <p class="hint">
+          选择只有一张清晰人脸的照片。相同 ID 会追加样本，并更新姓名。
+        </p>
+        <p class="form-error" role="alert"></p>
+        <button class="primary submit" type="submit">提取并保存特征</button>
+      </form>
+    </dialog>
+    <dialog id="access-dialog">
+      <form id="access-form">
+        <div class="dialog-head">
+          <h2>连接设置</h2>
+          <button type="button" class="subtle close-dialog" aria-label="关闭">
+            关闭
+          </button>
+        </div>
+        <label
+          >API 密钥<input
+            name="key"
+            type="password"
+            autocomplete="off"
+            placeholder="服务未设置密钥时留空"
+        /></label>
+        <p class="hint">
+          密钥仅保存在当前标签页会话中。网页与 API 使用同一个服务地址。
+        </p>
+        <button class="primary submit" type="submit">保存连接设置</button>
+      </form>
+    </dialog>
+    <template id="stream-template">
+      <article class="stream-card">
+        <div class="card-head">
+          <h2></h2>
+          <span class="status"></span>
+        </div>
+        <div class="player">
+          <video
+            autoplay
+            muted
+            playsinline
+            controls
+            aria-label="实时识别视频"
+          ></video>
+          <p class="player-message">正在连接视频…</p>
+        </div>
+        <div class="card-body">
+          <div class="metrics">
+            <span class="format">等待视频信息</span
+            ><span class="targets"></span>
+          </div>
+          <p class="stream-error" role="status"></p>
+          <label class="output-label"
+            >输出 RTSP 地址<input
+              class="output-url"
+              readonly
+              aria-label="输出 RTSP 地址"
+          /></label>
+          <div class="card-actions">
+            <button class="copy subtle">复制地址</button
+            ><button class="toggle subtle">停止</button
+            ><button class="remove danger">删除</button>
+          </div>
+        </div>
+      </article>
+    </template>
+  </body>
+</html>

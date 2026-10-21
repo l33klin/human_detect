@@ -39,11 +39,14 @@ class DetectionResult(BaseModel):
     height: int
     persons: List[Person]
     processing_ms: float
+    frame: Optional[dict] = None
 
 
 class StreamRequest(BaseModel):
     source: Union[int, str]
     fps: Optional[float] = Field(None, gt=0, le=60)
+    name: str = Field("", max_length=100)
+    publish: Optional[bool] = None
 
     @field_validator("source", mode="before")
     @classmethod
@@ -53,5 +56,5 @@ class StreamRequest(BaseModel):
         if isinstance(value, str) and len(value) <= 4096:
             parsed = urlsplit(value)
             if parsed.scheme in {"rtsp", "rtsps", "http", "https"} and parsed.hostname:
-                return value
+                return parsed.geturl()
         raise ValueError("source must be a camera index (0..64) or RTSP/HTTP(S) URL")

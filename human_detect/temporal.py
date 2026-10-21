@@ -90,8 +90,8 @@ class TemporalSession:
     def _gray(self, rgb):
         height, width = rgb.shape[:2]
         scale = min(1, 640 / width, 480 / height)
-        gray = cv2.cvtColor(rgb, cv2.COLOR_RGB2GRAY)
-        return cv2.resize(gray, (round(width * scale), round(height * scale)))
+        small = cv2.resize(rgb, (round(width * scale), round(height * scale)))
+        return cv2.cvtColor(small, cv2.COLOR_RGB2GRAY)
 
     def _seed(self, gray, result):
         gh, gw = gray.shape

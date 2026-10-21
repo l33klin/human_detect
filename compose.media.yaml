@@ -1,0 +1,35 @@
+# docker compose -f compose.yaml -f compose.vaapi.yaml -f compose.media.yaml up --build -d
+services:
+  human-detect:
+    environment:
+      HD_MEDIA_ENABLED: "true"
+      HD_MEDIA_PUBLISH_URL: rtsp://mediamtx:8554
+      HD_MEDIA_WEBRTC_URL: http://mediamtx:8889
+      HD_MEDIA_PUBLIC_HOST: "${HD_MEDIA_PUBLIC_HOST:?Set HD_MEDIA_PUBLIC_HOST to the server LAN IP or hostname}"
+      HD_MEDIA_ENCODER: vaapi
+      HD_MAX_STREAMS: "${HD_MEDIA_MAX_STREAMS:-1}"
+    depends_on:
+      - mediamtx
+    # Two independent, full-resolution shared frame slots fit comfortably here.
+    shm_size: 128m
+
+  mediamtx:
+    image: bluenviron/mediamtx:1.21.2
+    command: ["/mediamtx.yml"]
+    restart: unless-stopped
+    init: true
+    environment:
+      MTX_WEBRTCADDITIONALHOSTS: "${HD_MEDIA_PUBLIC_HOST:?Set HD_MEDIA_PUBLIC_HOST}"
+    ports:
+      - "${HD_BIND_ADDRESS:-127.0.0.1}:${HD_MEDIA_RTSP_PORT:-8554}:8554"
+      - "${HD_BIND_ADDRESS:-127.0.0.1}:8189:8189/udp"
+      - "${HD_BIND_ADDRESS:-127.0.0.1}:8189:8189/tcp"
+    volumes:
+      - ./mediamtx.yml:/mediamtx.yml:ro
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m
+    logging:
+      options:
+        max-size: "10m"
+        max-file: "3"

@@ -7,7 +7,7 @@ ARG DEBIAN_MIRROR=https://deb.debian.org
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
 RUN sed -i "s|http://deb.debian.org|${DEBIAN_MIRROR}|g" /etc/apt/sources.list.d/debian.sources \
     && apt-get update && apt-get install -y --no-install-recommends \
-      ca-certificates libglib2.0-0 libgl1 libusb-1.0-0 ffmpeg \
+      ca-certificates libglib2.0-0 libgl1 libusb-1.0-0 ffmpeg fonts-noto-cjk \
     && if [ "$WITH_VAAPI" = "true" ]; then \
          apt-get install -y --no-install-recommends intel-media-va-driver; \
        fi \

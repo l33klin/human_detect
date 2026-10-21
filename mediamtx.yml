@@ -1,0 +1,16 @@
+logLevel: warn
+rtspTransports: [tcp]
+rtmp: false
+hls: false
+srt: false
+moq: false
+webrtcLocalUDPAddress: :8189
+webrtcLocalTCPAddress: :8189
+# HTTP/WHEP is reached through the application; it is not published by Compose.
+webrtcAddress: :8889
+pathDefaults:
+  source: publisher
+  overridePublisher: false
+  record: false
+paths:
+  "~^annotated/[0-9a-f]{32}$": {}

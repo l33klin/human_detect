@@ -32,9 +32,12 @@ def decoder_command(source, backend, device, timeout_ms, output_fps):
     if isinstance(source, int):
         command += ["-f", "v4l2", "-i", f"/dev/video{source}"]
     else:
-        command += ["-rw_timeout", str(timeout_ms * 1000)]
         if source.startswith(("rtsp://", "rtsps://")):
+            # RTSP timeout option names differ across FFmpeg releases. Its
+            # killable capture process is supervised by the stream watchdog.
             command += ["-rtsp_transport", "tcp"]
+        else:
+            command += ["-rw_timeout", str(timeout_ms * 1000)]
         command += ["-i", source]
     # This filter keeps hardware surfaces on-device; discarded frames never
     # reach hwdownload, RGB conversion or the inter-process pipe.

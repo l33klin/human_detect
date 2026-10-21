@@ -12,6 +12,34 @@ from datetime import datetime, timezone
 
 from human_detect.executor import Busy
 from human_detect.runtime import EngineUnavailable
+from human_detect.stream_store import StreamStore
+
+
+class CaptureStop:
+    """One-way shared flag that remains usable after SIGKILL.
+
+    multiprocessing.Event uses a condition/acknowledgement protocol. A child
+    killed inside wait() can strand its semaphore and block the parent's set().
+    A single shared byte and bounded polling have no lock a child can orphan.
+    """
+
+    def __init__(self, context):
+        self.flag = context.RawValue("b", 0)
+
+    def set(self):
+        self.flag.value = 1
+
+    def is_set(self):
+        return bool(self.flag.value)
+
+    def wait(self, seconds):
+        deadline = time.monotonic() + seconds
+        while not self.is_set():
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                return False
+            time.sleep(min(0.02, remaining))
+        return True
 
 
 def replace_latest(channel, item):
@@ -67,8 +95,10 @@ def capture_frames(
 
 
 class Stream:
-    def __init__(self, source, fps, settings, pipeline, executor, context):
-        self.id = uuid.uuid4().hex
+    def __init__(self, source, fps, settings, pipeline, executor, context, stream_id=None, name=""):
+        self.id = stream_id or uuid.uuid4().hex
+        self.name = name
+        self.started = False
         self.fps, self.settings = fps, settings
         self.context, self.source = context, source
         self.pipeline, self.executor = pipeline, executor
@@ -76,7 +106,7 @@ class Stream:
         self.lock = threading.RLock()
         self.condition = threading.Condition(self.lock)
         self.stop = threading.Event()
-        self.capture_stop = context.Event()
+        self.capture_stop = CaptureStop(context)
         self.frames = context.Queue(maxsize=1)
         self.process = context.Process(
             target=capture_frames,
@@ -92,6 +122,7 @@ class Stream:
 
     def start(self):
         self.process.start()
+        self.started = True
         self.thread.start()
 
     def _make_video_pipeline(self):
@@ -219,6 +250,8 @@ class Stream:
         with self.lock:
             return dict(
                 stream_id=self.id,
+                name=self.name,
+                publish=False,
                 state=self.state,
                 error=self.error,
                 target_fps=self.fps,
@@ -239,9 +272,11 @@ class Stream:
     def close(self):
         self.stop.set()
         self.capture_stop.set()
-        self.thread.join(timeout=self.settings.inference_timeout_seconds + 3)
-        self.process.join(timeout=1)
-        self._terminate_capture()
+        if self.started:
+            self.thread.join(timeout=self.settings.inference_timeout_seconds + 3)
+            self.process.join(timeout=1)
+            self._terminate_capture()
+            self.started = False
         self.frames.close()
         self._set_state("stopped", None)
 
@@ -252,21 +287,102 @@ class StreamManager:
         self.context = multiprocessing.get_context("spawn")
         self.lock = threading.Lock()
         self.streams = {}
+        self.definitions = {}
+        self.store = StreamStore(settings.database.with_name("streams.sqlite3"))
+        for key, definition, enabled in self.store.list():
+            self.definitions[key] = definition
+            stream = self._build(key, definition)
+            self.streams[key] = stream
+            if enabled and (not definition["publish"] or settings.media_enabled):
+                if sum(s.started for s in self.streams.values()) < settings.max_streams:
+                    stream.start()
+                else:
+                    stream._set_state("failed", "stream_limit_reached")
+            elif enabled:
+                stream._set_state("failed", "media_disabled")
+            else:
+                stream._set_state("stopped", None)
 
-    def create(self, source, fps):
+    def _build(self, key, definition):
+        if definition["publish"]:
+            from human_detect.published import PublishedStream
+
+            cls = PublishedStream
+        else:
+            cls = Stream
+        return cls(
+            definition["source"],
+            definition["fps"],
+            self.settings,
+            self.pipeline,
+            self.executor,
+            self.context,
+            key,
+            definition["name"],
+        )
+
+    def _capacity(self):
+        if sum(s.started for s in self.streams.values()) >= self.settings.max_streams:
+            raise Busy("stream limit reached")
+
+    def create(self, source, fps, name="", publish=None):
         with self.lock:
-            if len(self.streams) >= self.settings.max_streams:
-                raise Busy("stream limit reached")
-            stream = Stream(
-                source,
-                fps or self.settings.stream_fps,
-                self.settings,
-                self.pipeline,
-                self.executor,
-                self.context,
+            self._capacity()
+            publish = self.settings.media_enabled if publish is None else publish
+            if publish and not self.settings.media_enabled:
+                raise ValueError("media output is disabled; configure MediaMTX first")
+            if publish and (
+                not isinstance(source, str) or not source.startswith(("rtsp://", "rtsps://"))
+            ):
+                raise ValueError("annotated output requires an RTSP source")
+            key = uuid.uuid4().hex
+            default_fps = self.settings.media_inference_fps if publish else self.settings.stream_fps
+            definition = dict(
+                source=source,
+                fps=fps or default_fps,
+                name=name.strip(),
+                publish=publish,
             )
-            stream.start()
-            self.streams[stream.id] = stream
+            stream = self._build(key, definition)
+            try:
+                self.store.save(key, definition, True)
+                stream.start()
+            except BaseException:
+                stream.close()
+                self.store.delete(key)
+                raise
+            self.definitions[key], self.streams[key] = definition, stream
+            return stream
+
+    def stop_stream(self, key):
+        with self.lock:
+            stream = self.streams.get(key)
+            if not stream:
+                return None
+            self.store.save(key, self.definitions[key], False)
+            stream.close()
+            return stream
+
+    def start_stream(self, key):
+        with self.lock:
+            old = self.streams.get(key)
+            if not old:
+                return None
+            if old.started and old.state not in {"failed", "stopped"}:
+                return old
+            old.close()
+            self._capacity()
+            definition = self.definitions[key]
+            if definition["publish"] and not self.settings.media_enabled:
+                raise ValueError("media output is disabled; configure MediaMTX first")
+            stream = self._build(key, definition)
+            try:
+                self.store.save(key, definition, True)
+                stream.start()
+            except BaseException:
+                stream.close()
+                raise
+            self.streams[key] = stream
             return stream
 
     def get(self, stream_id):
@@ -284,6 +400,8 @@ class StreamManager:
                 return False
             # Keep the capacity reserved until camera/process shutdown completes.
             stream.close()
+            self.store.delete(stream_id)
+            del self.definitions[stream_id]
             del self.streams[stream_id]
             return True
 
@@ -292,3 +410,4 @@ class StreamManager:
             for stream in self.streams.values():
                 stream.close()
             self.streams.clear()
+            self.store.close()

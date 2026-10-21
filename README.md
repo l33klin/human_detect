@@ -1,6 +1,6 @@
 # Human Detect
 
-在 Ubuntu Server 上使用 **Coral M.2 / PCIe Edge TPU**，提供人体检测、人脸检测和已录入人员的身份匹配。支持 RTSP、HTTP(S) 视频流、USB/V4L2 摄像头和静态图片，输出 JSON。
+在 Ubuntu Server 上使用 **Coral M.2 / PCIe Edge TPU**，提供人体检测、人脸检测和已录入人员的身份匹配。支持 RTSP、HTTP(S) 视频流、USB/V4L2 摄像头和静态图片的 JSON 结果；RTSP 还可输出带人体框、人脸框和身份文字的新 RTSP 流，并在网页中实时观看、管理视频源和身份。
 
 视频处理链路：
 
@@ -15,9 +15,11 @@ CPU / 核显解码 → RGB 转换前筛帧 → 运动检查 / 跟踪与定期刷
 - 三个模型都显式加载 Edge TPU delegate。缺失设备、加载失败或推理失败时返回错误，**没有 CPU 推理回退**。
 - 启动前校验模型 SHA-256、检查计算图并进行真实 TPU 预热；拒绝未编译模型和遗留在 CPU 上的卷积等计算。
 - CPU 或核显负责视频解码；CPU 负责运动检查、光流跟踪、图像缩放/裁剪、SSD 框解码/NMS、反量化和小规模向量比较。当前三个模型只有两个检测模型保留反量化和 SSD 后处理算子。
-- 原始图片、视频帧只在内存中处理。SQLite 仅保存 ID、姓名、特征向量和模型指纹；结果不含图像或特征向量。
+- 原始图片、视频帧只在内存中处理。身份库仅保存 ID、姓名、特征向量和模型指纹；独立的 `streams.sqlite3` 保存视频连接配置，文件权限为 `0600`，接口不返回原始连接地址。
 - 单个进程串行访问 TPU。每路视频保留至多一个待处理帧，处理不及时丢弃旧帧；所有输入共享有界推理队列。
-- 视频断线自动重连；采集进程卡住时重建；删除视频源会回收进程。重启服务后需重新添加视频源。
+- 视频断线自动重连；采集进程卡住时重建；删除视频源会回收进程。运行中的视频源在服务重启后自动恢复；手动停止的视频源保持停止。
+
+带标注视频的处理链路与上述 JSON 筛帧链路不同：保留原分辨率和视频帧时间戳，每帧跟踪并绘制，定期在 TPU 上刷新检测，再编码为 H.264/Opus，交给 MediaMTX 分发 RTSP 与 WebRTC。它不在 RGB 转换前降到识别帧率。部署、接口、对齐语义和容量边界见 [RTSP 输出与前端说明](docs/annotated-streams.md)。
 
 ## Ubuntu 部署
 
@@ -52,7 +54,7 @@ curl http://127.0.0.1:8000/health/ready
 
 构建时若下载较慢，可用 `docker compose build --build-arg DEBIAN_MIRROR=https://mirrors.aliyun.com --build-arg PIP_INDEX_URL=https://mirrors.aliyun.com/pypi/simple/` 选择镜像站；默认使用 Debian 官方 HTTPS 源和 PyPI。
 
-局域网访问：在 `.env` 中设置 `HD_BIND_ADDRESS=0.0.0.0`、`HD_APEX_GID=<设备组 GID>` 和 `HD_API_KEY=<自定义口令>`，再启动 Compose。携带 `Authorization: Bearer <口令>` 调用所有接口；`/health/live` 无需口令。默认仅监听本机，口令为空。
+局域网访问：在 `.env` 中设置 `HD_BIND_ADDRESS=0.0.0.0`、`HD_APEX_GID=<设备组 GID>` 和 `HD_API_KEY=<自定义口令>`，再启动 Compose。API 携带 `Authorization: Bearer <口令>`；网页在“连接设置”中填写口令。首页、静态资源和 `/health/live` 无需口令。默认仅监听本机，口令为空。
 
 USB 摄像头需在 `compose.yaml` 的 `devices` 中增加 `/dev/video0:/dev/video0`，并在 `group_add` 中增加该设备所属组的数字 GID。RTSP/HTTP 视频流不需要映射摄像头设备。服务只使用一个 Uvicorn worker，请勿增加 worker 数量共享同一块 TPU。
 
@@ -170,6 +172,8 @@ curl -X POST http://127.0.0.1:8000/v1/images/analyze \
 
 ### 视频流
 
+默认 JSON 模式如下；启用视频输出后提交 RTSP 会默认生成新流，使用 `"publish":false` 可明确只获取 JSON。新流和前端部署见 [说明](docs/annotated-streams.md)。
+
 ```bash
 curl -X POST http://127.0.0.1:8000/v1/streams \
   -H 'Content-Type: application/json' \
@@ -183,6 +187,8 @@ curl -X POST http://127.0.0.1:8000/v1/streams \
 ```bash
 curl http://127.0.0.1:8000/v1/streams
 curl http://127.0.0.1:8000/v1/streams/<stream_id>
+curl -X POST http://127.0.0.1:8000/v1/streams/<stream_id>/stop
+curl -X POST http://127.0.0.1:8000/v1/streams/<stream_id>/start
 
 # 每行一个 JSON，包含状态、sequence、processed、skipped 和 latest 分析结果。
 curl -N http://127.0.0.1:8000/v1/streams/<stream_id>/events

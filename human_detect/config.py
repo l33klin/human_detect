@@ -35,3 +35,14 @@ class Settings(BaseSettings):
     motion_changed_fraction: float = Field(0.002, gt=0, le=1)
     capture_backend: Literal["ffmpeg", "vaapi"] = "ffmpeg"
     vaapi_device: str = "/dev/dri/renderD128"
+    media_enabled: bool = False
+    media_inference_fps: float = Field(3, gt=0, le=60)
+    media_publish_url: str = "rtsp://127.0.0.1:8554"
+    media_webrtc_url: str = "http://127.0.0.1:8889"
+    media_public_host: str = ""
+    media_rtsp_port: int = Field(8554, ge=1, le=65535)
+    media_encoder: Literal["vaapi", "libx264"] = "vaapi"
+    media_bitrate: int = Field(4_000_000, ge=100_000, le=50_000_000)
+    media_qp: int = Field(24, ge=1, le=51)
+    media_max_lag_seconds: float = Field(0.75, gt=0, le=5)
+    media_font: str = "/usr/share/fonts/opentype/noto/NotoSansCJK-Regular.ttc"
