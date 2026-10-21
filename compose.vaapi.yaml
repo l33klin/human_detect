@@ -1,0 +1,15 @@
+# Optional overlay: docker compose -f compose.yaml -f compose.vaapi.yaml up --build
+# The host's render GID must be supplied explicitly. This does not change host groups.
+services:
+  human-detect:
+    build:
+      args:
+        WITH_VAAPI: "true"
+    environment:
+      HD_CAPTURE_BACKEND: vaapi
+      HD_TEMPORAL_ENABLED: "true"
+      HD_EMPTY_SCENE_ENABLED: "true"
+    devices:
+      - /dev/dri/renderD128:/dev/dri/renderD128
+    group_add:
+      - "${HD_RENDER_GID:?Set HD_RENDER_GID to the numeric group ID of /dev/dri/renderD128}"

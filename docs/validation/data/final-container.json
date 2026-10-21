@@ -1,0 +1,101 @@
+{
+  "doctor": {
+    "system": "Linux",
+    "release": "5.15.0-181-generic",
+    "architecture": "x86_64",
+    "python": "3.9.25",
+    "libedgetpu": "libedgetpu.so.1",
+    "pci_devices": [
+      "/dev/apex_0"
+    ],
+    "models": {
+      "person": {
+        "sha256": "c2e24885894a7cc2760746af400f747ec493c12c379bc7b2785bbcbd26a08a8c",
+        "host_ops": [
+          "DEQUANTIZE",
+          "TFLite_Detection_PostProcess"
+        ]
+      },
+      "face": {
+        "sha256": "fe207aa3711980c1cbbdae7cdd18fc1011d3f98ec367c0b4034e3033409c0ef1",
+        "host_ops": [
+          "DEQUANTIZE",
+          "TFLite_Detection_PostProcess"
+        ]
+      },
+      "embedding": {
+        "sha256": "01f6f5814e122261632c3156ef6ac3c5eea051bae707352cc64b96894a278cac",
+        "host_ops": []
+      }
+    },
+    "inference_tested": true
+  },
+  "video_api": {
+    "results": [
+      {
+        "backend": "ffmpeg",
+        "processed": 7,
+        "size": [
+          1920,
+          1080
+        ],
+        "known_identity": true,
+        "motion_metadata": {
+          "reason": "occupied",
+          "changed_fraction": null,
+          "motion_enabled": true,
+          "empty_scene_seconds": 2.0
+        },
+        "kill_parent": false,
+        "capture_and_decoder_released": true,
+        "cpu_dnn_fallback": false,
+        "live_identity_deletion_invalidates_cache": true
+      },
+      {
+        "backend": "vaapi",
+        "processed": 7,
+        "size": [
+          1920,
+          1080
+        ],
+        "known_identity": true,
+        "motion_metadata": {
+          "reason": "occupied",
+          "changed_fraction": null,
+          "motion_enabled": true,
+          "empty_scene_seconds": 2.0
+        },
+        "kill_parent": false,
+        "capture_and_decoder_released": true,
+        "cpu_dnn_fallback": false,
+        "live_identity_deletion_invalidates_cache": true
+      },
+      {
+        "backend": "vaapi",
+        "processed": 7,
+        "size": [
+          1920,
+          1080
+        ],
+        "known_identity": true,
+        "motion_metadata": {
+          "reason": "occupied",
+          "changed_fraction": null,
+          "motion_enabled": true,
+          "empty_scene_seconds": 2.0
+        },
+        "kill_parent": true,
+        "capture_and_decoder_released": true,
+        "cpu_dnn_fallback": false,
+        "live_identity_deletion_invalidates_cache": true
+      }
+    ],
+    "invalid_device_no_fallback": true
+  },
+  "uid": 10001,
+  "ffmpeg": "ffmpeg version 5.1.9-0+deb12u1 Copyright (c) 2000-2026 the FFmpeg developers",
+  "iHD_version": "23.1.1+dfsg1-1",
+  "runtime_sha256": "686c861ec1601a1dcb81bba698ec919f1ebe07720c189baf26a8f952aa261ced",
+  "runtime_wheel_version": "2.5.0.post1",
+  "read_only_container": true
+}

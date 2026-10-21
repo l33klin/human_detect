@@ -1,0 +1,22 @@
+{
+  "images": {
+    "runs": 20,
+    "persons": 1,
+    "faces": 1,
+    "processing_p50_ms": 63.73,
+    "processing_p95_ms": 65.3,
+    "same_image_enrollment_match": true
+  },
+  "video": {
+    "protocol": "HTTP MJPEG",
+    "target_fps": 5.0,
+    "elapsed_seconds": 8.01,
+    "processed": 35,
+    "observed_fps_including_startup": 4.37,
+    "skipped": 0,
+    "state": "running"
+  },
+  "deleted_identity_returns_unknown": true,
+  "ready_after_test": true,
+  "note": "Same-image matching verifies integration, not recognition accuracy."
+}

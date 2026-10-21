@@ -1,0 +1,77 @@
+{
+  "results": [
+    {
+      "backend": "ffmpeg",
+      "processed": 6,
+      "size": [
+        1920,
+        1080
+      ],
+      "known_identity": true,
+      "motion_metadata": {
+        "reason": "occupied",
+        "changed_fraction": null,
+        "motion_enabled": true,
+        "empty_scene_seconds": 2.0
+      },
+      "kill_parent": false,
+      "capture_and_decoder_released": true,
+      "cpu_dnn_fallback": false
+    },
+    {
+      "backend": "vaapi",
+      "processed": 6,
+      "size": [
+        1920,
+        1080
+      ],
+      "known_identity": true,
+      "motion_metadata": {
+        "reason": "occupied",
+        "changed_fraction": null,
+        "motion_enabled": true,
+        "empty_scene_seconds": 2.0
+      },
+      "kill_parent": false,
+      "capture_and_decoder_released": true,
+      "cpu_dnn_fallback": false
+    },
+    {
+      "backend": "vaapi",
+      "processed": 6,
+      "size": [
+        1920,
+        1080
+      ],
+      "known_identity": true,
+      "motion_metadata": {
+        "reason": "occupied",
+        "changed_fraction": null,
+        "motion_enabled": true,
+        "empty_scene_seconds": 2.0
+      },
+      "kill_parent": true,
+      "capture_and_decoder_released": true,
+      "cpu_dnn_fallback": false
+    },
+    {
+      "backend": "vaapi-i420",
+      "processed": 6,
+      "size": [
+        1920,
+        1080
+      ],
+      "known_identity": true,
+      "motion_metadata": {
+        "reason": "occupied",
+        "changed_fraction": null,
+        "motion_enabled": true,
+        "empty_scene_seconds": 2.0
+      },
+      "kill_parent": false,
+      "capture_and_decoder_released": true,
+      "cpu_dnn_fallback": false
+    }
+  ],
+  "invalid_device_no_fallback": true
+}

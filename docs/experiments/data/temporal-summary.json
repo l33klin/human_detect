@@ -1,0 +1,4447 @@
+{
+  "raw_sha256": "43da15230f4318fcaaa0bd2fdb845bf7fb3b5d16333897f06a7fd1dcc0e05200",
+  "per_repeat": [
+    {
+      "variant": "baseline",
+      "scenario": "static",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 62.19,
+        "p50_ms": 62.42,
+        "p95_ms": 66.253
+      },
+      "processing_fps": 16.08,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "static",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 14.607,
+        "p50_ms": 4.678,
+        "p95_ms": 57.364
+      },
+      "processing_fps": 68.458,
+      "calls": {
+        "person": 8,
+        "face": 8,
+        "embedding": 2
+      },
+      "speedup": 4.258,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "translation",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 62.751,
+        "p50_ms": 61.662,
+        "p95_ms": 70.447
+      },
+      "processing_fps": 15.936,
+      "calls": {
+        "person": 40,
+        "face": 45,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 45,
+        "candidate_persons": 45,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 45,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "translation",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 17.888,
+        "p50_ms": 5.252,
+        "p95_ms": 73.335
+      },
+      "processing_fps": 55.905,
+      "calls": {
+        "person": 8,
+        "face": 9,
+        "embedding": 5
+      },
+      "speedup": 3.508,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 45,
+        "candidate_persons": 45,
+        "same_person_count_frames": 36,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 43,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 0.98197,
+        "mean_face_iou": 0.96758
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "occlusion",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 15.848,
+        "p50_ms": 4.352,
+        "p95_ms": 55.641
+      },
+      "processing_fps": 63.1,
+      "calls": {
+        "person": 9,
+        "face": 9,
+        "embedding": 2
+      },
+      "speedup": 3.637,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 31,
+        "full_detection_frames": 9,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "occlusion",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 57.633,
+        "p50_ms": 60.759,
+        "p95_ms": 65.325
+      },
+      "processing_fps": 17.351,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 28
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "switch",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 71.8,
+        "p50_ms": 63.443,
+        "p95_ms": 126.45
+      },
+      "processing_fps": 13.928,
+      "calls": {
+        "person": 40,
+        "face": 70,
+        "embedding": 70
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "switch",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 25.483,
+        "p50_ms": 13.535,
+        "p95_ms": 111.324
+      },
+      "processing_fps": 39.241,
+      "calls": {
+        "person": 14,
+        "face": 17,
+        "embedding": 6
+      },
+      "speedup": 2.818,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 26,
+        "full_detection_frames": 14,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "two_people",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 33.587,
+        "p50_ms": 15.541,
+        "p95_ms": 104.027
+      },
+      "processing_fps": 29.773,
+      "calls": {
+        "person": 8,
+        "face": 40,
+        "embedding": 6
+      },
+      "speedup": 3.476,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "two_people",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 116.738,
+        "p50_ms": 117.107,
+        "p95_ms": 121.827
+      },
+      "processing_fps": 8.566,
+      "calls": {
+        "person": 40,
+        "face": 200,
+        "embedding": 120
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "static",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 61.836,
+        "p50_ms": 61.72,
+        "p95_ms": 65.778
+      },
+      "processing_fps": 16.172,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "static",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 16.022,
+        "p50_ms": 4.997,
+        "p95_ms": 57.407
+      },
+      "processing_fps": 62.416,
+      "calls": {
+        "person": 8,
+        "face": 8,
+        "embedding": 2
+      },
+      "speedup": 3.859,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "translation",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 18.121,
+        "p50_ms": 5.657,
+        "p95_ms": 71.539
+      },
+      "processing_fps": 55.183,
+      "calls": {
+        "person": 8,
+        "face": 9,
+        "embedding": 5
+      },
+      "speedup": 3.382,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 45,
+        "same_person_count_frames": 34,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 41,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 0.97938,
+        "mean_face_iou": 0.97111
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "translation",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 61.291,
+        "p50_ms": 61.181,
+        "p95_ms": 67.768
+      },
+      "processing_fps": 16.316,
+      "calls": {
+        "person": 40,
+        "face": 43,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 43,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 43,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "occlusion",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 16.365,
+        "p50_ms": 5.13,
+        "p95_ms": 59.016
+      },
+      "processing_fps": 61.107,
+      "calls": {
+        "person": 9,
+        "face": 9,
+        "embedding": 2
+      },
+      "speedup": 3.437,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 31,
+        "full_detection_frames": 9,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "occlusion",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 56.248,
+        "p50_ms": 59.659,
+        "p95_ms": 64.227
+      },
+      "processing_fps": 17.778,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 28
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "switch",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 22.454,
+        "p50_ms": 10.474,
+        "p95_ms": 93.015
+      },
+      "processing_fps": 44.535,
+      "calls": {
+        "person": 14,
+        "face": 17,
+        "embedding": 6
+      },
+      "speedup": 3.217,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 26,
+        "full_detection_frames": 14,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "switch",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 72.242,
+        "p50_ms": 63.095,
+        "p95_ms": 124.803
+      },
+      "processing_fps": 13.842,
+      "calls": {
+        "person": 40,
+        "face": 70,
+        "embedding": 70
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "two_people",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 140.455,
+        "p50_ms": 140.664,
+        "p95_ms": 145.405
+      },
+      "processing_fps": 7.12,
+      "calls": {
+        "person": 40,
+        "face": 200,
+        "embedding": 200
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "two_people",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 36.816,
+        "p50_ms": 16.272,
+        "p95_ms": 108.119
+      },
+      "processing_fps": 27.162,
+      "calls": {
+        "person": 8,
+        "face": 40,
+        "embedding": 10
+      },
+      "speedup": 3.815,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "static",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 17.525,
+        "p50_ms": 6.774,
+        "p95_ms": 58.649
+      },
+      "processing_fps": 57.06,
+      "calls": {
+        "person": 8,
+        "face": 8,
+        "embedding": 2
+      },
+      "speedup": 3.59,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "static",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 62.906,
+        "p50_ms": 62.892,
+        "p95_ms": 66.533
+      },
+      "processing_fps": 15.897,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "translation",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 20.843,
+        "p50_ms": 7.753,
+        "p95_ms": 73.036
+      },
+      "processing_fps": 47.979,
+      "calls": {
+        "person": 8,
+        "face": 9,
+        "embedding": 8
+      },
+      "speedup": 2.909,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 45,
+        "same_person_count_frames": 36,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 42,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 0.98021,
+        "mean_face_iou": 0.96745
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "translation",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 60.632,
+        "p50_ms": 60.256,
+        "p95_ms": 67.368
+      },
+      "processing_fps": 16.493,
+      "calls": {
+        "person": 40,
+        "face": 43,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 43,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 43,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "occlusion",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 18.343,
+        "p50_ms": 7.246,
+        "p95_ms": 58.704
+      },
+      "processing_fps": 54.518,
+      "calls": {
+        "person": 9,
+        "face": 9,
+        "embedding": 2
+      },
+      "speedup": 3.073,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 31,
+        "full_detection_frames": 9,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "occlusion",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 56.364,
+        "p50_ms": 59.041,
+        "p95_ms": 63.327
+      },
+      "processing_fps": 17.742,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 28
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "switch",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 71.036,
+        "p50_ms": 61.541,
+        "p95_ms": 122.89
+      },
+      "processing_fps": 14.077,
+      "calls": {
+        "person": 40,
+        "face": 70,
+        "embedding": 70
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "switch",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 24.369,
+        "p50_ms": 11.989,
+        "p95_ms": 81.107
+      },
+      "processing_fps": 41.036,
+      "calls": {
+        "person": 14,
+        "face": 17,
+        "embedding": 6
+      },
+      "speedup": 2.915,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 26,
+        "full_detection_frames": 14,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "two_people",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 39.152,
+        "p50_ms": 18.662,
+        "p95_ms": 111.047
+      },
+      "processing_fps": 25.541,
+      "calls": {
+        "person": 8,
+        "face": 40,
+        "embedding": 10
+      },
+      "speedup": 3.582,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "two_people",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "processing": {
+        "mean_ms": 140.261,
+        "p50_ms": 140.288,
+        "p95_ms": 144.548
+      },
+      "processing_fps": 7.13,
+      "calls": {
+        "person": 40,
+        "face": 200,
+        "embedding": 200
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "static",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 15.479,
+        "p50_ms": 4.172,
+        "p95_ms": 57.634
+      },
+      "processing_fps": 64.605,
+      "calls": {
+        "person": 8,
+        "face": 8,
+        "embedding": 2
+      },
+      "speedup": 4.073,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "static",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 63.042,
+        "p50_ms": 64.171,
+        "p95_ms": 66.014
+      },
+      "processing_fps": 15.863,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "translation",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 17.021,
+        "p50_ms": 5.092,
+        "p95_ms": 68.642
+      },
+      "processing_fps": 58.75,
+      "calls": {
+        "person": 8,
+        "face": 9,
+        "embedding": 5
+      },
+      "speedup": 3.725,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 45,
+        "candidate_persons": 45,
+        "same_person_count_frames": 36,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 43,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 0.98197,
+        "mean_face_iou": 0.96758
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "translation",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 63.41,
+        "p50_ms": 62.766,
+        "p95_ms": 70.346
+      },
+      "processing_fps": 15.77,
+      "calls": {
+        "person": 40,
+        "face": 45,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 45,
+        "candidate_persons": 45,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 45,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "occlusion",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 16.641,
+        "p50_ms": 4.242,
+        "p95_ms": 58.864
+      },
+      "processing_fps": 60.094,
+      "calls": {
+        "person": 9,
+        "face": 9,
+        "embedding": 2
+      },
+      "speedup": 3.341,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 31,
+        "full_detection_frames": 9,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "occlusion",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 55.595,
+        "p50_ms": 59.084,
+        "p95_ms": 65.157
+      },
+      "processing_fps": 17.987,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 28
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "switch",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 21.818,
+        "p50_ms": 12.289,
+        "p95_ms": 79.784
+      },
+      "processing_fps": 45.833,
+      "calls": {
+        "person": 14,
+        "face": 17,
+        "embedding": 6
+      },
+      "speedup": 3.281,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 26,
+        "full_detection_frames": 14,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "switch",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 71.587,
+        "p50_ms": 61.908,
+        "p95_ms": 124.662
+      },
+      "processing_fps": 13.969,
+      "calls": {
+        "person": 40,
+        "face": 70,
+        "embedding": 70
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "two_people",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 33.677,
+        "p50_ms": 15.116,
+        "p95_ms": 101.09
+      },
+      "processing_fps": 29.694,
+      "calls": {
+        "person": 8,
+        "face": 40,
+        "embedding": 6
+      },
+      "speedup": 3.439,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "two_people",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 115.82,
+        "p50_ms": 115.612,
+        "p95_ms": 123.253
+      },
+      "processing_fps": 8.634,
+      "calls": {
+        "person": 40,
+        "face": 200,
+        "embedding": 120
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "static",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 15.715,
+        "p50_ms": 4.976,
+        "p95_ms": 58.348
+      },
+      "processing_fps": 63.634,
+      "calls": {
+        "person": 8,
+        "face": 8,
+        "embedding": 2
+      },
+      "speedup": 3.97,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "static",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 62.394,
+        "p50_ms": 62.94,
+        "p95_ms": 65.462
+      },
+      "processing_fps": 16.027,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "translation",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 18.105,
+        "p50_ms": 5.665,
+        "p95_ms": 72.938
+      },
+      "processing_fps": 55.232,
+      "calls": {
+        "person": 8,
+        "face": 9,
+        "embedding": 5
+      },
+      "speedup": 3.419,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 45,
+        "same_person_count_frames": 34,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 41,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 0.97938,
+        "mean_face_iou": 0.97111
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "translation",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 61.902,
+        "p50_ms": 61.549,
+        "p95_ms": 66.462
+      },
+      "processing_fps": 16.155,
+      "calls": {
+        "person": 40,
+        "face": 43,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 43,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 43,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "occlusion",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 57.071,
+        "p50_ms": 59.966,
+        "p95_ms": 64.498
+      },
+      "processing_fps": 17.522,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 28
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "occlusion",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 16.654,
+        "p50_ms": 5.116,
+        "p95_ms": 61.18
+      },
+      "processing_fps": 60.044,
+      "calls": {
+        "person": 9,
+        "face": 9,
+        "embedding": 2
+      },
+      "speedup": 3.427,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 31,
+        "full_detection_frames": 9,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "switch",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 70.814,
+        "p50_ms": 61.749,
+        "p95_ms": 126.288
+      },
+      "processing_fps": 14.122,
+      "calls": {
+        "person": 40,
+        "face": 70,
+        "embedding": 70
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "switch",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 22.805,
+        "p50_ms": 10.117,
+        "p95_ms": 92.038
+      },
+      "processing_fps": 43.849,
+      "calls": {
+        "person": 14,
+        "face": 17,
+        "embedding": 6
+      },
+      "speedup": 3.105,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 26,
+        "full_detection_frames": 14,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "two_people",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 140.606,
+        "p50_ms": 140.841,
+        "p95_ms": 145.324
+      },
+      "processing_fps": 7.112,
+      "calls": {
+        "person": 40,
+        "face": 200,
+        "embedding": 200
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "two_people",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 36.764,
+        "p50_ms": 16.552,
+        "p95_ms": 108.815
+      },
+      "processing_fps": 27.2,
+      "calls": {
+        "person": 8,
+        "face": 40,
+        "embedding": 10
+      },
+      "speedup": 3.825,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "static",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 61.241,
+        "p50_ms": 60.963,
+        "p95_ms": 65.141
+      },
+      "processing_fps": 16.329,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "static",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 17.476,
+        "p50_ms": 6.754,
+        "p95_ms": 59.192
+      },
+      "processing_fps": 57.221,
+      "calls": {
+        "person": 8,
+        "face": 8,
+        "embedding": 2
+      },
+      "speedup": 3.504,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "translation",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 21.428,
+        "p50_ms": 7.518,
+        "p95_ms": 75.701
+      },
+      "processing_fps": 46.667,
+      "calls": {
+        "person": 8,
+        "face": 9,
+        "embedding": 8
+      },
+      "speedup": 2.84,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 45,
+        "same_person_count_frames": 36,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 42,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 0.98021,
+        "mean_face_iou": 0.96745
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "translation",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 60.849,
+        "p50_ms": 60.458,
+        "p95_ms": 67.1
+      },
+      "processing_fps": 16.434,
+      "calls": {
+        "person": 40,
+        "face": 43,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 43,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 43,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "occlusion",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 56.732,
+        "p50_ms": 60.448,
+        "p95_ms": 65.03
+      },
+      "processing_fps": 17.627,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 28
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "occlusion",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 18.596,
+        "p50_ms": 6.785,
+        "p95_ms": 59.285
+      },
+      "processing_fps": 53.776,
+      "calls": {
+        "person": 9,
+        "face": 9,
+        "embedding": 2
+      },
+      "speedup": 3.051,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 31,
+        "full_detection_frames": 9,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "switch",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 24.15,
+        "p50_ms": 12.179,
+        "p95_ms": 88.977
+      },
+      "processing_fps": 41.408,
+      "calls": {
+        "person": 14,
+        "face": 17,
+        "embedding": 6
+      },
+      "speedup": 2.883,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 26,
+        "full_detection_frames": 14,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "switch",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 69.626,
+        "p50_ms": 62.048,
+        "p95_ms": 123.323
+      },
+      "processing_fps": 14.362,
+      "calls": {
+        "person": 40,
+        "face": 70,
+        "embedding": 70
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "two_people",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 140.824,
+        "p50_ms": 141.234,
+        "p95_ms": 146.68
+      },
+      "processing_fps": 7.101,
+      "calls": {
+        "person": 40,
+        "face": 200,
+        "embedding": 200
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "two_people",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "processing": {
+        "mean_ms": 39.475,
+        "p50_ms": 18.523,
+        "p95_ms": 134.843
+      },
+      "processing_fps": 25.332,
+      "calls": {
+        "person": 8,
+        "face": 40,
+        "embedding": 10
+      },
+      "speedup": 3.567,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "static",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 15.094,
+        "p50_ms": 4.127,
+        "p95_ms": 56.072
+      },
+      "processing_fps": 66.25,
+      "calls": {
+        "person": 8,
+        "face": 8,
+        "embedding": 2
+      },
+      "speedup": 4.165,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "static",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 62.859,
+        "p50_ms": 62.923,
+        "p95_ms": 65.897
+      },
+      "processing_fps": 15.909,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "translation",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 17.175,
+        "p50_ms": 5.026,
+        "p95_ms": 69.969
+      },
+      "processing_fps": 58.225,
+      "calls": {
+        "person": 8,
+        "face": 9,
+        "embedding": 5
+      },
+      "speedup": 3.655,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 45,
+        "candidate_persons": 45,
+        "same_person_count_frames": 36,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 43,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 0.98197,
+        "mean_face_iou": 0.96758
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "translation",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 62.771,
+        "p50_ms": 61.774,
+        "p95_ms": 71.643
+      },
+      "processing_fps": 15.931,
+      "calls": {
+        "person": 40,
+        "face": 45,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 45,
+        "candidate_persons": 45,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 45,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "occlusion",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 17.043,
+        "p50_ms": 4.549,
+        "p95_ms": 62.065
+      },
+      "processing_fps": 58.674,
+      "calls": {
+        "person": 9,
+        "face": 9,
+        "embedding": 2
+      },
+      "speedup": 3.386,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 31,
+        "full_detection_frames": 9,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "occlusion",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 57.71,
+        "p50_ms": 61.37,
+        "p95_ms": 65.342
+      },
+      "processing_fps": 17.328,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 28
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "switch",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 21.515,
+        "p50_ms": 9.983,
+        "p95_ms": 81.738
+      },
+      "processing_fps": 46.479,
+      "calls": {
+        "person": 14,
+        "face": 17,
+        "embedding": 6
+      },
+      "speedup": 3.378,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 26,
+        "full_detection_frames": 14,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "switch",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 72.683,
+        "p50_ms": 63.743,
+        "p95_ms": 124.364
+      },
+      "processing_fps": 13.758,
+      "calls": {
+        "person": 40,
+        "face": 70,
+        "embedding": 70
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "two_people",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 115.442,
+        "p50_ms": 117.447,
+        "p95_ms": 122.617
+      },
+      "processing_fps": 8.662,
+      "calls": {
+        "person": 40,
+        "face": 200,
+        "embedding": 120
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "two_people",
+      "size": [
+        512,
+        600
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 33.849,
+        "p50_ms": 15.132,
+        "p95_ms": 102.304
+      },
+      "processing_fps": 29.543,
+      "calls": {
+        "person": 8,
+        "face": 40,
+        "embedding": 6
+      },
+      "speedup": 3.41,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "static",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 15.574,
+        "p50_ms": 4.992,
+        "p95_ms": 57.302
+      },
+      "processing_fps": 64.211,
+      "calls": {
+        "person": 8,
+        "face": 8,
+        "embedding": 2
+      },
+      "speedup": 3.969,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "static",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 61.817,
+        "p50_ms": 61.895,
+        "p95_ms": 65.209
+      },
+      "processing_fps": 16.177,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "translation",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 61.551,
+        "p50_ms": 61.67,
+        "p95_ms": 65.944
+      },
+      "processing_fps": 16.247,
+      "calls": {
+        "person": 40,
+        "face": 43,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 43,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 43,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "translation",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 17.883,
+        "p50_ms": 5.708,
+        "p95_ms": 71.833
+      },
+      "processing_fps": 55.919,
+      "calls": {
+        "person": 8,
+        "face": 9,
+        "embedding": 5
+      },
+      "speedup": 3.442,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 45,
+        "same_person_count_frames": 34,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 41,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 0.97938,
+        "mean_face_iou": 0.97111
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "occlusion",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 57.642,
+        "p50_ms": 60.48,
+        "p95_ms": 64.651
+      },
+      "processing_fps": 17.349,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 28
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "occlusion",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 17.1,
+        "p50_ms": 4.974,
+        "p95_ms": 57.777
+      },
+      "processing_fps": 58.48,
+      "calls": {
+        "person": 9,
+        "face": 9,
+        "embedding": 2
+      },
+      "speedup": 3.371,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 31,
+        "full_detection_frames": 9,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "switch",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 23.498,
+        "p50_ms": 10.839,
+        "p95_ms": 91.257
+      },
+      "processing_fps": 42.556,
+      "calls": {
+        "person": 14,
+        "face": 17,
+        "embedding": 6
+      },
+      "speedup": 3.039,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 26,
+        "full_detection_frames": 14,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "switch",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 71.413,
+        "p50_ms": 61.622,
+        "p95_ms": 124.464
+      },
+      "processing_fps": 14.003,
+      "calls": {
+        "person": 40,
+        "face": 70,
+        "embedding": 70
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "two_people",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 139.406,
+        "p50_ms": 140.491,
+        "p95_ms": 146.426
+      },
+      "processing_fps": 7.173,
+      "calls": {
+        "person": 40,
+        "face": 200,
+        "embedding": 200
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "two_people",
+      "size": [
+        1280,
+        720
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 37.211,
+        "p50_ms": 16.744,
+        "p95_ms": 111.733
+      },
+      "processing_fps": 26.874,
+      "calls": {
+        "person": 8,
+        "face": 40,
+        "embedding": 10
+      },
+      "speedup": 3.746,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "static",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 17.471,
+        "p50_ms": 6.832,
+        "p95_ms": 60.072
+      },
+      "processing_fps": 57.237,
+      "calls": {
+        "person": 8,
+        "face": 8,
+        "embedding": 2
+      },
+      "speedup": 3.527,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "static",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 61.621,
+        "p50_ms": 61.593,
+        "p95_ms": 64.703
+      },
+      "processing_fps": 16.228,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "translation",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 21.204,
+        "p50_ms": 7.548,
+        "p95_ms": 75.944
+      },
+      "processing_fps": 47.162,
+      "calls": {
+        "person": 8,
+        "face": 9,
+        "embedding": 8
+      },
+      "speedup": 2.871,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 45,
+        "same_person_count_frames": 36,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 42,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 0.98021,
+        "mean_face_iou": 0.96745
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "translation",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 60.879,
+        "p50_ms": 60.549,
+        "p95_ms": 66.081
+      },
+      "processing_fps": 16.426,
+      "calls": {
+        "person": 40,
+        "face": 43,
+        "embedding": 40
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 43,
+        "candidate_persons": 43,
+        "same_person_count_frames": 40,
+        "reference_faces": 40,
+        "candidate_faces": 40,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 43,
+        "reference_faces_in_matched_bodies": 40,
+        "matched_faces_iou50": 40,
+        "same_identity_faces": 40,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "occlusion",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 18.417,
+        "p50_ms": 6.748,
+        "p95_ms": 57.867
+      },
+      "processing_fps": 54.297,
+      "calls": {
+        "person": 9,
+        "face": 9,
+        "embedding": 2
+      },
+      "speedup": 3.148,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 31,
+        "full_detection_frames": 9,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "occlusion",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 57.973,
+        "p50_ms": 60.581,
+        "p95_ms": 66.001
+      },
+      "processing_fps": 17.25,
+      "calls": {
+        "person": 40,
+        "face": 40,
+        "embedding": 28
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 40,
+        "candidate_persons": 40,
+        "same_person_count_frames": 40,
+        "reference_faces": 28,
+        "candidate_faces": 28,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 40,
+        "reference_faces_in_matched_bodies": 28,
+        "matched_faces_iou50": 28,
+        "same_identity_faces": 28,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "switch",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 72.202,
+        "p50_ms": 62.924,
+        "p95_ms": 126.598
+      },
+      "processing_fps": 13.85,
+      "calls": {
+        "person": 40,
+        "face": 70,
+        "embedding": 70
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "switch",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 24.436,
+        "p50_ms": 12.087,
+        "p95_ms": 85.974
+      },
+      "processing_fps": 40.923,
+      "calls": {
+        "person": 14,
+        "face": 17,
+        "embedding": 6
+      },
+      "speedup": 2.955,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 70,
+        "candidate_persons": 70,
+        "same_person_count_frames": 40,
+        "reference_faces": 70,
+        "candidate_faces": 70,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 70,
+        "reference_faces_in_matched_bodies": 70,
+        "matched_faces_iou50": 70,
+        "same_identity_faces": 70,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 26,
+        "full_detection_frames": 14,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline+temporal",
+      "scenario": "two_people",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 39.482,
+        "p50_ms": 18.785,
+        "p95_ms": 116.339
+      },
+      "processing_fps": 25.328,
+      "calls": {
+        "person": 8,
+        "face": 40,
+        "embedding": 10
+      },
+      "speedup": 3.555,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 32,
+        "full_detection_frames": 8,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    },
+    {
+      "variant": "baseline",
+      "scenario": "two_people",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "processing": {
+        "mean_ms": 140.347,
+        "p50_ms": 141.989,
+        "p95_ms": 148.531
+      },
+      "processing_fps": 7.125,
+      "calls": {
+        "person": 40,
+        "face": 200,
+        "embedding": 200
+      },
+      "speedup": 1.0,
+      "agreement": {
+        "frames": 40,
+        "reference_persons": 200,
+        "candidate_persons": 200,
+        "same_person_count_frames": 40,
+        "reference_faces": 200,
+        "candidate_faces": 200,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 200,
+        "reference_faces_in_matched_bodies": 200,
+        "matched_faces_iou50": 200,
+        "same_identity_faces": 200,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0
+      }
+    }
+  ],
+  "aggregate": [
+    {
+      "scenario": "static",
+      "size": [
+        512,
+        600
+      ],
+      "variant": "baseline",
+      "mean_ms": 62.69701666666667,
+      "p95_ms": 66.2387,
+      "calls": {
+        "person": 120,
+        "face": 120,
+        "embedding": 120
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "static",
+      "size": [
+        512,
+        600
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 15.060241666666666,
+      "p95_ms": 57.36384999999999,
+      "calls": {
+        "person": 24,
+        "face": 24,
+        "embedding": 6
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 96
+      }
+    },
+    {
+      "scenario": "translation",
+      "size": [
+        512,
+        600
+      ],
+      "variant": "baseline",
+      "mean_ms": 62.97768333333333,
+      "p95_ms": 70.44745,
+      "calls": {
+        "person": 120,
+        "face": 135,
+        "embedding": 120
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 135,
+        "candidate_persons": 135,
+        "matched_bodies_iou50": 135,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "translation",
+      "size": [
+        512,
+        600
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 17.36114166666667,
+      "p95_ms": 70.85619999999999,
+      "calls": {
+        "person": 24,
+        "face": 27,
+        "embedding": 15
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 135,
+        "candidate_persons": 135,
+        "matched_bodies_iou50": 129,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 96
+      }
+    },
+    {
+      "scenario": "occlusion",
+      "size": [
+        512,
+        600
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 16.5106,
+      "p95_ms": 62.06484999999999,
+      "calls": {
+        "person": 27,
+        "face": 27,
+        "embedding": 6
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 84,
+        "candidate_faces": 84,
+        "matched_faces_iou50": 84,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 93
+      }
+    },
+    {
+      "scenario": "occlusion",
+      "size": [
+        512,
+        600
+      ],
+      "variant": "baseline",
+      "mean_ms": 56.979108333333336,
+      "p95_ms": 65.34265,
+      "calls": {
+        "person": 120,
+        "face": 120,
+        "embedding": 84
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 84,
+        "candidate_faces": 84,
+        "matched_faces_iou50": 84,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "switch",
+      "size": [
+        512,
+        600
+      ],
+      "variant": "baseline",
+      "mean_ms": 72.023275,
+      "p95_ms": 125.94624999999999,
+      "calls": {
+        "person": 120,
+        "face": 210,
+        "embedding": 210
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 210,
+        "candidate_persons": 210,
+        "matched_bodies_iou50": 210,
+        "reference_faces": 210,
+        "candidate_faces": 210,
+        "matched_faces_iou50": 210,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "switch",
+      "size": [
+        512,
+        600
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 22.938908333333334,
+      "p95_ms": 84.09554999999999,
+      "calls": {
+        "person": 42,
+        "face": 51,
+        "embedding": 18
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 210,
+        "candidate_persons": 210,
+        "matched_bodies_iou50": 210,
+        "reference_faces": 210,
+        "candidate_faces": 210,
+        "matched_faces_iou50": 210,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 78
+      }
+    },
+    {
+      "scenario": "two_people",
+      "size": [
+        512,
+        600
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 33.70425,
+      "p95_ms": 104.02729999999993,
+      "calls": {
+        "person": 24,
+        "face": 120,
+        "embedding": 18
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 600,
+        "candidate_persons": 600,
+        "matched_bodies_iou50": 600,
+        "reference_faces": 600,
+        "candidate_faces": 600,
+        "matched_faces_iou50": 600,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 96
+      }
+    },
+    {
+      "scenario": "two_people",
+      "size": [
+        512,
+        600
+      ],
+      "variant": "baseline",
+      "mean_ms": 115.99971666666667,
+      "p95_ms": 123.0842,
+      "calls": {
+        "person": 120,
+        "face": 600,
+        "embedding": 360
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 600,
+        "candidate_persons": 600,
+        "matched_bodies_iou50": 600,
+        "reference_faces": 600,
+        "candidate_faces": 600,
+        "matched_faces_iou50": 600,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "static",
+      "size": [
+        1280,
+        720
+      ],
+      "variant": "baseline",
+      "mean_ms": 62.015633333333334,
+      "p95_ms": 65.587,
+      "calls": {
+        "person": 120,
+        "face": 120,
+        "embedding": 120
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "static",
+      "size": [
+        1280,
+        720
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 15.770075,
+      "p95_ms": 58.29904999999998,
+      "calls": {
+        "person": 24,
+        "face": 24,
+        "embedding": 6
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 96
+      }
+    },
+    {
+      "scenario": "translation",
+      "size": [
+        1280,
+        720
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 18.036691666666666,
+      "p95_ms": 72.90285,
+      "calls": {
+        "person": 24,
+        "face": 27,
+        "embedding": 15
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 129,
+        "candidate_persons": 135,
+        "matched_bodies_iou50": 123,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 96
+      }
+    },
+    {
+      "scenario": "translation",
+      "size": [
+        1280,
+        720
+      ],
+      "variant": "baseline",
+      "mean_ms": 61.581575,
+      "p95_ms": 67.3974,
+      "calls": {
+        "person": 120,
+        "face": 129,
+        "embedding": 120
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 129,
+        "candidate_persons": 129,
+        "matched_bodies_iou50": 129,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "occlusion",
+      "size": [
+        1280,
+        720
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 16.706216666666666,
+      "p95_ms": 60.87675,
+      "calls": {
+        "person": 27,
+        "face": 27,
+        "embedding": 6
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 84,
+        "candidate_faces": 84,
+        "matched_faces_iou50": 84,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 93
+      }
+    },
+    {
+      "scenario": "occlusion",
+      "size": [
+        1280,
+        720
+      ],
+      "variant": "baseline",
+      "mean_ms": 56.9868,
+      "p95_ms": 64.4803,
+      "calls": {
+        "person": 120,
+        "face": 120,
+        "embedding": 84
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 84,
+        "candidate_faces": 84,
+        "matched_faces_iou50": 84,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "switch",
+      "size": [
+        1280,
+        720
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 22.91925833333333,
+      "p95_ms": 92.58924999999999,
+      "calls": {
+        "person": 42,
+        "face": 51,
+        "embedding": 18
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 210,
+        "candidate_persons": 210,
+        "matched_bodies_iou50": 210,
+        "reference_faces": 210,
+        "candidate_faces": 210,
+        "matched_faces_iou50": 210,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 78
+      }
+    },
+    {
+      "scenario": "switch",
+      "size": [
+        1280,
+        720
+      ],
+      "variant": "baseline",
+      "mean_ms": 71.48933333333333,
+      "p95_ms": 124.80275,
+      "calls": {
+        "person": 120,
+        "face": 210,
+        "embedding": 210
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 210,
+        "candidate_persons": 210,
+        "matched_bodies_iou50": 210,
+        "reference_faces": 210,
+        "candidate_faces": 210,
+        "matched_faces_iou50": 210,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "two_people",
+      "size": [
+        1280,
+        720
+      ],
+      "variant": "baseline",
+      "mean_ms": 140.15531666666666,
+      "p95_ms": 145.86599999999999,
+      "calls": {
+        "person": 120,
+        "face": 600,
+        "embedding": 600
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 600,
+        "candidate_persons": 600,
+        "matched_bodies_iou50": 600,
+        "reference_faces": 600,
+        "candidate_faces": 600,
+        "matched_faces_iou50": 600,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "two_people",
+      "size": [
+        1280,
+        720
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 36.93021666666667,
+      "p95_ms": 111.39374999999984,
+      "calls": {
+        "person": 24,
+        "face": 120,
+        "embedding": 30
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 600,
+        "candidate_persons": 600,
+        "matched_bodies_iou50": 600,
+        "reference_faces": 600,
+        "candidate_faces": 600,
+        "matched_faces_iou50": 600,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 96
+      }
+    },
+    {
+      "scenario": "static",
+      "size": [
+        1920,
+        1080
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 17.490866666666665,
+      "p95_ms": 59.87799999999997,
+      "calls": {
+        "person": 24,
+        "face": 24,
+        "embedding": 6
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 96
+      }
+    },
+    {
+      "scenario": "static",
+      "size": [
+        1920,
+        1080
+      ],
+      "variant": "baseline",
+      "mean_ms": 61.92273333333333,
+      "p95_ms": 66.34939999999999,
+      "calls": {
+        "person": 120,
+        "face": 120,
+        "embedding": 120
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "translation",
+      "size": [
+        1920,
+        1080
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 21.158166666666666,
+      "p95_ms": 75.59705,
+      "calls": {
+        "person": 24,
+        "face": 27,
+        "embedding": 24
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 129,
+        "candidate_persons": 135,
+        "matched_bodies_iou50": 126,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 96
+      }
+    },
+    {
+      "scenario": "translation",
+      "size": [
+        1920,
+        1080
+      ],
+      "variant": "baseline",
+      "mean_ms": 60.786341666666665,
+      "p95_ms": 67.35695,
+      "calls": {
+        "person": 120,
+        "face": 129,
+        "embedding": 120
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 129,
+        "candidate_persons": 129,
+        "matched_bodies_iou50": 129,
+        "reference_faces": 120,
+        "candidate_faces": 120,
+        "matched_faces_iou50": 120,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "occlusion",
+      "size": [
+        1920,
+        1080
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 18.451825,
+      "p95_ms": 59.24794999999999,
+      "calls": {
+        "person": 27,
+        "face": 27,
+        "embedding": 6
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 84,
+        "candidate_faces": 84,
+        "matched_faces_iou50": 84,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 93
+      }
+    },
+    {
+      "scenario": "occlusion",
+      "size": [
+        1920,
+        1080
+      ],
+      "variant": "baseline",
+      "mean_ms": 57.02300833333334,
+      "p95_ms": 65.0295,
+      "calls": {
+        "person": 120,
+        "face": 120,
+        "embedding": 84
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 120,
+        "candidate_persons": 120,
+        "matched_bodies_iou50": 120,
+        "reference_faces": 84,
+        "candidate_faces": 84,
+        "matched_faces_iou50": 84,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "switch",
+      "size": [
+        1920,
+        1080
+      ],
+      "variant": "baseline",
+      "mean_ms": 70.95459166666667,
+      "p95_ms": 125.1099,
+      "calls": {
+        "person": 120,
+        "face": 210,
+        "embedding": 210
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 210,
+        "candidate_persons": 210,
+        "matched_bodies_iou50": 210,
+        "reference_faces": 210,
+        "candidate_faces": 210,
+        "matched_faces_iou50": 210,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    },
+    {
+      "scenario": "switch",
+      "size": [
+        1920,
+        1080
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 24.318216666666668,
+      "p95_ms": 88.87814999999999,
+      "calls": {
+        "person": 42,
+        "face": 51,
+        "embedding": 18
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 210,
+        "candidate_persons": 210,
+        "matched_bodies_iou50": 210,
+        "reference_faces": 210,
+        "candidate_faces": 210,
+        "matched_faces_iou50": 210,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 78
+      }
+    },
+    {
+      "scenario": "two_people",
+      "size": [
+        1920,
+        1080
+      ],
+      "variant": "baseline+temporal",
+      "mean_ms": 39.369908333333335,
+      "p95_ms": 134.8427499999999,
+      "calls": {
+        "person": 24,
+        "face": 120,
+        "embedding": 30
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 600,
+        "candidate_persons": 600,
+        "matched_bodies_iou50": 600,
+        "reference_faces": 600,
+        "candidate_faces": 600,
+        "matched_faces_iou50": 600,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 96
+      }
+    },
+    {
+      "scenario": "two_people",
+      "size": [
+        1920,
+        1080
+      ],
+      "variant": "baseline",
+      "mean_ms": 140.47755,
+      "p95_ms": 146.6296,
+      "calls": {
+        "person": 120,
+        "face": 600,
+        "embedding": 600
+      },
+      "agreement": {
+        "frames": 120,
+        "reference_persons": 600,
+        "candidate_persons": 600,
+        "matched_bodies_iou50": 600,
+        "reference_faces": 600,
+        "candidate_faces": 600,
+        "matched_faces_iou50": 600,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 0
+      }
+    }
+  ]
+}

@@ -29,7 +29,8 @@ def doctor(invoke=False):
             if audit["sha256"] != item["sha256"]:
                 raise RuntimeError(f"{role} checksum mismatch")
         if invoke:
-            ModelBundle(settings)
+            models = ModelBundle(settings)
+            models.close()
             report["inference_tested"] = True
     except Exception as exc:
         report["error"] = str(exc)

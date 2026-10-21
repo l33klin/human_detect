@@ -1,14 +1,14 @@
 """Capture latest frame in a child process so blocked camera I/O can be terminated."""
 
 import multiprocessing
+import os
 import queue
+import signal
 import threading
 import time
 import uuid
 from concurrent.futures import TimeoutError
 from datetime import datetime, timezone
-
-import cv2
 
 from human_detect.executor import Busy
 from human_detect.runtime import EngineUnavailable
@@ -28,43 +28,41 @@ def replace_latest(channel, item):
             pass
 
 
-def capture_frames(source, timeout_ms, channel, stop):
+def capture_frames(
+    source,
+    timeout_ms,
+    channel,
+    stop,
+    backend="ffmpeg",
+    device="/dev/dri/renderD128",
+    max_pixels=20_000_000,
+    output_fps=5,
+):
     """No source URL or camera credentials are returned in errors or logs."""
     # FFmpeg may log the source, including credentials, directly to stderr.
-    import os
-
+    if hasattr(os, "setsid"):
+        os.setsid()
     with open(os.devnull, "w") as sink:
         os.dup2(sink.fileno(), 2)
     channel.cancel_join_thread()
     while not stop.is_set():
         capture = None
         try:
-            if isinstance(source, int):
-                capture = cv2.VideoCapture(source, cv2.CAP_V4L2)
-                capture.set(cv2.CAP_PROP_BUFFERSIZE, 1)
-            else:
-                capture = cv2.VideoCapture(
-                    source,
-                    cv2.CAP_FFMPEG,
-                    [
-                        cv2.CAP_PROP_OPEN_TIMEOUT_MSEC,
-                        timeout_ms,
-                        cv2.CAP_PROP_READ_TIMEOUT_MSEC,
-                        timeout_ms,
-                    ],
-                )
-            if not capture.isOpened():
-                raise RuntimeError("open_failed")
+            from human_detect.video import FFmpegCapture
+
+            capture = FFmpegCapture(
+                source, backend, device, timeout_ms, max_pixels, output_fps=output_fps
+            )
             while not stop.is_set():
-                ok, bgr = capture.read()
-                if not ok:
+                rgb = capture.read()
+                if rgb is None:
                     raise RuntimeError("read_failed")
-                replace_latest(channel, (time.time(), cv2.cvtColor(bgr, cv2.COLOR_BGR2RGB)))
+                replace_latest(channel, (time.time(), rgb))
         except Exception:
             replace_latest(channel, (time.time(), None))
         finally:
             if capture is not None:
-                capture.release()
+                capture.close()
         stop.wait(2)
 
 
@@ -74,6 +72,7 @@ class Stream:
         self.fps, self.settings = fps, settings
         self.context, self.source = context, source
         self.pipeline, self.executor = pipeline, executor
+        self.video_pipeline = self._make_video_pipeline()
         self.lock = threading.RLock()
         self.condition = threading.Condition(self.lock)
         self.stop = threading.Event()
@@ -81,7 +80,7 @@ class Stream:
         self.frames = context.Queue(maxsize=1)
         self.process = context.Process(
             target=capture_frames,
-            args=(source, settings.stream_timeout_ms, self.frames, self.capture_stop),
+            args=self._capture_args(),
             daemon=True,
         )
         self.state, self.error = "connecting", None
@@ -94,6 +93,47 @@ class Stream:
     def start(self):
         self.process.start()
         self.thread.start()
+
+    def _make_video_pipeline(self):
+        if not self.settings.temporal_enabled:
+            return self.pipeline
+        if self.settings.empty_scene_enabled:
+            from human_detect.motion import EmptySceneSession
+
+            return EmptySceneSession(self.pipeline)
+        from human_detect.temporal import TemporalSession
+
+        return TemporalSession(self.pipeline)
+
+    def _capture_args(self):
+        cfg = self.settings
+        return (
+            self.source,
+            cfg.stream_timeout_ms,
+            self.frames,
+            self.capture_stop,
+            cfg.capture_backend,
+            cfg.vaapi_device,
+            cfg.max_image_pixels,
+            self.fps,
+        )
+
+    def _terminate_capture(self):
+        # FFmpeg is a child of the capture process. Kill the private group too,
+        # including when the parent exited first, to avoid orphaned decoders.
+        grouped = hasattr(os, "killpg")
+        for sig in (signal.SIGTERM, signal.SIGKILL):
+            if grouped:
+                try:
+                    os.killpg(self.process.pid, sig)
+                except ProcessLookupError:
+                    pass
+            if self.process.is_alive():
+                if sig == signal.SIGTERM:
+                    self.process.terminate()
+                else:
+                    self.process.kill()
+            self.process.join(timeout=2)
 
     def _run(self):
         next_at = 0
@@ -112,6 +152,7 @@ class Stream:
                     last_frame_at = time.monotonic()
                 continue
             if rgb is None:
+                self.video_pipeline = self._make_video_pipeline()
                 self._set_state("reconnecting", "source_unavailable")
                 continue
             if rgb.shape[0] * rgb.shape[1] > self.settings.max_image_pixels:
@@ -123,7 +164,7 @@ class Stream:
             future = None
             try:
                 future = self.executor.submit(
-                    self.pipeline.analyze, rgb, datetime.fromtimestamp(captured, timezone.utc)
+                    self.video_pipeline.analyze, rgb, datetime.fromtimestamp(captured, timezone.utc)
                 )
                 result = future.result(timeout=self.settings.inference_timeout_seconds)
                 with self.condition:
@@ -162,17 +203,14 @@ class Stream:
     def _restart_capture(self):
         if self.stop.is_set():
             return
-        self.process.terminate()
-        self.process.join(timeout=2)
-        if self.process.is_alive():
-            self.process.kill()
-            self.process.join(timeout=2)
+        self._terminate_capture()
         # A terminated process may corrupt its queue; always create a fresh one.
         self.frames.close()
         self.frames = self.context.Queue(maxsize=1)
+        self.video_pipeline = self._make_video_pipeline()
         self.process = self.context.Process(
             target=capture_frames,
-            args=(self.source, self.settings.stream_timeout_ms, self.frames, self.capture_stop),
+            args=self._capture_args(),
             daemon=True,
         )
         self.process.start()
@@ -184,6 +222,7 @@ class Stream:
                 state=self.state,
                 error=self.error,
                 target_fps=self.fps,
+                capture_backend=self.settings.capture_backend,
                 processed=self.processed,
                 skipped=self.skipped,
                 sequence=self.sequence,
@@ -202,12 +241,7 @@ class Stream:
         self.capture_stop.set()
         self.thread.join(timeout=self.settings.inference_timeout_seconds + 3)
         self.process.join(timeout=1)
-        if self.process.is_alive():
-            self.process.terminate()
-            self.process.join(timeout=2)
-        if self.process.is_alive():
-            self.process.kill()
-            self.process.join(timeout=2)
+        self._terminate_capture()
         self.frames.close()
         self._set_state("stopped", None)
 

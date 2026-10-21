@@ -1,0 +1,61 @@
+Edge TPU Compiler version 16.0.384591198
+Started a compilation timeout timer of 180 seconds.
+
+Models compiled successfully in 2639 ms.
+
+Input model: experiments/artifacts/source/ssdlite_mobiledet_coco_qat_postprocess.tflite
+Input size: 4.13MiB
+Output model: experiments/artifacts/co-person-first/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite
+Output size: 5.15MiB
+On-chip memory used for caching model parameters: 1.90MiB
+On-chip memory remaining for caching model parameters: 0.00B
+Off-chip memory used for streaming uncached model parameters: 2.90MiB
+Number of Edge TPU subgraphs: 1
+Total number of operations: 137
+Operation log: experiments/artifacts/co-person-first/ssdlite_mobiledet_coco_qat_postprocess_edgetpu.log
+
+Model successfully compiled but not all operations are supported by the Edge TPU. A percentage of the model will instead run on the CPU, which is slower. If possible, consider updating your model to use only operations supported by the Edge TPU. For details, visit g.co/coral/model-reqs.
+Number of operations that will run on Edge TPU: 134
+Number of operations that will run on CPU: 3
+
+Operator                       Count      Status
+
+DEPTHWISE_CONV_2D              27         Mapped to Edge TPU
+LOGISTIC                       1          Mapped to Edge TPU
+CONCATENATION                  2          Mapped to Edge TPU
+RESHAPE                        13         Mapped to Edge TPU
+CUSTOM                         1          Operation is working on an unsupported data type
+ADD                            15         Mapped to Edge TPU
+CONV_2D                        66         Mapped to Edge TPU
+QUANTIZE                       10         Mapped to Edge TPU
+DEQUANTIZE                     2          Operation is working on an unsupported data type
+
+Input model: experiments/artifacts/source/ssd_mobilenet_v2_face_quant_postprocess.tflite
+Input size: 5.29MiB
+Output model: experiments/artifacts/co-person-first/ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite
+Output size: 6.35MiB
+On-chip memory used for caching model parameters: 5.60MiB
+On-chip memory remaining for caching model parameters: 0.00B
+Off-chip memory used for streaming uncached model parameters: 1.92MiB
+Number of Edge TPU subgraphs: 1
+Total number of operations: 133
+Operation log: experiments/artifacts/co-person-first/ssd_mobilenet_v2_face_quant_postprocess_edgetpu.log
+
+Model successfully compiled but not all operations are supported by the Edge TPU. A percentage of the model will instead run on the CPU, which is slower. If possible, consider updating your model to use only operations supported by the Edge TPU. For details, visit g.co/coral/model-reqs.
+Number of operations that will run on Edge TPU: 130
+Number of operations that will run on CPU: 3
+
+Operator                       Count      Status
+
+DEPTHWISE_CONV_2D              17         Mapped to Edge TPU
+LOGISTIC                       1          Mapped to Edge TPU
+CONCATENATION                  2          Mapped to Edge TPU
+PAD                            22         Mapped to Edge TPU
+RESHAPE                        13         Mapped to Edge TPU
+CUSTOM                         1          Operation is working on an unsupported data type
+ADD                            10         Mapped to Edge TPU
+CONV_2D                        55         Mapped to Edge TPU
+QUANTIZE                       10         Mapped to Edge TPU
+DEQUANTIZE                     2          Operation is working on an unsupported data type
+Compilation child process completed within timeout period.
+Compilation succeeded! 

@@ -1,0 +1,62 @@
+{
+  "results": [
+    {
+      "backend": "ffmpeg",
+      "processed": 7,
+      "size": [
+        1920,
+        1080
+      ],
+      "known_identity": true,
+      "motion_metadata": {
+        "reason": "occupied",
+        "changed_fraction": null,
+        "motion_enabled": true,
+        "empty_scene_seconds": 2.0
+      },
+      "kill_parent": false,
+      "capture_and_decoder_released": true,
+      "cpu_dnn_fallback": false,
+      "live_identity_deletion_invalidates_cache": true
+    },
+    {
+      "backend": "vaapi",
+      "processed": 7,
+      "size": [
+        1920,
+        1080
+      ],
+      "known_identity": true,
+      "motion_metadata": {
+        "reason": "occupied",
+        "changed_fraction": null,
+        "motion_enabled": true,
+        "empty_scene_seconds": 2.0
+      },
+      "kill_parent": false,
+      "capture_and_decoder_released": true,
+      "cpu_dnn_fallback": false,
+      "live_identity_deletion_invalidates_cache": true
+    },
+    {
+      "backend": "vaapi",
+      "processed": 7,
+      "size": [
+        1920,
+        1080
+      ],
+      "known_identity": true,
+      "motion_metadata": {
+        "reason": "occupied",
+        "changed_fraction": null,
+        "motion_enabled": true,
+        "empty_scene_seconds": 2.0
+      },
+      "kill_parent": true,
+      "capture_and_decoder_released": true,
+      "cpu_dnn_fallback": false,
+      "live_identity_deletion_invalidates_cache": true
+    }
+  ],
+  "invalid_device_no_fallback": true
+}

@@ -35,7 +35,7 @@ class Pipeline:
             self.failure = "TPU inference failed; restart service after checking hardware/runtime"
             raise EngineUnavailable(self.failure) from exc
 
-    def analyze(self, rgb, captured_at=None):
+    def analyze(self, rgb, captured_at=None, embedding_cache=None):
         start = time.perf_counter()
         captured_at = captured_at or datetime.now(timezone.utc)
         with self.lock:
@@ -63,7 +63,15 @@ class Pipeline:
                 selected.append(box)
                 identity = Identity(status="face_too_small")
                 if min(box.x2 - box.x1, box.y2 - box.y1) >= cfg.min_face_pixels:
-                    vector = self._invoke(self.models.embedding.embed, face_crop(rgb, box))
+
+                    def extract():
+                        return self._invoke(self.models.embedding.embed, face_crop(rgb, box))
+
+                    vector = (
+                        embedding_cache.get(rgb, box, extract)
+                        if embedding_cache is not None
+                        else extract()
+                    )
                     identity = self.store.match(
                         vector, cfg.similarity_threshold, cfg.identity_margin
                     )

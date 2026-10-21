@@ -1,0 +1,6566 @@
+{
+  "phase": "integrated",
+  "revision": "e45854c",
+  "revisions": [
+    "e45854c",
+    "250493d",
+    "5829591"
+  ],
+  "groups": [
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 9,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 3.013621705273787,
+      "p95_ms": 20.162338111549616,
+      "repeat_mean_ms": [
+        3.0459893867373466,
+        3.0113411446412406,
+        2.9835345844427743
+      ],
+      "mean_elapsed_ms": 4445.123631507158,
+      "mean_cpu_ms": 4665.520601000002,
+      "mean_first_frame_ms": 139.86159426470599,
+      "total_decoded_frames": 450,
+      "decoded_fps": 33.74484321128796,
+      "cpu_ms_per_decoded_frame": 31.103470673333348
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 90,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 19.86567967881759,
+      "p95_ms": 21.167547069489956,
+      "repeat_mean_ms": [
+        20.003069067994755,
+        19.725030350188415,
+        19.868939618269604
+      ],
+      "mean_elapsed_ms": 2226.2242026627064,
+      "mean_cpu_ms": 2506.864614000001,
+      "mean_first_frame_ms": 107.45424591004848,
+      "total_decoded_frames": 450,
+      "decoded_fps": 67.37865836719878,
+      "cpu_ms_per_decoded_frame": 16.712430760000007
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 9,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 2.8956140908930035,
+      "p95_ms": 19.961425475776196,
+      "repeat_mean_ms": [
+        2.753443829715252,
+        3.0057972917954126,
+        2.9276011511683464
+      ],
+      "mean_elapsed_ms": 964.9845616271099,
+      "mean_cpu_ms": 1446.4594480000023,
+      "mean_first_frame_ms": 53.156545385718346,
+      "total_decoded_frames": 450,
+      "decoded_fps": 155.4429013320973,
+      "cpu_ms_per_decoded_frame": 9.643062986666683
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "opencv",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 90,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 20.265602444609005,
+      "p95_ms": 22.489766590297222,
+      "repeat_mean_ms": [
+        20.516991553207237,
+        20.326800147692364,
+        19.953015632927418
+      ],
+      "mean_elapsed_ms": 1526.1242942263682,
+      "mean_cpu_ms": 1738.685338666669,
+      "mean_first_frame_ms": 36.59940448900064,
+      "total_decoded_frames": 450,
+      "decoded_fps": 98.2881935419545,
+      "cpu_ms_per_decoded_frame": 11.591235591111126
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 9,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 2.9600186894337335,
+      "p95_ms": 20.499488152563572,
+      "repeat_mean_ms": [
+        2.950826225181421,
+        2.996700629591942,
+        2.9325292135278382
+      ],
+      "mean_elapsed_ms": 1787.7184382329385,
+      "mean_cpu_ms": 2227.090439999999,
+      "mean_first_frame_ms": 107.94302821159363,
+      "total_decoded_frames": 450,
+      "decoded_fps": 83.90583035450861,
+      "cpu_ms_per_decoded_frame": 14.847269599999994
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 90,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 19.13753298835622,
+      "p95_ms": 20.3534253872931,
+      "repeat_mean_ms": [
+        19.162551934520405,
+        19.17375847697258,
+        19.076288553575676
+      ],
+      "mean_elapsed_ms": 4460.962168251474,
+      "mean_cpu_ms": 4850.100713999997,
+      "mean_first_frame_ms": 146.6836848606666,
+      "total_decoded_frames": 450,
+      "decoded_fps": 33.62503297327765,
+      "cpu_ms_per_decoded_frame": 32.334004759999985
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "opencv",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 63,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 23.950149015420013,
+      "p95_ms": 59.273543022572994,
+      "repeat_mean_ms": [
+        24.206164851784706,
+        23.71240419646104,
+        23.93187799801429
+      ],
+      "mean_elapsed_ms": 1679.668719569842,
+      "mean_cpu_ms": 1964.0494619999995,
+      "mean_first_frame_ms": 47.02728924651941,
+      "total_decoded_frames": 450,
+      "decoded_fps": 89.30332407357955,
+      "cpu_ms_per_decoded_frame": 13.093663079999997
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 24,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 15.223840644790066,
+      "p95_ms": 53.27183622866869,
+      "repeat_mean_ms": [
+        15.223981191714605,
+        15.209166705608368,
+        15.238374037047228
+      ],
+      "mean_elapsed_ms": 4633.968589206536,
+      "mean_cpu_ms": 4859.437046333337,
+      "mean_first_frame_ms": 132.34139358003935,
+      "total_decoded_frames": 450,
+      "decoded_fps": 32.36966265791718,
+      "cpu_ms_per_decoded_frame": 32.396246975555584
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 63,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 22.723443143897587,
+      "p95_ms": 53.0453666113317,
+      "repeat_mean_ms": [
+        22.72849977016449,
+        23.127443467577297,
+        22.31438619395097
+      ],
+      "mean_elapsed_ms": 4635.710775852203,
+      "mean_cpu_ms": 4941.474551666659,
+      "mean_first_frame_ms": 141.17931636671224,
+      "total_decoded_frames": 450,
+      "decoded_fps": 32.357497534436845,
+      "cpu_ms_per_decoded_frame": 32.943163677777726
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 24,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 16.679370444681908,
+      "p95_ms": 60.871842782944434,
+      "repeat_mean_ms": [
+        16.391787864267826,
+        17.034533247351646,
+        16.611790222426254
+      ],
+      "mean_elapsed_ms": 2368.392873555422,
+      "mean_cpu_ms": 2742.2828560000003,
+      "mean_first_frame_ms": 102.93236623207729,
+      "total_decoded_frames": 450,
+      "decoded_fps": 63.33408687166864,
+      "cpu_ms_per_decoded_frame": 18.28188570666667
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 24,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 15.52838467889362,
+      "p95_ms": 59.356755670160055,
+      "repeat_mean_ms": [
+        15.561244077980518,
+        15.655220796664556,
+        15.368689162035784
+      ],
+      "mean_elapsed_ms": 1357.9008989036083,
+      "mean_cpu_ms": 1727.2319846666637,
+      "mean_first_frame_ms": 34.70919094979763,
+      "total_decoded_frames": 450,
+      "decoded_fps": 110.46461499591942,
+      "cpu_ms_per_decoded_frame": 11.514879897777758
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 63,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 23.985904682841564,
+      "p95_ms": 59.79711711406708,
+      "repeat_mean_ms": [
+        24.031807358066242,
+        23.93058855086565,
+        23.995318139592808
+      ],
+      "mean_elapsed_ms": 2560.8387483904758,
+      "mean_cpu_ms": 2885.7642403333443,
+      "mean_first_frame_ms": 103.56816525260608,
+      "total_decoded_frames": 450,
+      "decoded_fps": 58.57455886055971,
+      "cpu_ms_per_decoded_frame": 19.238428268888967
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 18
+      },
+      "mean_ms": 26.52836771061023,
+      "p95_ms": 54.8095915466547,
+      "repeat_mean_ms": [
+        26.468874638279278,
+        26.60895896454652,
+        26.50726952900489
+      ],
+      "mean_elapsed_ms": 4845.928604404132,
+      "mean_cpu_ms": 5048.347598000002,
+      "mean_first_frame_ms": 148.68569249908128,
+      "total_decoded_frames": 450,
+      "decoded_fps": 30.95381963813402,
+      "cpu_ms_per_decoded_frame": 33.655650653333346
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 24
+      },
+      "mean_ms": 31.033318903711105,
+      "p95_ms": 75.47456929460168,
+      "repeat_mean_ms": [
+        31.10104997952779,
+        29.841471773882706,
+        32.15743495772282
+      ],
+      "mean_elapsed_ms": 2910.2170603970685,
+      "mean_cpu_ms": 3166.9613790000026,
+      "mean_first_frame_ms": 146.15842451651892,
+      "total_decoded_frames": 450,
+      "decoded_fps": 51.542547132045904,
+      "cpu_ms_per_decoded_frame": 21.11307586000002
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 24
+      },
+      "mean_ms": 31.180943362414837,
+      "p95_ms": 73.23027392849326,
+      "repeat_mean_ms": [
+        31.37720339000225,
+        30.991328693926334,
+        31.174298003315926
+      ],
+      "mean_elapsed_ms": 2882.4801401545606,
+      "mean_cpu_ms": 3123.264823000004,
+      "mean_first_frame_ms": 154.39599317808947,
+      "total_decoded_frames": 450,
+      "decoded_fps": 52.038519853238924,
+      "cpu_ms_per_decoded_frame": 20.821765486666692
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 18
+      },
+      "mean_ms": 27.419505185551113,
+      "p95_ms": 56.97327824309468,
+      "repeat_mean_ms": [
+        27.524512261152267,
+        27.125807975729305,
+        27.608195319771767
+      ],
+      "mean_elapsed_ms": 4857.700911040108,
+      "mean_cpu_ms": 5062.104600333325,
+      "mean_first_frame_ms": 134.40464002390704,
+      "total_decoded_frames": 450,
+      "decoded_fps": 30.87880516873624,
+      "cpu_ms_per_decoded_frame": 33.74736400222216
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 24
+      },
+      "mean_ms": 29.840810265805985,
+      "p95_ms": 76.50342714041471,
+      "repeat_mean_ms": [
+        29.532554124792416,
+        30.346625111997128,
+        29.643251560628414
+      ],
+      "mean_elapsed_ms": 1879.8329333464305,
+      "mean_cpu_ms": 2084.0169999999957,
+      "mean_first_frame_ms": 63.71692754328251,
+      "total_decoded_frames": 450,
+      "decoded_fps": 79.79432498449415,
+      "cpu_ms_per_decoded_frame": 13.89344666666664
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "opencv",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 24
+      },
+      "mean_ms": 29.33262934287389,
+      "p95_ms": 77.51874411478639,
+      "repeat_mean_ms": [
+        29.024556713799637,
+        29.67157115538915,
+        29.301760159432888
+      ],
+      "mean_elapsed_ms": 1874.378760655721,
+      "mean_cpu_ms": 2099.4416346666685,
+      "mean_first_frame_ms": 60.824790969491005,
+      "total_decoded_frames": 450,
+      "decoded_fps": 80.02651499717427,
+      "cpu_ms_per_decoded_frame": 13.996277564444455
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 90,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 19.907412326170338,
+      "p95_ms": 22.387977503240105,
+      "repeat_mean_ms": [
+        20.032280186812084,
+        19.924681695799034,
+        19.7652750958999
+      ],
+      "mean_elapsed_ms": 2682.3520995676517,
+      "mean_cpu_ms": 2860.8240073333345,
+      "mean_first_frame_ms": 109.46961119771004,
+      "total_decoded_frames": 450,
+      "decoded_fps": 55.921070177243834,
+      "cpu_ms_per_decoded_frame": 19.072160048888897
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 9,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 3.1041588427291975,
+      "p95_ms": 20.62964318320155,
+      "repeat_mean_ms": [
+        3.276693200071653,
+        3.011304202179114,
+        3.024479125936826
+      ],
+      "mean_elapsed_ms": 2402.885625138879,
+      "mean_cpu_ms": 2611.272174333332,
+      "mean_first_frame_ms": 132.34921172261238,
+      "total_decoded_frames": 450,
+      "decoded_fps": 62.42494375541928,
+      "cpu_ms_per_decoded_frame": 17.408481162222213
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 24,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 17.25133088313871,
+      "p95_ms": 62.09299312904477,
+      "repeat_mean_ms": [
+        17.52261631190777,
+        17.253557220101357,
+        16.977819117407005
+      ],
+      "mean_elapsed_ms": 2852.3438032716513,
+      "mean_cpu_ms": 3021.412074999997,
+      "mean_first_frame_ms": 134.91353020071983,
+      "total_decoded_frames": 450,
+      "decoded_fps": 52.58833098168226,
+      "cpu_ms_per_decoded_frame": 20.142747166666645
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 63,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 24.37250761108266,
+      "p95_ms": 61.63143292069435,
+      "repeat_mean_ms": [
+        23.3859920874238,
+        24.96313800414403,
+        24.768392741680145
+      ],
+      "mean_elapsed_ms": 2967.161704475681,
+      "mean_cpu_ms": 3104.555027666668,
+      "mean_first_frame_ms": 111.44204127291839,
+      "total_decoded_frames": 450,
+      "decoded_fps": 50.55336208125741,
+      "cpu_ms_per_decoded_frame": 20.697033517777786
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 24
+      },
+      "mean_ms": 30.979315543340313,
+      "p95_ms": 76.16604128852487,
+      "repeat_mean_ms": [
+        30.75993147989114,
+        31.785895054539044,
+        30.39212009559075
+      ],
+      "mean_elapsed_ms": 3353.7033343066773,
+      "mean_cpu_ms": 3428.5438430000017,
+      "mean_first_frame_ms": 140.41195809841156,
+      "total_decoded_frames": 450,
+      "decoded_fps": 44.72667527433819,
+      "cpu_ms_per_decoded_frame": 22.856958953333347
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 24
+      },
+      "mean_ms": 31.649982639484936,
+      "p95_ms": 76.95756405591965,
+      "repeat_mean_ms": [
+        32.10005400081476,
+        31.329778023064137,
+        31.520115894575913
+      ],
+      "mean_elapsed_ms": 3297.8401041279235,
+      "mean_cpu_ms": 3392.645896333334,
+      "mean_first_frame_ms": 135.59535952905813,
+      "total_decoded_frames": 450,
+      "decoded_fps": 45.48431557134751,
+      "cpu_ms_per_decoded_frame": 22.617639308888894
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 9,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 2.868129644129011,
+      "p95_ms": 19.8148506693542,
+      "repeat_mean_ms": [
+        2.881527195374171,
+        2.8854265809059143,
+        2.837435156106949
+      ],
+      "mean_elapsed_ms": 765.5400838702917,
+      "mean_cpu_ms": 896.4589169999991,
+      "mean_first_frame_ms": 127.5026984512806,
+      "total_decoded_frames": 450,
+      "decoded_fps": 195.94009923249826,
+      "cpu_ms_per_decoded_frame": 5.976392779999994
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 90,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 19.195282500651146,
+      "p95_ms": 20.145504735410213,
+      "repeat_mean_ms": [
+        19.107552866141003,
+        19.21303818623225,
+        19.265256449580193
+      ],
+      "mean_elapsed_ms": 816.0676167656978,
+      "mean_cpu_ms": 1066.010589333333,
+      "mean_first_frame_ms": 115.22162643571694,
+      "total_decoded_frames": 450,
+      "decoded_fps": 183.80829837911176,
+      "cpu_ms_per_decoded_frame": 7.10673726222222
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 90,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 19.561606376535362,
+      "p95_ms": 21.336211264133453,
+      "repeat_mean_ms": [
+        19.219748365382355,
+        19.760869878033798,
+        19.704200886189938
+      ],
+      "mean_elapsed_ms": 849.1772611935934,
+      "mean_cpu_ms": 889.4143530000002,
+      "mean_first_frame_ms": 130.32199690739313,
+      "total_decoded_frames": 450,
+      "decoded_fps": 176.64156455292007,
+      "cpu_ms_per_decoded_frame": 5.9294290200000015
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 9,
+        "face": 0,
+        "embedding": 0
+      },
+      "mean_ms": 3.0410617176029415,
+      "p95_ms": 19.870976265519857,
+      "repeat_mean_ms": [
+        3.0424424757560096,
+        3.0832096934318542,
+        2.9975329836209617
+      ],
+      "mean_elapsed_ms": 773.1184518585602,
+      "mean_cpu_ms": 706.4877613333332,
+      "mean_first_frame_ms": 120.95758443077405,
+      "total_decoded_frames": 450,
+      "decoded_fps": 194.01942825113434,
+      "cpu_ms_per_decoded_frame": 4.709918408888888
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 63,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 24.261006712913513,
+      "p95_ms": 58.75874608755112,
+      "repeat_mean_ms": [
+        25.495202901462715,
+        23.798352604111034,
+        23.48946463316679
+      ],
+      "mean_elapsed_ms": 1177.8110098093748,
+      "mean_cpu_ms": 1372.124887666667,
+      "mean_first_frame_ms": 128.45375575125217,
+      "total_decoded_frames": 450,
+      "decoded_fps": 127.3548971360669,
+      "cpu_ms_per_decoded_frame": 9.147499251111112
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 63,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 25.330200646486546,
+      "p95_ms": 58.613839093595736,
+      "repeat_mean_ms": [
+        26.724060997366905,
+        23.755141471823055,
+        25.51139947026968
+      ],
+      "mean_elapsed_ms": 1087.639454131325,
+      "mean_cpu_ms": 1096.3212366666676,
+      "mean_first_frame_ms": 112.32481213907401,
+      "total_decoded_frames": 450,
+      "decoded_fps": 137.9133493459024,
+      "cpu_ms_per_decoded_frame": 7.30880824444445
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 24,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 16.811063658032154,
+      "p95_ms": 58.78864526748657,
+      "repeat_mean_ms": [
+        18.128630394736927,
+        16.658353495101135,
+        15.646207084258398
+      ],
+      "mean_elapsed_ms": 1138.5324075818062,
+      "mean_cpu_ms": 1283.9783880000002,
+      "mean_first_frame_ms": 118.52738757928212,
+      "total_decoded_frames": 450,
+      "decoded_fps": 131.74855542196954,
+      "cpu_ms_per_decoded_frame": 8.55985592
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 24,
+        "face": 18,
+        "embedding": 9
+      },
+      "mean_ms": 18.079539181457626,
+      "p95_ms": 63.62377740442753,
+      "repeat_mean_ms": [
+        16.992268276711304,
+        18.512163683772087,
+        18.734185583889484
+      ],
+      "mean_elapsed_ms": 1085.7822665323813,
+      "mean_cpu_ms": 1056.4990813333332,
+      "mean_first_frame_ms": 132.58806119362512,
+      "total_decoded_frames": 450,
+      "decoded_fps": 138.14924467227567,
+      "cpu_ms_per_decoded_frame": 7.043327208888887
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 18
+      },
+      "mean_ms": 29.809248592290615,
+      "p95_ms": 62.2195010073483,
+      "repeat_mean_ms": [
+        29.126146249473095,
+        28.856345141927402,
+        31.445254385471344
+      ],
+      "mean_elapsed_ms": 1485.4712101320426,
+      "mean_cpu_ms": 1612.7833566666668,
+      "mean_first_frame_ms": 163.50844192008176,
+      "total_decoded_frames": 450,
+      "decoded_fps": 100.97805933692017,
+      "cpu_ms_per_decoded_frame": 10.751889044444445
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 18
+      },
+      "mean_ms": 33.78324446578821,
+      "p95_ms": 67.62907933443785,
+      "repeat_mean_ms": [
+        34.69919816901287,
+        32.841124261418976,
+        33.809410966932774
+      ],
+      "mean_elapsed_ms": 1457.2982856382926,
+      "mean_cpu_ms": 1470.5793519999997,
+      "mean_first_frame_ms": 140.44036467870077,
+      "total_decoded_frames": 450,
+      "decoded_fps": 102.93019725491574,
+      "cpu_ms_per_decoded_frame": 9.803862346666662
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 18
+      },
+      "mean_ms": 33.93716185043255,
+      "p95_ms": 67.74112619459629,
+      "repeat_mean_ms": [
+        36.09469042470058,
+        34.41977395365635,
+        31.29702117294073
+      ],
+      "mean_elapsed_ms": 1452.8079157074292,
+      "mean_cpu_ms": 1459.805229999999,
+      "mean_first_frame_ms": 153.00053544342518,
+      "total_decoded_frames": 450,
+      "decoded_fps": 103.24833612085538,
+      "cpu_ms_per_decoded_frame": 9.73203486666666
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "scale": [],
+      "runs": 3,
+      "stages": {
+        "person": 36,
+        "face": 36,
+        "embedding": 18
+      },
+      "mean_ms": 30.284056978093254,
+      "p95_ms": 62.41813786327838,
+      "repeat_mean_ms": [
+        29.680519923567772,
+        31.073643267154694,
+        30.098007743557293
+      ],
+      "mean_elapsed_ms": 1490.0472164154053,
+      "mean_cpu_ms": 1625.0714370000005,
+      "mean_first_frame_ms": 148.228465889891,
+      "total_decoded_frames": 450,
+      "decoded_fps": 100.66795088604897,
+      "cpu_ms_per_decoded_frame": 10.833809580000004
+    }
+  ],
+  "errors": [],
+  "comparisons": [
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "opencv",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "opencv",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 0.98625,
+        "mean_face_iou": 0.96048,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 0.98625,
+        "mean_face_iou": 0.96048,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 0.98813,
+        "mean_face_iou": 0.96129,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 0.98813,
+        "mean_face_iou": 0.96129,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "opencv",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 0,
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "opencv",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 0.98625,
+        "mean_face_iou": 0.96048,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "opencv",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 0.98625,
+        "mean_face_iou": 0.96048,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 0.98813,
+        "mean_face_iou": 0.96129,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 0.98813,
+        "mean_face_iou": 0.96129,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "opencv",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 1,
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "opencv",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 3,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "empty",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 0,
+        "candidate_persons": 0,
+        "same_person_count_frames": 30,
+        "reference_faces": 0,
+        "candidate_faces": 0,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 0,
+        "full_detection_frames": 30,
+        "mean_body_iou": null,
+        "mean_face_iou": null,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "opencv",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 0.98625,
+        "mean_face_iou": 0.96048,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 0.98625,
+        "mean_face_iou": 0.96048,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 8,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "entry_exit",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 15,
+        "candidate_persons": 15,
+        "same_person_count_frames": 30,
+        "reference_faces": 15,
+        "candidate_faces": 15,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "tracked_frames": 9,
+        "full_detection_frames": 21,
+        "matched_bodies_iou50": 15,
+        "reference_faces_in_matched_bodies": 15,
+        "matched_faces_iou50": 15,
+        "same_identity_faces": 15,
+        "cached_identity_disagreements": 0,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 0.98813,
+        "mean_face_iou": 0.96129,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": false,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 0.98813,
+        "mean_face_iou": 0.96129,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "opencv",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "opencv",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "motion_idle",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "vaapi-i420-sampled",
+      "policy": "combined",
+      "reference": "ffmpeg_same_policy",
+      "rgb_sample_equal": true,
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg-sampled",
+      "policy": "combined",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    },
+    {
+      "scene": "occupied",
+      "size": [
+        1920,
+        1080
+      ],
+      "repeat": 2,
+      "backend": "ffmpeg-sampled",
+      "policy": "motion_idle",
+      "reference": "same_backend_combined",
+      "agreement": {
+        "frames": 30,
+        "reference_persons": 30,
+        "candidate_persons": 30,
+        "same_person_count_frames": 30,
+        "reference_faces": 30,
+        "candidate_faces": 30,
+        "extra_positive_identities": 0,
+        "missing_positive_identities": 0,
+        "matched_bodies_iou50": 30,
+        "reference_faces_in_matched_bodies": 30,
+        "matched_faces_iou50": 30,
+        "same_identity_faces": 30,
+        "cached_identity_disagreements": 0,
+        "tracked_frames": 18,
+        "full_detection_frames": 12,
+        "mean_body_iou": 1.0,
+        "mean_face_iou": 1.0,
+        "extra_person_frames": 0,
+        "missing_person_frames": 0,
+        "entry_delay_vs_baseline_ms": [
+          0.0
+        ],
+        "missed_baseline_segments": 0
+      }
+    }
+  ]
+}

@@ -1,0 +1,130 @@
+{
+  "compiler_version": "Edge TPU Compiler version 16.0.384591198",
+  "source_models": {
+    "person": {
+      "file": "ssdlite_mobiledet_coco_qat_postprocess.tflite",
+      "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+      "sha256": "32c486140391eb4dc43fca7113ad392be632dc5366687f2731f73d740678693f"
+    },
+    "face": {
+      "file": "ssd_mobilenet_v2_face_quant_postprocess.tflite",
+      "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssd_mobilenet_v2_face_quant_postprocess.tflite",
+      "sha256": "4c33a81508aed53a2b55b91693957d777f051e24cd62f69270f512957d422aa2"
+    }
+  },
+  "limitation": "Only person/face detectors co-compiled; original embedder unchanged.",
+  "original_embedding_sha256": "01f6f5814e122261632c3156ef6ac3c5eea051bae707352cc64b96894a278cac",
+  "variants": {
+    "individual": {
+      "commands": [
+        [
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin/ld-linux-x86-64.so.2",
+          "--library-path",
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin",
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin/edgetpu_compiler",
+          "--out_dir",
+          "experiments/artifacts/individual",
+          "--show_operations",
+          "experiments/artifacts/source/ssdlite_mobiledet_coco_qat_postprocess.tflite"
+        ],
+        [
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin/ld-linux-x86-64.so.2",
+          "--library-path",
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin",
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin/edgetpu_compiler",
+          "--out_dir",
+          "experiments/artifacts/individual",
+          "--show_operations",
+          "experiments/artifacts/source/ssd_mobilenet_v2_face_quant_postprocess.tflite"
+        ]
+      ],
+      "models": {
+        "person": {
+          "file": "ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+          "sha256": "bdd49513e4b357d3d8258e620a72ab6d47dd954b064230984c12f6dbcd7b614b",
+          "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+          "generated": true
+        },
+        "face": {
+          "file": "ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite",
+          "sha256": "df44f0ff274e15edf5cbc09f53e7e8a20cc084910b4f3d0700541346dce5f0a3",
+          "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssd_mobilenet_v2_face_quant_postprocess.tflite",
+          "generated": true
+        },
+        "embedding": {
+          "file": "mobilefacenet_edgetpu.tflite",
+          "url": "https://raw.githubusercontent.com/NikolasChorianopoulos/face-recognition-on-the-google-coral-dev-board/03bd43ff94e9c83b604eb802bb191beb7f1fb185/models/mobilefacenet_edgetpu.tflite",
+          "sha256": "01f6f5814e122261632c3156ef6ac3c5eea051bae707352cc64b96894a278cac"
+        }
+      }
+    },
+    "co-person-first": {
+      "commands": [
+        [
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin/ld-linux-x86-64.so.2",
+          "--library-path",
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin",
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin/edgetpu_compiler",
+          "--out_dir",
+          "experiments/artifacts/co-person-first",
+          "--show_operations",
+          "experiments/artifacts/source/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+          "experiments/artifacts/source/ssd_mobilenet_v2_face_quant_postprocess.tflite"
+        ]
+      ],
+      "models": {
+        "person": {
+          "file": "ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+          "sha256": "52abc2c1eb73237c6d3538ffe7b33c9c0c7ed6e18b55fccd8cccc6c8c0519d60",
+          "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+          "generated": true
+        },
+        "face": {
+          "file": "ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite",
+          "sha256": "56e43ec0e35ef85486fdbcb868377e6d7b6ec0d393f0caaa0604b74b67068ba0",
+          "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssd_mobilenet_v2_face_quant_postprocess.tflite",
+          "generated": true
+        },
+        "embedding": {
+          "file": "mobilefacenet_edgetpu.tflite",
+          "url": "https://raw.githubusercontent.com/NikolasChorianopoulos/face-recognition-on-the-google-coral-dev-board/03bd43ff94e9c83b604eb802bb191beb7f1fb185/models/mobilefacenet_edgetpu.tflite",
+          "sha256": "01f6f5814e122261632c3156ef6ac3c5eea051bae707352cc64b96894a278cac"
+        }
+      }
+    },
+    "co-face-first": {
+      "commands": [
+        [
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin/ld-linux-x86-64.so.2",
+          "--library-path",
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin",
+          "/tmp/human-detect-motion.uzs2mP/compiler/usr/bin/edgetpu_compiler_bin/edgetpu_compiler",
+          "--out_dir",
+          "experiments/artifacts/co-face-first",
+          "--show_operations",
+          "experiments/artifacts/source/ssd_mobilenet_v2_face_quant_postprocess.tflite",
+          "experiments/artifacts/source/ssdlite_mobiledet_coco_qat_postprocess.tflite"
+        ]
+      ],
+      "models": {
+        "person": {
+          "file": "ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+          "sha256": "eafac2862079f331ba23078e98590fa530e488929a63fbd9d90012717c096e3f",
+          "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+          "generated": true
+        },
+        "face": {
+          "file": "ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite",
+          "sha256": "2c0cef6c3de34c3250d77d1890e5fb262ef9dc81122fca395b5aae7018da2cac",
+          "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssd_mobilenet_v2_face_quant_postprocess.tflite",
+          "generated": true
+        },
+        "embedding": {
+          "file": "mobilefacenet_edgetpu.tflite",
+          "url": "https://raw.githubusercontent.com/NikolasChorianopoulos/face-recognition-on-the-google-coral-dev-board/03bd43ff94e9c83b604eb802bb191beb7f1fb185/models/mobilefacenet_edgetpu.tflite",
+          "sha256": "01f6f5814e122261632c3156ef6ac3c5eea051bae707352cc64b96894a278cac"
+        }
+      }
+    }
+  }
+}

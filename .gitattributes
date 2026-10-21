@@ -1,0 +1,4 @@
+# Preserve external compiler logs verbatim, including their trailing spaces.
+docs/experiments/data/compilation/** -whitespace
+docs/experiments/data/combined/compilation/** -whitespace
+docs/experiments/data/motion-vaapi/probes/** -whitespace

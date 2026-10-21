@@ -6,7 +6,12 @@ __pycache__/
 *.egg-info/
 .env
 data/
-models/*.tflite
-models/*.part
+models/**/*.tflite
+models/**/*.part
 build/
 dist/
+models/joint/
+!docs/experiments/data/
+!docs/experiments/data/**
+!docs/validation/data/
+!docs/validation/data/**

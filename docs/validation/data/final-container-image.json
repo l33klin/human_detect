@@ -1,0 +1,13 @@
+{
+  "Id": "sha256:05e1535301312c9bc64b40dd916b5cf80315292db0414674327050cd01bddc15",
+  "Created": "2026-10-21T12:45:43.644459917+08:00",
+  "Architecture": "amd64",
+  "Os": "linux",
+  "Size": 866394084,
+  "User": "app",
+  "build_args": {
+    "WITH_VAAPI": "true",
+    "DEBIAN_MIRROR": "https://mirrors.aliyun.com",
+    "PIP_INDEX_URL": "https://mirrors.aliyun.com/pypi/simple/"
+  }
+}

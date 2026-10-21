@@ -1,0 +1,32 @@
+{
+  "system": "Linux",
+  "release": "5.15.0-181-generic",
+  "architecture": "x86_64",
+  "python": "3.9.25",
+  "libedgetpu": "libedgetpu.so.1",
+  "pci_devices": [
+    "/dev/apex_0"
+  ],
+  "models": {
+    "person": {
+      "sha256": "c2e24885894a7cc2760746af400f747ec493c12c379bc7b2785bbcbd26a08a8c",
+      "host_ops": [
+        "DEQUANTIZE",
+        "TFLite_Detection_PostProcess"
+      ]
+    },
+    "face": {
+      "sha256": "fe207aa3711980c1cbbdae7cdd18fc1011d3f98ec367c0b4034e3033409c0ef1",
+      "host_ops": [
+        "DEQUANTIZE",
+        "TFLite_Detection_PostProcess"
+      ]
+    },
+    "embedding": {
+      "sha256": "01f6f5814e122261632c3156ef6ac3c5eea051bae707352cc64b96894a278cac",
+      "host_ops": []
+    }
+  },
+  "inference_tested": false,
+  "error": "failed to initialize person on pci:99: Failed to load delegate from libedgetpu.so.1\n"
+}

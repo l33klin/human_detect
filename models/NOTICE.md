@@ -7,6 +7,8 @@ Artifacts are downloaded without modifications from the pinned URLs in `manifest
 
 No upstream application source is included in this service. The service implements its own inference adapters and pipeline.
 
+The Docker image downloads the official [Coral runtime 20221024 archive](https://github.com/google-coral/libedgetpu/releases/tag/release-grouper), verifies SHA-256 `7f17d85e6f21ec861af3f9168043a7ec351b80e08c9f168013ab68e99410aee2`, and installs its standard (`throttled`) Linux library. The archive's binary LICENSE is preserved at `/usr/local/share/edgetpu/LICENSE`; it is distinct from the source repository license. The x86_64 library SHA-256 is `686c861ec1601a1dcb81bba698ec919f1ebe07720c189baf26a8f952aa261ced`, identical to the standard runtime validated on pn41. No runtime binary is stored in this repository.
+
 Coral documentation:
 
 - [Edge TPU model requirements](https://www.coral.withgoogle.com/docs/edgetpu/models-intro/)

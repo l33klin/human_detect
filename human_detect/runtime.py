@@ -129,21 +129,35 @@ class TpuModel:
     def embed(self, rgb):
         return normalize(self.run(rgb)[0])
 
+    def close(self):
+        # The interpreter must release its graph before unloading the delegate.
+        self.interpreter = None
+        self.delegate = None
+
 
 class ModelBundle:
     def __init__(self, settings):
         manifest = json.loads((settings.models_dir / "manifest.json").read_text())
         models = {}
-        for role in ("person", "face", "embedding"):
-            item = manifest[role]
-            path = settings.models_dir / item["file"]
-            checksum = hashlib.sha256(path.read_bytes()).hexdigest()
-            if checksum != item["sha256"]:
-                raise EngineUnavailable(f"checksum mismatch for {path.name}")
-            models[role] = TpuModel(path, settings.device, role)
+        try:
+            for role in ("person", "face", "embedding"):
+                item = manifest[role]
+                path = settings.models_dir / item["file"]
+                checksum = hashlib.sha256(path.read_bytes()).hexdigest()
+                if checksum != item["sha256"]:
+                    raise EngineUnavailable(f"checksum mismatch for {path.name}")
+                models[role] = TpuModel(path, settings.device, role)
+        except Exception:
+            for model in models.values():
+                model.close()
+            raise
         self.person, self.face, self.embedding = (
             models[r] for r in ("person", "face", "embedding")
         )
         self.fingerprint = self.embedding.audit["sha256"] + ":rgb-raw-resize-margin0.1-v1"
         self.dimension = self.embedding.dimension
         self.report = {role: model.audit for role, model in models.items()}
+
+    def close(self):
+        for role in ("person", "face", "embedding"):
+            getattr(self, role).close()

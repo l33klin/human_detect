@@ -1,0 +1,74 @@
+{
+  "python": "3.9.25",
+  "platform": "Linux-5.15.0-181-generic-x86_64-with-glibc2.35",
+  "cpu": "Intel(R) Pentium(R) Silver N6005 @ 2.00GHz",
+  "packages": {
+    "numpy": "1.26.4",
+    "opencv-python-headless": "4.11.0.86",
+    "tflite": "2.10.0",
+    "tflite-runtime": "2.5.0.post1",
+    "fastapi": "0.128.8",
+    "pydantic": "2.13.5",
+    "pytest": "8.4.2",
+    "ruff": "0.17.1"
+  },
+  "ffmpeg": "ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers",
+  "joint_models": {
+    "person": {
+      "file": "ssdlite_mobiledet_coco_qat_postprocess_edgetpu.tflite",
+      "sha256": "c2e24885894a7cc2760746af400f747ec493c12c379bc7b2785bbcbd26a08a8c",
+      "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssdlite_mobiledet_coco_qat_postprocess.tflite",
+      "generated": true
+    },
+    "face": {
+      "file": "ssd_mobilenet_v2_face_quant_postprocess_edgetpu.tflite",
+      "sha256": "fe207aa3711980c1cbbdae7cdd18fc1011d3f98ec367c0b4034e3033409c0ef1",
+      "url": "https://raw.githubusercontent.com/google-coral/test_data/104342d2d3480b3e66203073dac24f4e2dbb4c41/ssd_mobilenet_v2_face_quant_postprocess.tflite",
+      "generated": true
+    },
+    "embedding": {
+      "file": "mobilefacenet_edgetpu.tflite",
+      "url": "https://raw.githubusercontent.com/NikolasChorianopoulos/face-recognition-on-the-google-coral-dev-board/03bd43ff94e9c83b604eb802bb191beb7f1fb185/models/mobilefacenet_edgetpu.tflite",
+      "sha256": "01f6f5814e122261632c3156ef6ac3c5eea051bae707352cc64b96894a278cac"
+    }
+  },
+  "compiler": "Edge TPU Compiler version 16.0.384591198",
+  "source_sha256": {
+    "human_detect/__init__.py": "c4e22c27618cb04a00e593cf6f262a154f0fb83b7943bdb0768578cda3e9b134",
+    "human_detect/app.py": "0c1ae447c0810f63a0a6e005fcdcd267bf03ed2fdd58413a23db6e3d234ea693",
+    "human_detect/cli.py": "8eb6a76d60b063f4dbc6dba8b3fe651c589ea8bce476ee20ef87e227e436bbd6",
+    "human_detect/config.py": "0e65394d59d32bb6c1a26b812400087ff4b8dcae52a07f32cef47d776413fac0",
+    "human_detect/executor.py": "dc0b7550614f5949374a103f8aec7266c02e4f9b51f388997eb2c4c8f63418e3",
+    "human_detect/identity.py": "6378ddeb2c9121857b3cd7e6e6b315e4d6219732936fa4ef074a15e83ba86777",
+    "human_detect/motion.py": "10c017b27a5f42905b23a9b012cf63e0d66c80c54c72f0a756722636966e9442",
+    "human_detect/pipeline.py": "e767165db35644d3be6f39fac109a52e5a6f86343938136c788c3986c19f0665",
+    "human_detect/runtime.py": "820b325ae994e5e3e280dfc0f9aebc5abd9a4577b3c05eae7596405c69503dac",
+    "human_detect/schemas.py": "b1ec855416ef91dc9d1be2cd121a3805c663fd1fe7f121a5ac40b07c65f3c36e",
+    "human_detect/streams.py": "5da2985ca9cbd8165e91c2428a4792fb125a61687a28c648b9c858f18721398d",
+    "human_detect/temporal.py": "00e0fdc21c90c5e234e7aa32cecbfc2394433576093685d87b842a0fd544fa53",
+    "human_detect/video.py": "a64f4603480d49374c114a3092731df22df893c85070b85b6f9c53f54ccf520e",
+    "scripts/download_models.py": "80fa93090daf69eb93021716ca4d3cef5d462a661c8cc6057538b922fe387cbb",
+    "scripts/install_edgetpu.py": "8be3ac542731c83c3b2ec80a0ae56316609ad1ced86c4c6724cc3008fcd22771",
+    "scripts/prepare_joint_models.py": "ba88860e2ca7f5cc9c7c1d80867a964dace05b08cd06eb6e0e47c729716dc129",
+    "scripts/validate_hardware.py": "bd40311fd8378264256f6b56e1f0aa593d88a91be3c004dfcc191a3c52293772",
+    "scripts/validate_optimizations.py": "3b2cbe6e5e4f3c1a9882bcb8903fce5e855be1f22f342bc9c334df06a741066f",
+    "scripts/validate_video.py": "76a648ee75d1527dac92b06f31b534337d57e5a4ba9dde6574a257b9b88476a1",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/conftest.py": "c5e47c324a9208c8472c36b6149629fbe66c1923bd7df109cd80f113a5419e3c",
+    "tests/fakes.py": "0d533b78a65a0214cee219fcb817febc0c42573f161dafa99fb965ad4b4b2ffb",
+    "tests/test_api.py": "bc5e48a6ae62d22f8680bcd9eb1fc5a1696c91e173d2f7b95c85a5cd2437f087",
+    "tests/test_executor_streams.py": "d482b25ab54cc7267dda1482d7cf942d6b63e93ef7c85c27cf3a93f6d45bf9a2",
+    "tests/test_identity.py": "a8ad6975bd6ed07c2257ddb2ff1adb53ccbb4772172729a71b9f712ecaf6203c",
+    "tests/test_motion.py": "cc0241c3cbe36b5a93669b5b5187b65b9aa69d59b184f03c0d51261ca462d5ce",
+    "tests/test_runtime.py": "29086265ce560f0db6326ef217c3d7996d6acda2aa21f0edd455dde8fc9c12b4",
+    "tests/test_runtime_install.py": "1e2cc18594c62213bfe8881019963e300ef042f00b66ba5371526b9d1f48d034",
+    "tests/test_temporal.py": "1bf57cb6558e20b9f6124b379bc863f35a8d82bff4f73e1fb3402555b54258e3",
+    "tests/test_video.py": "dd783a18e09196f394e733ed9608c7929ca11a8ad380aaf90bc25df7282e18e6",
+    "pyproject.toml": "9ae2c4f6dd50702673e44469942655451d2085dcf73d8d7be4d3ed7aa1198f73",
+    "Dockerfile": "917a1621443202df37b33586e49057aba3b2e4e52d899c57e3cdfc1793b0c96d",
+    "compose.yaml": "363ced3afb0f0cec648f3235c18dc438acdfd3029df7b025748a4c989bef08cc",
+    "compose.vaapi.yaml": "f51ab3532592fdfc2c19e89314c2679e87183e41ff97a98a6ad6e876f246c4f3",
+    "compose.stable.yaml": "96db5b4b2ce7d42fd5883f963f851b995de8f26098b08b3b4146bf0232d4d1f1",
+    ".env.example": "88997484614ec26a5436102eabbe7900d949759014962060a83e9de4916b11ee"
+  }
+}

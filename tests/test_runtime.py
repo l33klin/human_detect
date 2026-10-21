@@ -8,7 +8,7 @@ import numpy as np
 import pytest
 import tflite
 
-from human_detect.runtime import EngineUnavailable, TpuModel, audit_model
+from human_detect.runtime import EngineUnavailable, ModelBundle, TpuModel, audit_model
 
 
 def minimal_model(path, builtin):
@@ -138,3 +138,30 @@ def test_ssd_coordinates_class_filter_and_invalid_boxes():
     detected = model.detect(np.zeros((100, 200, 3), dtype=np.uint8), 0.5, class_id=0)
     assert len(detected) == 1
     assert detected[0][0].model_dump() == {"x1": 0, "y1": 10, "x2": 100, "y2": 100}
+
+
+def test_bundle_initialization_failure_releases_already_loaded_models(settings, monkeypatch):
+    import hashlib
+
+    settings.models_dir = settings.database.parent / "models"
+    settings.models_dir.mkdir()
+    manifest = {}
+    for role in ("person", "face", "embedding"):
+        path = settings.models_dir / f"{role}.tflite"
+        path.write_bytes(role.encode())
+        manifest[role] = dict(file=path.name, sha256=hashlib.sha256(path.read_bytes()).hexdigest())
+    (settings.models_dir / "manifest.json").write_text(json.dumps(manifest))
+    closed = []
+
+    class Model:
+        def __init__(self, path, device, role):
+            if role == "face":
+                raise EngineUnavailable("missing TPU")
+
+        def close(self):
+            closed.append("person")
+
+    monkeypatch.setattr("human_detect.runtime.TpuModel", Model)
+    with pytest.raises(EngineUnavailable, match="missing TPU"):
+        ModelBundle(settings)
+    assert closed == ["person"]

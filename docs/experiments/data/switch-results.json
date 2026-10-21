@@ -1,0 +1,375 @@
+{
+  "assets_sha256": {
+    "reference": "c43444bf3b1b1e3080551ca194bd231da4b67f20fc91454502915a6b806b614f",
+    "alternate": "270e2bb9a1dce26a042baea93dbc4118d2f9b243c822ae5687ced52715048c56"
+  },
+  "equivalence_vs_individual": {
+    "baseline": {
+      "max_abs_output_difference": 0.0,
+      "exact": true
+    },
+    "individual": {
+      "max_abs_output_difference": 0.0,
+      "exact": true
+    },
+    "co-person-first": {
+      "max_abs_output_difference": 0.0,
+      "exact": true
+    },
+    "co-face-first": {
+      "max_abs_output_difference": 0.0,
+      "exact": true
+    }
+  },
+  "results": [
+    {
+      "variant": "baseline",
+      "repeat": 0,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 46.106,
+        "p50_ms": 46.067,
+        "p95_ms": 49.212
+      }
+    },
+    {
+      "variant": "individual",
+      "repeat": 0,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 45.308,
+        "p50_ms": 45.49,
+        "p95_ms": 49.307
+      }
+    },
+    {
+      "variant": "co-person-first",
+      "repeat": 0,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 30.071,
+        "p50_ms": 29.893,
+        "p95_ms": 33.602
+      }
+    },
+    {
+      "variant": "co-face-first",
+      "repeat": 0,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 30.29,
+        "p50_ms": 30.04,
+        "p95_ms": 33.727
+      }
+    },
+    {
+      "variant": "co-person-first",
+      "repeat": 0,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 59.971,
+        "p50_ms": 60.25,
+        "p95_ms": 62.934
+      }
+    },
+    {
+      "variant": "baseline",
+      "repeat": 0,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 60.158,
+        "p50_ms": 60.719,
+        "p95_ms": 64.107
+      }
+    },
+    {
+      "variant": "co-face-first",
+      "repeat": 0,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 60.227,
+        "p50_ms": 61.019,
+        "p95_ms": 63.069
+      }
+    },
+    {
+      "variant": "individual",
+      "repeat": 0,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 60.581,
+        "p50_ms": 61.105,
+        "p95_ms": 63.183
+      }
+    },
+    {
+      "variant": "individual",
+      "repeat": 1,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 45.056,
+        "p50_ms": 44.787,
+        "p95_ms": 48.555
+      }
+    },
+    {
+      "variant": "co-person-first",
+      "repeat": 1,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 30.561,
+        "p50_ms": 30.837,
+        "p95_ms": 33.79
+      }
+    },
+    {
+      "variant": "baseline",
+      "repeat": 1,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 44.955,
+        "p50_ms": 45.308,
+        "p95_ms": 49.247
+      }
+    },
+    {
+      "variant": "co-face-first",
+      "repeat": 1,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 30.744,
+        "p50_ms": 30.848,
+        "p95_ms": 34.633
+      }
+    },
+    {
+      "variant": "co-person-first",
+      "repeat": 1,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 60.039,
+        "p50_ms": 60.245,
+        "p95_ms": 63.15
+      }
+    },
+    {
+      "variant": "co-face-first",
+      "repeat": 1,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 60.334,
+        "p50_ms": 60.859,
+        "p95_ms": 63.019
+      }
+    },
+    {
+      "variant": "individual",
+      "repeat": 1,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 60.356,
+        "p50_ms": 60.613,
+        "p95_ms": 63.573
+      }
+    },
+    {
+      "variant": "baseline",
+      "repeat": 1,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 60.287,
+        "p50_ms": 61.02,
+        "p95_ms": 63.991
+      }
+    },
+    {
+      "variant": "co-person-first",
+      "repeat": 2,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 30.41,
+        "p50_ms": 31.046,
+        "p95_ms": 33.876
+      }
+    },
+    {
+      "variant": "individual",
+      "repeat": 2,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 45.952,
+        "p50_ms": 46.156,
+        "p95_ms": 48.799
+      }
+    },
+    {
+      "variant": "co-face-first",
+      "repeat": 2,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 30.291,
+        "p50_ms": 30.307,
+        "p95_ms": 33.818
+      }
+    },
+    {
+      "variant": "baseline",
+      "repeat": 2,
+      "stages": [
+        "person",
+        "face"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 45.931,
+        "p50_ms": 46.684,
+        "p95_ms": 48.744
+      }
+    },
+    {
+      "variant": "individual",
+      "repeat": 2,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 59.747,
+        "p50_ms": 59.981,
+        "p95_ms": 63.647
+      }
+    },
+    {
+      "variant": "co-face-first",
+      "repeat": 2,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 58.479,
+        "p50_ms": 58.89,
+        "p95_ms": 62.957
+      }
+    },
+    {
+      "variant": "co-person-first",
+      "repeat": 2,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 59.868,
+        "p50_ms": 60.242,
+        "p95_ms": 63.009
+      }
+    },
+    {
+      "variant": "baseline",
+      "repeat": 2,
+      "stages": [
+        "person",
+        "face",
+        "embedding"
+      ],
+      "runs": 100,
+      "processing": {
+        "mean_ms": 60.386,
+        "p50_ms": 60.268,
+        "p95_ms": 64.128
+      }
+    }
+  ],
+  "note": "Fixed-call model invocation timing, not pipeline/camera FPS. Embedding model is independently compiled and unchanged."
+}

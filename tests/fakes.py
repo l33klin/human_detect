@@ -21,7 +21,11 @@ class Detector:
 
 
 class Embedder:
+    def __init__(self):
+        self.calls = 0
+
     def embed(self, image):
+        self.calls += 1
         return np.array([1, 0, 0], dtype=np.float32)
 
 
@@ -33,10 +37,11 @@ def fake_models(settings):
         dimension=3,
         fingerprint="test-model-v1",
         report={},
+        close=lambda: None,
     )
 
 
-def synthetic_capture(source, timeout_ms, channel, stop):
+def synthetic_capture(source, timeout_ms, channel, stop, *options):
     """Spawn-safe test video source, no TPU simulation is exposed by production CLI."""
     channel.cancel_join_thread()
     while not stop.is_set():

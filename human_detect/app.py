@@ -57,6 +57,7 @@ def create_app(settings=None, model_factory=ModelBundle):
             await asyncio.to_thread(streams.close)
             await asyncio.to_thread(executor.close)
             store.close()
+            models.close()
 
     app = FastAPI(title="Human Detect · Coral Edge TPU", version="0.1.0", lifespan=lifespan)
 

@@ -1,0 +1,6 @@
+# Stable backgrounds with few people: mount the prepared shared-cache detector pair.
+# Run scripts/prepare_joint_models.py before using this overlay.
+services:
+  human-detect:
+    volumes:
+      - ./models/joint:/app/models:ro
