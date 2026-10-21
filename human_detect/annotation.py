@@ -21,6 +21,14 @@ class Annotator:
         ImageDraw.Draw(image).text((8, 6 - bounds[1]), text, font=self.font, fill=(240, 255, 247))
         return np.asarray(image)
 
+    def _draw_label(self, rgb, text, x, y):
+        height, width = rgb.shape[:2]
+        label = self.label(text)
+        x = max(0, min(width - min(width, label.shape[1]), x))
+        y = max(0, min(height - 1, y))
+        h, w = min(label.shape[0], height - y), min(label.shape[1], width - x)
+        rgb[y : y + h, x : x + w] = label[:h, :w]
+
     def draw(self, rgb, persons):
         height, width = rgb.shape[:2]
         for person in persons:
@@ -34,16 +42,23 @@ class Annotator:
                 cv2.rectangle(
                     rgb, (fb["x1"], fb["y1"]), (fb["x2"] - 1, fb["y2"] - 1), (255, 205, 90), 2
                 )
+                self._draw_label(
+                    rgb,
+                    f"人脸 {face['confidence']:.3f}",
+                    fb["x1"],
+                    min(height - self.label_height, fb["y2"] + 2),
+                )
                 identity = face["identity"]
                 labels.append(
                     f"{identity['name']} [{identity['person_id']}]"
                     if identity["status"] == "matched"
                     else "未知"
                 )
-            text = " / ".join(labels) if labels else "未检测到人脸"
-            label = self.label(text)
-            x = max(0, min(width - min(width, label.shape[1]), box["x1"]))
-            y = max(0, min(height - 1, box["y1"] - label.shape[0]))
-            h, w = min(label.shape[0], height - y), min(label.shape[1], width - x)
-            rgb[y : y + h, x : x + w] = label[:h, :w]
+            identity_text = " / ".join(labels) if labels else "未检测到人脸"
+            self._draw_label(
+                rgb,
+                f"人体 {person['confidence']:.3f} | {identity_text}",
+                box["x1"],
+                box["y1"] - self.label_height,
+            )
         return rgb
