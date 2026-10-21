@@ -1,9 +1,14 @@
 # Coral's published Linux runtime wheel targets CPython 3.9.
 FROM python:3.9-slim-bullseye
 
+ARG WITH_VAAPI=false
+
 ENV PYTHONDONTWRITEBYTECODE=1 PYTHONUNBUFFERED=1 PIP_NO_CACHE_DIR=1
 RUN apt-get update && apt-get install -y --no-install-recommends \
       ca-certificates curl gnupg libglib2.0-0 libgl1 libusb-1.0-0 \
+    && if [ "$WITH_VAAPI" = "true" ]; then \
+         apt-get install -y --no-install-recommends ffmpeg intel-media-va-driver; \
+       fi \
     && curl -fsSL https://packages.cloud.google.com/apt/doc/apt-key.gpg \
        | gpg --dearmor -o /usr/share/keyrings/coral.gpg \
     && echo 'deb [signed-by=/usr/share/keyrings/coral.gpg] https://packages.cloud.google.com/apt coral-edgetpu-stable main' \

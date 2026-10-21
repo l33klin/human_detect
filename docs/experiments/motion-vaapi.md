@@ -50,3 +50,24 @@ HD_CAPTURE_BACKEND=vaapi human-detect serve
 需要系统 FFmpeg、iHD 驱动和 `/dev/dri/renderD128` 访问权限。pn41 测试用临时 `setpriv` 进程赋予 render 主组，保留 apex 等附属组；不永久修改组成员，不以 root 部署服务。使用 `HD_CAPTURE_BACKEND=ffmpeg` 可运行同一管道的 CPU 解码控制组。显式 vaapi 路径失败时重连并返回状态，不切换软件解码；TPU 故障仍按原策略报错。
 
 PPM 帧头携带实际尺寸，先校验像素上限再分配 RGB 内存。采集进程使用独立进程组，超时、删除流和关闭服务时同时回收 FFmpeg 子进程。静态图片 API 不使用运动复用。
+
+容器提供可选 `compose.vaapi.yaml`：通过构建参数加入 FFmpeg/iHD，并映射 render 设备及数字 GID。先设置 `HD_APEX_GID`、`HD_RENDER_GID`，再使用 `docker compose -f compose.yaml -f compose.vaapi.yaml ...`。此次测量使用 Ubuntu 主机原有 FFmpeg/驱动，不代表 Debian 容器内驱动组合已经通过相同验证。该 overlay 沿用基础模型目录；如需联合模型，按组合分支说明挂载相应目录。
+
+## 初测后的格式对照
+
+初始协议使用 NV12→RGB 路径。初测发现该路径慢，另外记录 3 轮分段对照：GPU 表面、NV12 下载、NV12→RGB、NV12→I420→RGB，输出至 `/dev/null`，不计 Python 管道；命令和结果单独保存。后者的 I420 平面重排发生在 CPU，不能称作核显色彩转换。
+
+增加显式 `vaapi-i420` 后端，并用相同视频、3 轮重复补测完整 RGB 回传和整体 pipeline；不覆盖初始数据，不重测已失败的 VPP 缩放路径：
+
+```bash
+PYTHONPATH=. python -m experiments.motion_video --phase decode \
+  --backends vaapi-i420 --skip-scale --reuse-clips \
+  --models experiments/artifacts/co-person-first --frames 150 --repeats 3 \
+  --work /tmp/hd-motion-benchmark --output decode-i420.json
+PYTHONPATH=. python -m experiments.motion_video --phase integrated \
+  --backends vaapi-i420 --reuse-clips \
+  --models experiments/artifacts/co-person-first --frames 150 --repeats 3 \
+  --work /tmp/hd-motion-benchmark --output integrated-i420.json
+```
+
+`experiments.summarize_motion_video --extra` 可合并同阶段补测记录，断言相同素材和模型；保留两次源码版本。OpenCV 与外部 FFmpeg 的版本、线程策略、内存路径不同，须分别报告库内基线与相同管道的 CPU 对照。

@@ -34,3 +34,6 @@ def test_vaapi_requires_hardware_surfaces_and_source_is_single_argument():
     assert command[command.index("-hwaccel_output_format") + 1] == "vaapi"
     assert command[command.index("-vf") + 1] == "hwdownload,format=nv12"
     assert "-hwaccel" not in decoder_command(source, "ffmpeg", "unused", 5000)
+    command = decoder_command(source, "vaapi-i420", "/dev/dri/renderD128", 5000)
+    assert command[command.index("-vf") + 1] == "hwdownload,format=nv12,format=yuv420p"
+    assert command[command.index("-hwaccel") + 1] == "vaapi"

@@ -1,6 +1,6 @@
 # Human Detect
 
-本分支合并跟踪降频与两检测模型联合编译，均为可选配置。见 [组合实验协议](docs/experiments/combined.md)和[组合实测结果](docs/experiments/combined-results.md)。
+本分支在组合优化基础上验证运动触发、空场景降频与显式 VAAPI 采集。见 [实验协议](docs/experiments/motion-vaapi.md)和[实测结果](docs/experiments/motion-vaapi-results.md)。新增选项默认关闭，神经网络推理继续使用 TPU。
 
 在 Ubuntu Server 上使用 **Coral M.2 / PCIe Edge TPU**，提供人体检测、人脸检测和已录入人员的身份匹配。支持 RTSP、HTTP(S) 视频流、USB/V4L2 摄像头和静态图片，输出 JSON。
 

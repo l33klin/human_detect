@@ -34,5 +34,5 @@ class Settings(BaseSettings):
     empty_scene_seconds: float = Field(2, gt=0, le=10)
     motion_pixel_threshold: int = Field(18, ge=1, le=255)
     motion_changed_fraction: float = Field(0.002, gt=0, le=1)
-    capture_backend: Literal["opencv", "ffmpeg", "vaapi"] = "opencv"
+    capture_backend: Literal["opencv", "ffmpeg", "vaapi", "vaapi-i420"] = "opencv"
     vaapi_device: str = "/dev/dri/renderD128"

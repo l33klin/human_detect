@@ -212,7 +212,13 @@ def main():
     parser.add_argument("--frames", type=int, default=60)
     parser.add_argument("--repeats", type=int, default=3)
     parser.add_argument("--revision", default="unspecified")
+    parser.add_argument("--backends", default="opencv,ffmpeg,vaapi")
+    parser.add_argument("--skip-scale", action="store_true")
+    parser.add_argument("--reuse-clips", action="store_true")
     args = parser.parse_args()
+    backends = args.backends.split(",")
+    if not set(backends) <= {"opencv", "ffmpeg", "vaapi", "vaapi-i420"}:
+        parser.error("unknown decoder backend")
     args.work.mkdir(parents=True, exist_ok=True)
     assets, hashes = load_assets()
     cfg = Settings(_env_file=None, models_dir=args.models, database=args.work / "identity.sqlite3")
@@ -255,6 +261,9 @@ def main():
             if args.phase == "decode":
                 for size in ((1920, 1080), (3840, 2160)):
                     path = args.work / f"testsrc-{size[0]}.mp4"
+                    if args.reuse_clips and path.exists():
+                        clips.append(("testsrc", size, path))
+                        continue
                     subprocess.run(
                         [
                             "ffmpeg",
@@ -287,16 +296,17 @@ def main():
             else:
                 for scene in ("empty", "entry_exit", "occupied"):
                     path = args.work / f"{scene}-1080.mp4"
-                    encode(assets, scene, (1920, 1080), args.frames, path)
+                    if not (args.reuse_clips and path.exists()):
+                        encode(assets, scene, (1920, 1080), args.frames, path)
                     clips.append((scene, (1920, 1080), path))
             for repeat in range(args.repeats):
                 for scene, size, path in clips:
                     variants = [
                         (b, p, None)
-                        for b in ("opencv", "ffmpeg", "vaapi")
+                        for b in backends
                         for p in (("combined", "motion_idle") if pipeline else ("none",))
                     ]
-                    if not pipeline:
+                    if not pipeline and not args.skip_scale:
                         variants += [(b, "none", (1280, 720)) for b in ("ffmpeg", "vaapi")]
                     rng.shuffle(variants)
                     for backend, policy, scale in variants:

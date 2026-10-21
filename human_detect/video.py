@@ -17,7 +17,8 @@ def decoder_command(source, backend, device, timeout_ms, output_size=None):
         "-filter_threads",
         "1",
     ]
-    if backend == "vaapi":
+    hardware = backend in {"vaapi", "vaapi-i420"}
+    if hardware:
         command += [
             "-hwaccel",
             "vaapi",
@@ -27,7 +28,7 @@ def decoder_command(source, backend, device, timeout_ms, output_size=None):
             "vaapi",
         ]
     elif backend != "ffmpeg":
-        raise ValueError("expected ffmpeg or vaapi backend")
+        raise ValueError("expected ffmpeg, vaapi or vaapi-i420 backend")
     if isinstance(source, int):
         command += ["-f", "v4l2", "-i", f"/dev/video{source}"]
     else:
@@ -36,11 +37,15 @@ def decoder_command(source, backend, device, timeout_ms, output_size=None):
             command += ["-rtsp_transport", "tcp"]
         command += ["-i", source]
     filters = []
-    if backend == "vaapi":
+    if hardware:
         if output_size:
             w, h = output_size
             filters += [f"scale_vaapi=w={w}:h={h}:format=nv12"]
         filters += ["hwdownload", "format=nv12"]
+        if backend == "vaapi-i420":
+            # CPU plane rearrangement avoids the slow direct NV12->RGB path
+            # observed with FFmpeg 4.4 on pn41. Hardware decoding stays mandatory.
+            filters += ["format=yuv420p"]
     elif output_size:
         w, h = output_size
         filters += [f"scale=w={w}:h={h}:flags=bilinear"]
