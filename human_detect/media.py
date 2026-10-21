@@ -179,7 +179,9 @@ class MediaConnection:
             video = self.input.streams.video[0]
             if video.width * video.height > cfg.max_image_pixels:
                 raise ValueError("frame_pixel_limit_exceeded")
-            self.rate = video.average_rate or Fraction(25)
+            # Rawvideo in NUT often omits average_rate while retaining its
+            # nominal rate. Preserve that rate for cadence and output metadata.
+            self.rate = video.average_rate or video.guessed_rate or Fraction(25)
             if not 0 < self.rate <= 120:
                 raise ValueError("invalid_source_rate")
             self.encoder = subprocess.Popen(

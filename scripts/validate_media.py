@@ -113,14 +113,27 @@ def run(args):
             assert prepared.returncode == 0, prepared.stderr.decode()
         source_info = json.loads(
             subprocess.check_output(
-                ["ffprobe", "-v", "error", "-show_streams", "-of", "json", str(clip)]
+                [
+                    "ffprobe",
+                    "-v",
+                    "error",
+                    "-show_streams",
+                    "-show_format",
+                    "-of",
+                    "json",
+                    str(clip),
+                ]
             )
         )
         source_video = next(s for s in source_info["streams"] if s["codec_type"] == "video")
         width, height = source_video["width"], source_video["height"]
         has_audio = any(s["codec_type"] == "audio" for s in source_info["streams"])
         report["input"] = dict(
-            width=width, height=height, fps=source_video["avg_frame_rate"], audio=has_audio
+            width=width,
+            height=height,
+            fps=source_video["avg_frame_rate"],
+            audio=has_audio,
+            duration_seconds=float(source_info["format"]["duration"]),
         )
         for index in range(args.streams):
             launch(
@@ -222,6 +235,13 @@ def run(args):
                 (b["media"]["output_frames"] - a["media"]["output_frames"]) / elapsed
                 for a, b in zip(first, last)
             ]
+            report["measurement_counters"] = [
+                {
+                    key: dict(start=a["media"][key], end=b["media"][key])
+                    for key in ("output_frames", "dropped_frames")
+                }
+                for a, b in zip(first, last)
+            ]
             if args.benchmark_only:
                 args.output.write_text(json.dumps(report, ensure_ascii=False, indent=2))
                 print(
@@ -235,6 +255,7 @@ def run(args):
                 return
             report["codecs"] = []
             report["packet_timestamps"] = []
+            report["decoded_samples"] = []
             for value in last:
                 command = [
                     "ffprobe",
@@ -295,7 +316,9 @@ def run(args):
                 report["packet_timestamps"].append(
                     {str(k): dict(first=v[0], last=v[-1], count=len(v)) for k, v in times.items()}
                 )
-                # Decode a small sample to prove labels/boxes are actually in the RTSP pixels.
+                # Decode actual RTSP pixels. An arbitrary real clip can have no
+                # detected people at this instant, so only the known reference
+                # scene can assert that the sample contains annotation colors.
                 pixels = subprocess.run(
                     [
                         "ffmpeg",
@@ -327,7 +350,9 @@ def run(args):
 
                     Image.fromarray(rgb).save(args.preview)
                 green = (rgb[:, :, 1].astype(int) - rgb[:, :, 0] > 60) & (rgb[:, :, 1] > 150)
-                assert int(green.sum()) > 100
+                report["decoded_samples"].append(dict(green_pixels=int(green.sum())))
+                if not args.clip:
+                    assert int(green.sum()) > 100
             # A single authoritative identity store invalidates cached matches immediately.
             assert client.delete("/v1/identities/reference").status_code == 200
 

@@ -1,14 +1,19 @@
+import io
 import json
 import multiprocessing
 import time
+from fractions import Fraction
 from multiprocessing.shared_memory import SharedMemory
+from types import SimpleNamespace
 
+import av
 import httpx
+import numpy as np
 import pytest
 from fastapi.testclient import TestClient
 
 from human_detect.app import create_app
-from human_detect.media import encoder_command, media_decoder_command
+from human_detect.media import MediaConnection, encoder_command, media_decoder_command
 from human_detect.published import PublishedStream
 from tests.fakes import fake_models, synthetic_media
 
@@ -111,6 +116,40 @@ def test_media_commands_preserve_timestamps_and_do_not_drop_video_rate(settings)
     assert output[output.index("-rc_mode") + 1] == "CQP"
     assert "libx264" not in output and "libopus" in output
     assert output[output.index("-bf") + 1] == "0"
+
+
+@pytest.mark.parametrize("rate", [Fraction(60000, 1001), Fraction(25)])
+def test_nut_without_average_rate_preserves_source_cadence(settings, monkeypatch, rate):
+    # An initial rawvideo NUT frame carries the nominal rate even when there
+    # are not enough frames to estimate average_rate during the live probe.
+    source = io.BytesIO()
+    with av.open(source, mode="w", format="nut") as container:
+        video = container.add_stream("rawvideo", rate=rate)
+        video.width, video.height, video.pix_fmt = 32, 24, "rgb24"
+        frame = av.VideoFrame.from_ndarray(np.zeros((24, 32, 3), np.uint8), format="rgb24")
+        frame.pts, frame.time_base = 0, 1 / rate
+        for packet in video.encode(frame):
+            container.mux(packet)
+    source.seek(0)
+    with av.open(io.BytesIO(source.getvalue()), format="nut") as container:
+        assert container.streams.video[0].average_rate is None
+        assert container.streams.video[0].guessed_rate == rate
+
+    def process(**pipes):
+        fields = dict(stdin=None, stdout=None, terminate=lambda: None, wait=lambda **_: 0)
+        fields.update(pipes)
+        return SimpleNamespace(**fields)
+
+    decoder = process(stdout=source)
+    encoder = process(stdin=io.BytesIO())
+    processes = iter((decoder, encoder))
+    monkeypatch.setattr("human_detect.media.subprocess.Popen", lambda *a, **k: next(processes))
+    connection = MediaConnection("rtsp://camera/live", "rtsp://localhost/output", settings)
+    try:
+        assert connection.rate == rate
+        assert connection.video.average_rate == rate
+    finally:
+        connection.close()
 
 
 def test_ui_is_available_when_api_requires_key(settings):
