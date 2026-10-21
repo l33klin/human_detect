@@ -34,10 +34,11 @@ def test_bounded_admission_and_cancelled_queued_work():
         executor.close()
 
 
-@pytest.mark.parametrize("temporal", [False, True])
-def test_spawned_video_capture_json_results_and_cleanup(settings, monkeypatch, temporal):
+@pytest.mark.parametrize("temporal,motion", [(False, False), (True, False), (True, True)])
+def test_spawned_video_capture_json_results_and_cleanup(settings, monkeypatch, temporal, motion):
     monkeypatch.setattr("human_detect.streams.capture_frames", synthetic_capture)
     settings.temporal_enabled = temporal
+    settings.motion_enabled = settings.empty_scene_enabled = motion
     settings.max_streams = 1
     executor = InferenceExecutor(2)
     store = IdentityStore(settings.database, "test-model-v1", 3)

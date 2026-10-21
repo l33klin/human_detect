@@ -36,7 +36,7 @@ def fake_models(settings):
     )
 
 
-def synthetic_capture(source, timeout_ms, channel, stop):
+def synthetic_capture(source, timeout_ms, channel, stop, *options):
     """Spawn-safe test video source, no TPU simulation is exposed by production CLI."""
     channel.cancel_join_thread()
     while not stop.is_set():
