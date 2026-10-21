@@ -44,10 +44,12 @@ PYTHONPATH=. python -m experiments.motion_video --phase integrated \
 ```bash
 HD_MODELS_DIR=experiments/artifacts/co-person-first \
 HD_TEMPORAL_ENABLED=true HD_MOTION_ENABLED=true HD_EMPTY_SCENE_ENABLED=true \
-HD_CAPTURE_BACKEND=vaapi human-detect serve
+HD_CAPTURE_BACKEND=opencv human-detect serve
 ```
 
-需要系统 FFmpeg、iHD 驱动和 `/dev/dri/renderD128` 访问权限。pn41 测试用临时 `setpriv` 进程赋予 render 主组，保留 apex 等附属组；不永久修改组成员，不以 root 部署服务。使用 `HD_CAPTURE_BACKEND=ffmpeg` 可运行同一管道的 CPU 解码控制组。显式 vaapi 路径失败时重连并返回状态，不切换软件解码；TPU 故障仍按原策略报错。
+核显后端需要系统 FFmpeg、iHD 驱动和 `/dev/dri/renderD128` 访问权限。pn41 测试用临时 `setpriv` 进程赋予 render 主组，保留 apex 等附属组；不永久修改组成员，不以 root 部署服务。使用 `HD_CAPTURE_BACKEND=ffmpeg` 可运行同一管道的 CPU 解码控制组。显式 vaapi 路径失败时重连并返回状态，不切换软件解码；TPU 故障仍按原策略报错。
+
+上例保留 OpenCV 解码。核显实验显式设置 `HD_CAPTURE_BACKEND=vaapi` 或 `vaapi-i420`；本机实测不建议将它们设为默认。OpenCV 路径不需要 FFmpeg 可执行文件或 render 权限。
 
 PPM 帧头携带实际尺寸，先校验像素上限再分配 RGB 内存。采集进程使用独立进程组，超时、删除流和关闭服务时同时回收 FFmpeg 子进程。静态图片 API 不使用运动复用。
 
@@ -71,3 +73,20 @@ PYTHONPATH=. python -m experiments.motion_video --phase integrated \
 ```
 
 `experiments.summarize_motion_video --extra` 可合并同阶段补测记录，断言相同素材和模型；保留两次源码版本。OpenCV 与外部 FFmpeg 的版本、线程策略、内存路径不同，须分别报告库内基线与相同管道的 CPU 对照。
+
+## RGB 回传前筛帧补测
+
+I420 对照之后，再验证将 25 FPS 源视频在 RGB 转换之前筛至目标 5 FPS。硬件解码仍处理全部源帧，但只下载和转换被保留的帧。增加同样筛帧的 FFmpeg CPU 控制组，每段 150 个源帧、回传 30 个 RGB 帧、3 轮。
+
+```bash
+PYTHONPATH=. python -m experiments.motion_video --phase decode \
+  --backends ffmpeg,vaapi-i420 --sample-before-download --skip-scale --reuse-clips \
+  --models experiments/artifacts/co-person-first --frames 150 --repeats 3 \
+  --work /tmp/hd-motion-benchmark --output decode-sampled.json
+PYTHONPATH=. python -m experiments.motion_video --phase integrated \
+  --backends ffmpeg,vaapi-i420 --sample-before-download --reuse-clips \
+  --models experiments/artifacts/co-person-first --frames 150 --repeats 3 \
+  --work /tmp/hd-motion-benchmark --output integrated-sampled.json
+```
+
+记录标签附加 `-sampled`；`decoded_frames`/吞吐继续按全部源帧计，`delivered_rgb_frames` 单独记录。FFmpeg fps 过滤选择的帧与原来每五帧取一帧有采样相位差，因此须看人数/身份和进入时机，不能要求与初始回放逐像素一致。最终服务外部 FFmpeg 采集后端都在转换前按该流的目标 fps 筛帧；OpenCV 后端沿用原策略。

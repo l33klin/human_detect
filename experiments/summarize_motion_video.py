@@ -99,6 +99,9 @@ def summarize(report):
     for (scene, size, repeat), variants in pairs.items():
         for (backend, policy, scale), r in variants.items():
             reference = variants[(backend, "combined", scale)]
+            assert (reference.get("corpus_sha256") or reference.get("encoded_sha256")) == (
+                r.get("corpus_sha256") or r.get("encoded_sha256")
+            ), "different source frames"
             comparisons.append(
                 dict(
                     scene=scene,
@@ -110,8 +113,10 @@ def summarize(report):
                     agreement=agreement(reference["trace"], r["trace"]),
                 )
             )
-            if backend.startswith("vaapi") and ("ffmpeg", policy, scale) in variants:
-                reference = variants[("ffmpeg", policy, scale)]
+            control = "ffmpeg-sampled" if backend.endswith("-sampled") else "ffmpeg"
+            if backend.startswith("vaapi") and (control, policy, scale) in variants:
+                reference = variants[(control, policy, scale)]
+                assert reference["encoded_sha256"] == r["encoded_sha256"]
                 comparisons.append(
                     dict(
                         scene=scene,

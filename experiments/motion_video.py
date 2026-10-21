@@ -146,7 +146,16 @@ def child_cpu():
     return usage.ru_utime + usage.ru_stime
 
 
-def decode_run(path, backend, count, pipeline=None, meter=None, policy="combined", scale=None):
+def decode_run(
+    path,
+    backend,
+    count,
+    pipeline=None,
+    meter=None,
+    policy="combined",
+    scale=None,
+    sample_before_download=False,
+):
     if pipeline:
         meter.clear()
         session = processor(pipeline, policy)
@@ -155,13 +164,20 @@ def decode_run(path, backend, count, pipeline=None, meter=None, policy="combined
         CVReader(path)
         if backend == "opencv"
         else FFmpegCapture(
-            str(path), backend, "/dev/dri/renderD128", 5000, 20_000_000, output_size=scale
+            str(path),
+            backend,
+            "/dev/dri/renderD128",
+            5000,
+            20_000_000,
+            output_size=scale,
+            output_fps=5 if sample_before_download else None,
         )
     )
     reads, processing, trace, digest = [], [], [], hashlib.sha256()
     first_ms = None
     try:
-        for i in range(count):
+        delivered = count // 5 if sample_before_download else count
+        for i in range(delivered):
             before = time.perf_counter()
             rgb = reader.read()
             if rgb is None:
@@ -172,9 +188,11 @@ def decode_run(path, backend, count, pipeline=None, meter=None, policy="combined
             # Sparse pixel digest is negligible in the timed decode loop. Full
             # output/identity agreement is evaluated separately from throughput.
             digest.update(rgb[::64, ::64].tobytes())
-            if pipeline and i % 5 == 0:
+            if pipeline and (sample_before_download or i % 5 == 0):
                 before = time.perf_counter()
-                result = session.analyze(rgb, BASE + timedelta(seconds=i / 25))
+                result = session.analyze(
+                    rgb, BASE + timedelta(seconds=i / 5 if sample_before_download else i / 25)
+                )
                 processing.append((time.perf_counter() - before) * 1000)
                 trace.append(trace_result(result))
         assert reader.read() is None, "unexpected extra frames"
@@ -187,6 +205,8 @@ def decode_run(path, backend, count, pipeline=None, meter=None, policy="combined
         scale=list(scale) if scale else None,
         policy=policy,
         decoded_frames=count,
+        delivered_rgb_frames=delivered,
+        sample_before_download=sample_before_download,
         analyzed_frames=len(trace),
         elapsed_ms=elapsed * 1000,
         cpu_ms=cpu_seconds * 1000,
@@ -215,10 +235,13 @@ def main():
     parser.add_argument("--backends", default="opencv,ffmpeg,vaapi")
     parser.add_argument("--skip-scale", action="store_true")
     parser.add_argument("--reuse-clips", action="store_true")
+    parser.add_argument("--sample-before-download", action="store_true")
     args = parser.parse_args()
     backends = args.backends.split(",")
     if not set(backends) <= {"opencv", "ffmpeg", "vaapi", "vaapi-i420"}:
         parser.error("unknown decoder backend")
+    if args.sample_before_download and ("opencv" in backends or args.frames % 5):
+        parser.error("pre-download sampling requires external FFmpeg and frames divisible by 5")
     args.work.mkdir(parents=True, exist_ok=True)
     assets, hashes = load_assets()
     cfg = Settings(_env_file=None, models_dir=args.models, database=args.work / "identity.sqlite3")
@@ -315,10 +338,19 @@ def main():
                                 pipeline.analyze(frame(assets, scene, size, 0, args.frames))
                         try:
                             row = decode_run(
-                                path, backend, args.frames, pipeline, meter, policy, scale
+                                path,
+                                backend,
+                                args.frames,
+                                pipeline,
+                                meter,
+                                policy,
+                                scale,
+                                args.sample_before_download,
                             )
                         except Exception as exc:
                             row = dict(backend=backend, policy=policy, scale=scale, error=str(exc))
+                        if args.sample_before_download:
+                            row["backend"] += "-sampled"
                         row.update(
                             scene=scene,
                             size=list(size),

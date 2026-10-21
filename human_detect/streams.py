@@ -38,6 +38,7 @@ def capture_frames(
     backend="opencv",
     device="/dev/dri/renderD128",
     max_pixels=20_000_000,
+    output_fps=None,
 ):
     """No source URL or camera credentials are returned in errors or logs."""
     # FFmpeg may log the source, including credentials, directly to stderr.
@@ -52,7 +53,9 @@ def capture_frames(
             if backend != "opencv":
                 from human_detect.video import FFmpegCapture
 
-                capture = FFmpegCapture(source, backend, device, timeout_ms, max_pixels)
+                capture = FFmpegCapture(
+                    source, backend, device, timeout_ms, max_pixels, output_fps=output_fps
+                )
                 while not stop.is_set():
                     rgb = capture.read()
                     if rgb is None:
@@ -140,6 +143,7 @@ class Stream:
             cfg.capture_backend,
             cfg.vaapi_device,
             cfg.max_image_pixels,
+            self.fps,
         )
 
     def _terminate_capture(self):

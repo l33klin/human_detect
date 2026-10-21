@@ -5,7 +5,7 @@ import subprocess
 import numpy as np
 
 
-def decoder_command(source, backend, device, timeout_ms, output_size=None):
+def decoder_command(source, backend, device, timeout_ms, output_size=None, output_fps=None):
     command = [
         "ffmpeg",
         "-nostdin",
@@ -36,7 +36,9 @@ def decoder_command(source, backend, device, timeout_ms, output_size=None):
         if source.startswith(("rtsp://", "rtsps://")):
             command += ["-rtsp_transport", "tcp"]
         command += ["-i", source]
-    filters = []
+    # This filter keeps hardware surfaces on-device; discarded frames never
+    # reach hwdownload, RGB conversion or the inter-process pipe.
+    filters = [f"fps=fps={float(output_fps):g}"] if output_fps else []
     if hardware:
         if output_size:
             w, h = output_size
@@ -74,9 +76,11 @@ def decoder_command(source, backend, device, timeout_ms, output_size=None):
 
 
 class FFmpegCapture:
-    def __init__(self, source, backend, device, timeout_ms, max_pixels, output_size=None):
+    def __init__(
+        self, source, backend, device, timeout_ms, max_pixels, output_size=None, output_fps=None
+    ):
         self.max_pixels = max_pixels
-        self.command = decoder_command(source, backend, device, timeout_ms, output_size)
+        self.command = decoder_command(source, backend, device, timeout_ms, output_size, output_fps)
         self.process = subprocess.Popen(
             self.command,
             stdin=subprocess.DEVNULL,

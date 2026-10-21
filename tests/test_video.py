@@ -37,3 +37,5 @@ def test_vaapi_requires_hardware_surfaces_and_source_is_single_argument():
     command = decoder_command(source, "vaapi-i420", "/dev/dri/renderD128", 5000)
     assert command[command.index("-vf") + 1] == "hwdownload,format=nv12,format=yuv420p"
     assert command[command.index("-hwaccel") + 1] == "vaapi"
+    command = decoder_command(source, "vaapi-i420", "/dev/dri/renderD128", 5000, output_fps=5)
+    assert command[command.index("-vf") + 1].startswith("fps=fps=5,hwdownload,")
